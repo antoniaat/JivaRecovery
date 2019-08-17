@@ -3,6 +3,7 @@ import logo from '../../../assets/logo.png'
 
 // Components
 import TopBar from '../top-bar/TopBar';
+import HeaderSlider from '../slider/HeaderSlider';
 
 // Styles and Assets
 import './Navbar.scss';
@@ -11,6 +12,7 @@ function Navbar() {
     return (
         <div>
             <TopBar></TopBar>
+
             <div className='main-navigation'>
                 <section>
                     <img src={logo}></img>
@@ -27,6 +29,13 @@ function Navbar() {
                     </nav>
                 </section>
             </div>
+
+            <HeaderSlider></HeaderSlider>
+
+            <h1>heheh</h1>
+            <h1>heheh</h1>
+            <h1>heheh</h1>
+            <h1>heheh</h1>
         </div>
     );
 }

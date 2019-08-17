@@ -1,0 +1,14 @@
+@import "../../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+.headerSlider {
+    height: 300px;
+    width: 100%;
+}
+
+.headerSlider img {
+    width: 100%;
+    max-width: 100%;
+    background: cover;
+    height: 500px;
+}
