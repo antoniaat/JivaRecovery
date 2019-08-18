@@ -13,12 +13,20 @@
     }
 
     &-secondary {
-        background-color: var(--color-body-bgrd);
-        color: var(--color-link-default);
-        border-color: var(--color-link-default);
+        vertical-align: top;
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        font-size: 19px;
+        font-weight: bold;
+        padding: 12px 22px;
+        text-transform: uppercase;
+        margin-top: -28px;
 
         &:hover {
-            text-decoration: underline;
+            cursor: pointer;    
+            background-color: $mainColor;
+            border-color: $mainColor;
         }
     }
 
