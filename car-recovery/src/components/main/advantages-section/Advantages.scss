@@ -1,2 +1,39 @@
 @import '../../../styles/scss/styles.scss';
 
+.Advantages {
+    padding: 1.5rem;
+
+    article:nth-child(1) {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    article:nth-child(2) {
+        width: 94%;
+        margin: 0 auto;
+
+        div {
+            padding: 2rem;
+            display:inline-block;
+            width: 33%;
+            text-align: center;
+
+            h5 {
+                font-weight: bold;
+            }
+
+            img {
+                padding: 1rem;
+            }
+        }
+
+        div:nth-child(1), div:nth-child(3) {
+            background: $lightGrey;
+            border-bottom: 3px solid $lightGrey;
+        }
+
+        div:nth-child(2) {
+            border-bottom: 3px solid $darkColor;
+        }
+    }
+}
