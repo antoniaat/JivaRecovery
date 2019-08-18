@@ -19,7 +19,7 @@ function VehicleSearch() {
     const fuelTypeOptions = ['Petrol', 'Diesel', 'Hybrid', 'Electric', 'Petrol'];
 
     return (
-        <div className='vehicle-search'>
+        <div className='VehicleSearch'>
             <section>
                 <article>
                     <h1>Quick Vehicle Search</h1>

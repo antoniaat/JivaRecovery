@@ -25,28 +25,28 @@ class HeaderSlider extends React.Component {
             // className: 'slides'
         };
         return (
-            <Slider {...settings} className='headerSlider'>
+            <Slider {...settings} className='HeaderSlider'>
                 <div>
                     <img src={firstSlide}></img>
-                    <div class="center">
+                    <div className="HeaderSlider-center">
                         <h1>Jiva Trade UK</h1>
-                        <p id="text">
+                        <p className="HeaderSlider-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.
                         </p>
                     </div>
                 </div>
                 <div>
                     <img src={secondSlide}></img>
-                    <div class="center">
+                    <div className="HeaderSlider-center">
                     <h1>Jiva Trade UK</h1>
-                        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
+                        <p className="HeaderSlider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>
                 <div>
                     <img src={firstSlide}></img>
-                    <div class="center">
+                    <div className="HeaderSlider-center">
                     <h1>Jiva Trade UK</h1>
-                        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
+                        <p className="HeaderSlider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>
             </Slider>

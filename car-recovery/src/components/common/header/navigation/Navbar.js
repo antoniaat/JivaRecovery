@@ -1,14 +1,12 @@
 import React from 'react';
 import logo from '../../../../assets/logo.png'
 
-import HeaderSlider from '../slider/HeaderSlider';
-
 import './Navbar.scss';
 
 function Navbar() {
     return (
         <div>
-            <div className='main-navigation'>
+            <div className='Navbar-main-navigation'>
                 <section>
                     <img src={logo}></img>
                 </section>

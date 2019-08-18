@@ -20,12 +20,12 @@ function TopBar() {
     const youtubeIcon = <FontAwesomeIcon icon={faYoutube} />
 
     return (
-        <div className='topBar'>
+        <div className='TopBar'>
             <section>
-                <p className='phone-number'>
+                <p>
                     <span>{phoneIcon}</span>
                     PHONE: 1.800.68016</p>
-                <p className='email'>
+                <p>
                     <span>{mailIcon}</span>
                     EMAIL: SUPPORT@EXAMPLE.COM</p>
             </section>
