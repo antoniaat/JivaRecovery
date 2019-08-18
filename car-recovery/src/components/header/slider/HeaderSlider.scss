@@ -1,0 +1,106 @@
+@import "../../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
+@import './../variables.scss';
+
+.headerSlider {
+  height: 300px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    background: cover;
+    height: 500px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 467px;
+
+    li button:before {
+      color: white;
+    }
+
+    li.slick-active>button {
+
+      &::before,
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .center h1 {
+    font-family: $headingsFont;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 73px;
+    z-index: 1;
+    padding: 0;
+    color: white;
+    margin: 1.7em;
+    padding: 3px;
+  }
+
+  #text {
+    position: absolute;
+    top: 130px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    width: 40%;
+    padding: 1em;
+    color: white;
+    letter-spacing: 1px;
+    margin: 3em;
+    border-radius: 3px;
+  }
+
+  .center {
+    width: 100%;
+    height: 100vh;
+  }
+
+ 
+
+  p {
+    width: 70%;
+    display: block;
+  }
+
+  .char {
+    animation: an 1s ease-out 1 both;
+    display: inline-block;
+  }
+
+  @keyframes an {
+    from {
+      opacity: 0;
+      transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: perspective(500px) translate3d(0, 0, 0);
+    }
+  }
+
+  .mylink {
+    position: absolute;
+    z-index: 150;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: .6rem;
+  }
+
+  .mylink a {
+    color: #fff;
+    opacity: .5;
+    transition: opacity .3s;
+  }
+
+  .mylink a:hover {
+    opacity: 1
+  }
+}

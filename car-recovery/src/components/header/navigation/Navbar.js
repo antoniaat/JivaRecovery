@@ -31,11 +31,6 @@ function Navbar() {
             </div>
 
             <HeaderSlider></HeaderSlider>
-
-            <h1>heheh</h1>
-            <h1>heheh</h1>
-            <h1>heheh</h1>
-            <h1>heheh</h1>
         </div>
     );
 }
