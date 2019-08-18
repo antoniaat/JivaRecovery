@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assets/logo.png'
+import logo from '../../../../assets/logo.png'
 
 // Components
 import TopBar from '../top-bar/TopBar';
@@ -24,7 +24,7 @@ function Navbar() {
                             <li><a href='#'>About us</a></li>
                             <li><a href='#'>Auto Listing</a></li>
                             <li><a href='#'>News</a></li>
-                            <li><a href='#'><button>Contact</button></a></li>
+                            <li><a href='#'><button className='button'>Contact</button></a></li>
                         </ul>
                     </nav>
                 </section>

@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../../../../styles/scss/styles.scss";
 
 .topBar {
     background: $mainColor;
@@ -32,7 +32,7 @@
         span {
             color: white;
             font-size: 1.2em;
-            padding: 0 0 0 10px;
+            padding: 0 0 0 22px;
             cursor: pointer;
         }
     }

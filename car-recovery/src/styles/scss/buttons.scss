@@ -1,0 +1,36 @@
+.button {
+    border: 2px solid rgba(255, 255, 255, .2);
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    font-weight: lighter;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    }
+
+    &-secondary {
+        background-color: var(--color-body-bgrd);
+        color: var(--color-link-default);
+        border-color: var(--color-link-default);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+
+        .button {
+            display: block;
+
+            &+.button {
+                margin-left: 1em;
+            }
+        }
+    }
+}

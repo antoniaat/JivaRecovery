@@ -1,6 +1,8 @@
-@import "../../../../node_modules/slick-carousel/slick/slick.css";
-@import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
-@import './../variables.scss';
+@import "../../../../styles/scss/styles.scss";
+
+// Slider styles
+@import "../../../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 .headerSlider {
   height: 300px;
@@ -61,8 +63,6 @@
     height: 100vh;
   }
 
- 
-
   p {
     width: 70%;
     display: block;
@@ -71,18 +71,6 @@
   .char {
     animation: an 1s ease-out 1 both;
     display: inline-block;
-  }
-
-  @keyframes an {
-    from {
-      opacity: 0;
-      transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
-    }
-
-    to {
-      opacity: 1;
-      transform: perspective(500px) translate3d(0, 0, 0);
-    }
   }
 
   .mylink {

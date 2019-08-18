@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 
 import './HeaderSlider.scss';
-import './animations.js';
+import './Animations.js';
 
 // Slides
-import firstSlide from '../../../assets/header-slider/1.jpg'
-import secondSlide from '../../../assets/header-slider/2.jpg'
+import firstSlide from '../../../../assets/header-slider/1.jpg'
+import secondSlide from '../../../../assets/header-slider/2.jpg'
 
 class HeaderSlider extends React.Component {
     render() {
@@ -30,7 +30,6 @@ class HeaderSlider extends React.Component {
                     <img src={firstSlide}></img>
                     <div class="center">
                         <h1>Jiva Trade UK</h1>
-
                         <p id="text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.
                         </p>
@@ -40,7 +39,6 @@ class HeaderSlider extends React.Component {
                     <img src={secondSlide}></img>
                     <div class="center">
                     <h1>Jiva Trade UK</h1>
-
                         <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>
@@ -48,7 +46,6 @@ class HeaderSlider extends React.Component {
                     <img src={firstSlide}></img>
                     <div class="center">
                     <h1>Jiva Trade UK</h1>
-
                         <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>
@@ -57,7 +54,4 @@ class HeaderSlider extends React.Component {
     }
 }
 
-
-// export default class HeaderSlider {};
 export default HeaderSlider;
-
