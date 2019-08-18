@@ -4,6 +4,7 @@ import Navbar from './components/common/header/navigation/Navbar.js'
 import HeaderSlider from './components/common/header/slider/HeaderSlider'
 import VehicleSearch from './components/main/vehicle-search/VehicleSearch.js';
 import Advantages from './components/main/advantages-section/Advantages.js';
+import Services from './components/main/services-section/Services.js';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <main className='App-main'>
         <VehicleSearch></VehicleSearch>
         <Advantages> </Advantages>
+        <Services> </Services>
       </main>
     </div>
   );
