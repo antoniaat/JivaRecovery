@@ -3,6 +3,13 @@
 .Advantages {
     padding: 1.5rem;
 
+    article {
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     article:nth-child(1) {
         text-align: center;
         font-weight: bold;
@@ -25,15 +32,29 @@
             img {
                 padding: 1rem;
             }
+
+            button {
+                background: transparent;
+                font-size: 26px;
+                padding: .3em .4em;
+                color: $mainColor;
+                border: none;
+                outline: none;
+            }
         }
 
-        div:nth-child(1), div:nth-child(3) {
+        div {
             background: $lightGrey;
             border-bottom: 3px solid $lightGrey;
         }
 
-        div:nth-child(2) {
+        .active {
+            background: white;
             border-bottom: 3px solid $darkColor;
+        }
+
+        .notActive {
+            background: $lightGrey;
         }
     }
 }
