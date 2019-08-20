@@ -5,6 +5,7 @@ import HeaderSlider from './components/common/header/slider/HeaderSlider'
 import VehicleSearch from './components/main/vehicle-search/VehicleSearch.js';
 import Advantages from './components/main/advantages-section/Advantages.js';
 import Services from './components/main/services-section/Services.js';
+import VehicleOffers from './components/vehicle/vehicle-offers/VehicleOffers.js';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <VehicleSearch></VehicleSearch>
         <Advantages> </Advantages>
         <Services> </Services>
+        <VehicleOffers></VehicleOffers>
       </main>
     </div>
   );

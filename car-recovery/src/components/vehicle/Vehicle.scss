@@ -1,0 +1,66 @@
+@import '../../styles/scss/styles.scss';
+
+.Vehicle {
+    display: inline-block;
+    vertical-align: top;
+    background-color: $lightGrey;
+    width: 23%;
+    color: black;
+    margin: 1%;
+    text-align: center;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .vehicle-price {
+        background: white;
+        position: relative;
+        top: -30px;
+        width: 30%;
+        left: 33%;
+        padding: 3%;
+        font-weight: bold;
+        border: 1px solid #ccc;
+    }
+
+    .vehicle-name {
+        position: relative;
+        top: -20px;
+        font-size: 19px;
+    }
+
+    .vehicle-specifications div {
+        position: relative;
+        top: -20px;
+        padding: 8px;
+        display: inline-block;
+        width: 26%;
+        text-align: center;
+        margin: 0 auto;
+        background: white;
+        border: 1px solid #ccc;
+        margin: 1%;
+        font-size: 12px;
+
+        span {
+            display: block;
+            color: #444444;
+        }
+    }
+
+    .vehicle-rental {
+        background: $redColor;
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 6px 16px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}

@@ -24,7 +24,7 @@
         margin-top: -28px;
 
         &:hover {
-            cursor: pointer;    
+            cursor: pointer;
             background-color: $mainColor;
             border-color: $mainColor;
         }
@@ -40,5 +40,26 @@
                 margin-left: 1em;
             }
         }
+    }
+}
+
+.light-button {
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(33, 32, 32, 1);
+    border-width: 2px;
+    transition: all .3s ease-in-out;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 21px;
+    letter-spacing: 1px;
+    margin: 2%;
+    cursor: pointer;
+
+    &:hover {
+        font-size: 20px;
+        color: white;
+        background: $mainColor;
+        border: 2px solid $mainColor;
     }
 }
