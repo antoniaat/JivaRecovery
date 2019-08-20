@@ -1,11 +1,12 @@
 import React from 'react';
-import TopBar from './components/common/header/top-bar/TopBar.js'
-import Navbar from './components/common/header/navigation/Navbar.js'
-import HeaderSlider from './components/common/header/slider/HeaderSlider'
-import VehicleSearch from './components/main/vehicle-search/VehicleSearch.js';
-import Advantages from './components/main/advantages-section/Advantages.js';
-import Services from './components/main/services-section/Services.js';
-import VehicleOffers from './components/vehicle/vehicle-offers/VehicleOffers.js';
+import TopBar from './components/Common/Header/Top-Bar/TopBar.js'
+import Navbar from './components/Common/Header/Navigation/Navbar.js'
+import HeaderSlider from './components/Common/Header/Slider/HeaderSlider'
+import VehicleSearch from './components/Vehicle/Vehicle-Search/VehicleSearch.js';
+import Advantages from './components/Home/Advantages/Advantages.js';
+import Services from './components/Vehicle/Vehicle-Search/VehicleSearch.js';
+import VehicleOffers from './components/Vehicle/Vehicle-Offers/VehicleOffers.js';
+import Footer from './components/Common/Footer/Footer.js';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
         <Services> </Services>
         <VehicleOffers></VehicleOffers>
       </main>
+
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 }
