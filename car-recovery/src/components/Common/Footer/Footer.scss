@@ -2,4 +2,46 @@
 
 .Footer {
 
+    section:nth-child(1) {
+        background: url('../../../assets/footer-bg.jpg');
+        background-position: center;
+        background-attachment: cover;
+        color: white;
+        width: 100%;
+        padding: 1% 6%;
+        text-align: center;
+
+        article {
+            display: inline-block;
+            width: 22%;
+            margin: 1%;
+            text-align: left;
+            vertical-align: top;
+            font-size: .9em;
+
+            img {
+                padding-bottom: 8%;
+            }
+
+            a {
+                color: white;
+                display: block;
+            }
+
+            h6 {
+                font-weight: bold;
+                padding-bottom: 5%;
+            }
+        }
+    }
+
+    section:nth-child(2) {
+        background: $darkColor;
+        color: white;
+        padding: 1.2%;
+        padding-bottom: 0;
+        text-align: center;
+        font-size: 15px;
+    }
+
 }
