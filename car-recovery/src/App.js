@@ -7,6 +7,7 @@ import Advantages from './components/Home/Advantages/Advantages.js';
 import Services from './components/Vehicle/Vehicle-Search/VehicleSearch.js';
 import VehicleOffers from './components/Vehicle/Vehicle-Offers/VehicleOffers.js';
 import Footer from './components/Common/Footer/Footer.js';
+import Brands from './components/Home/Brands/Brands.js';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Advantages> </Advantages>
         <Services> </Services>
         <VehicleOffers></VehicleOffers>
+        <Brands></Brands>
       </main>
 
       <footer>
