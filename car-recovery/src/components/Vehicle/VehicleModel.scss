@@ -1,5 +1,12 @@
 @import '../../styles/scss/styles.scss';
 
-.VehicleTypes {
-    
+.VehicleModel {
+    display: inline-block;
+    width: 25%;
+    vertical-align: bottom;
+    margin: 1rem 0;
+
+    p {
+        font-size: 16px;
+    }
 }

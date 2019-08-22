@@ -8,15 +8,18 @@ class VehicleTypes extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {cars: vehiclesTypesData};
+        this.state = { cars: vehiclesTypesData };
     }
 
     render() {
         return (
             <div className='VehicleTypes'>
-                <VehicleModel></VehicleModel>
-                {/* {console.log(this.state.cars)} */}
-                {this.state.cars.map(c => <VehicleModel vehicleModel={c}></VehicleModel>)}
+                <h1>Types of Vehicles</h1>
+                <p><span>-</span> THE AUTOS WE DEALS IN <span>-</span></p>
+
+                <div className='vehicle-types'>
+                    {this.state.cars.map(c => <VehicleModel vehicleModel={c}></VehicleModel>)}
+                </div>
             </div>
         );
     }
