@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Sedan",
+        "offersCount": 4,
+        "lowestPriceOffer": 42000
+    },
+    {
+        "name": "Sport",
+        "offersCount": 8,
+        "lowestPriceOffer": 32000
+    },
+    {
+        "name": "Supercar",
+        "offersCount": 8,
+        "lowestPriceOffer": 32000
+    }
+]
