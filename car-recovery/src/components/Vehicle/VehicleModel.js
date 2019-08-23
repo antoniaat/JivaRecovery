@@ -6,12 +6,9 @@ const VehicleModel = (props) => {
     return (
         <div className='VehicleModel'>
             <div>
-                {/* {} */}
-                if(props.vehicleModel) console.log(props.vehicleModel)
-
-                {/* <p>{props.vehicleModel.name}</p>
-                <p>{props.vehicleModel.offersCount}</p>
-                <p>{props.vehicleModel.lowestPriceOffer}</p> */}
+                <img src={props.vehicleModel.img}></img>
+                <h6>{props.vehicleModel.name}</h6>
+                <p>{props.vehicleModel.offersCount} offers starting from ${props.vehicleModel.lowestPriceOffer}</p>
             </div>
         </div>
     );
