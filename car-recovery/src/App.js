@@ -9,6 +9,8 @@ import VehicleOffers from './components/Vehicle/Vehicle-Offers/VehicleOffers.js'
 import Footer from './components/Common/Footer/Footer.js';
 import Brands from './components/Home/Brands/Brands.js';
 import VehicleTypes from './components/Vehicle/Vehicle-Types/VehicleTypes';
+import About from './components/Home/About/About.js';
+import ContactForm from './components/Forms/Contact/ContactForm.js';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Services> </Services>
         <VehicleOffers></VehicleOffers>
         <VehicleTypes></VehicleTypes>
+        <ContactForm></ContactForm>
+        <About></About>
         <Brands></Brands>
       </main>
 
