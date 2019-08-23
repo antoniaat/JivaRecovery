@@ -1,0 +1,36 @@
+@import '../../../../styles/scss/styles.scss';
+
+.Benefit {
+    margin: 1rem 0;
+
+    .icon-box {
+        padding-right: 12px;
+        float: left;
+
+        span {
+            color: $redColor;
+            font-size: 33px;
+        }
+    }
+
+    .content-box {
+        display: inline;
+
+        .title {
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .subtitle {
+            font-size: 15px;
+            font-weight: lighter;
+            margin: 0;
+            padding: 0;
+            display: inline;
+            width: auto;
+            height: auto;
+            color: #666666;
+        }
+    }
+}

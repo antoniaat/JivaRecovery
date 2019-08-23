@@ -27,9 +27,9 @@ function App() {
         <Services> </Services>
         <VehicleOffers></VehicleOffers>
         <VehicleTypes></VehicleTypes>
-        <ContactForm></ContactForm>
         <About></About>
         <Brands></Brands>
+        <ContactForm></ContactForm>
       </main>
 
       <footer>

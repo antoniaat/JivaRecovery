@@ -1,0 +1,35 @@
+@import '../../../styles/scss/styles.scss';
+
+.About {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+
+    section {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        margin: 1rem;
+    }
+
+    section {
+        p {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .lead {
+            color: black;
+            font-weight: bold;
+            font-size: 19px;
+            font-weight: bold;
+            font-family: 'Montserrat' !important;
+        }
+    }
+
+    section:nth-child(4) > img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
