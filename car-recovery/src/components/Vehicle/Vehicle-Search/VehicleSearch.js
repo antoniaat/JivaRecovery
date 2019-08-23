@@ -1,8 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.css'
 
-// Styles and Assets
+import 'react-dropdown/style.css'
 import './VehicleSearch.scss';
 
 function VehicleSearch() {
@@ -34,7 +33,6 @@ function VehicleSearch() {
             <section>
                 <article>
                     <h6>Makers of vehicle</h6>
-                    {/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" /> */}
                     <Dropdown options={makesOfTheVehicleOptions} value={makesOfTheVehicleDefaultOption} placeholder="Select an option" />
                 </article>
 

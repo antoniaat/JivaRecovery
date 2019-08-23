@@ -13,7 +13,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 function TopBar() {
     const phoneIcon = <FontAwesomeIcon icon={faPhone} />
-    const mailIcon =  <FontAwesomeIcon icon={faEnvelope} />
+    const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
     const fbIcon = <FontAwesomeIcon icon={faFacebook} />
     const twitterIcon = <FontAwesomeIcon icon={faTwitter} />
     const instagramIcon = <FontAwesomeIcon icon={faInstagram} />
@@ -24,10 +24,12 @@ function TopBar() {
             <section>
                 <p>
                     <span>{phoneIcon}</span>
-                    PHONE: 1.800.68016</p>
+                    PHONE: 1.800.68016
+                </p>
                 <p>
                     <span>{mailIcon}</span>
-                    EMAIL: SUPPORT@EXAMPLE.COM</p>
+                    EMAIL: SUPPORT@EXAMPLE.COM
+                </p>
             </section>
             <section>
                 <span>{fbIcon}</span>

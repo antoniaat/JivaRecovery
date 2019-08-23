@@ -1,11 +1,10 @@
 import React from 'react';
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
+
+import './VehicleServices.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-// Styles and Assets
-import './Services.scss';
-
-// Icons
 import autoReparingIcon from '../../../assets/icons/icon-repair.png';
 import transmissionChekupIcon from '../../../assets/icons/icon-tabs02.png';
 import vehicleInspectionIcon from '../../../assets/icons/icon-tabs03.png';
@@ -14,7 +13,7 @@ function Services() {
     const faCheckCircleIcon = <FontAwesomeIcon icon={faCheckCircle} />
 
     return (
-        <div className='Services'>
+        <div className='VehicleServices'>
             <section>
                 <h2>Vehicle Services</h2>
                 <span>-</span>

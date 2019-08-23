@@ -10,7 +10,7 @@ import secondSlide from '../../../../assets/header-slider/2.jpg'
 
 class HeaderSlider extends React.Component {
     render() {
-        var settings = {
+        const settings = {
             dots: true,
             infinite: true,
             speed: 1000,
@@ -22,8 +22,8 @@ class HeaderSlider extends React.Component {
             fade: true,
             arrows: true,
             autoplaySpeed: 5000
-            // className: 'slides'
         };
+
         return (
             <Slider {...settings} className='HeaderSlider'>
                 <div>
@@ -38,14 +38,14 @@ class HeaderSlider extends React.Component {
                 <div>
                     <img src={secondSlide}></img>
                     <div className="HeaderSlider-center">
-                    <h1>Jiva Trade UK</h1>
+                        <h1>Jiva Trade UK</h1>
                         <p className="HeaderSlider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>
                 <div>
                     <img src={firstSlide}></img>
                     <div className="HeaderSlider-center">
-                    <h1>Jiva Trade UK</h1>
+                        <h1>Jiva Trade UK</h1>
                         <p className="HeaderSlider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro.</p>
                     </div>
                 </div>

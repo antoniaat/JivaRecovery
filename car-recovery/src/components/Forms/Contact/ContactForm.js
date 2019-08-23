@@ -5,6 +5,7 @@ import './ContactForm.scss';
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             name: '',
             email: '',
@@ -28,9 +29,7 @@ class ContactForm extends React.Component {
     }
 
     handleSubmit(event) {
-        // const result = 'Name: ' + this.state.name + 'Email: ' + this.state.email;
-        // alert(result);
-        // event.preventDefault();
+        // TODO: 
     }
 
     render() {

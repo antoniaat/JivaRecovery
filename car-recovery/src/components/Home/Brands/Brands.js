@@ -10,7 +10,6 @@ function Brands() {
             <span>-</span>
             <p>THE AUTOS WE DEALS IN</p>
             <span>-</span>
-
             <img src={brands}></img>
         </div>
     );

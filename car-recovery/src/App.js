@@ -4,7 +4,7 @@ import Navbar from './components/Common/Header/Navigation/Navbar.js'
 import HeaderSlider from './components/Common/Header/Slider/HeaderSlider'
 import VehicleSearch from './components/Vehicle/Vehicle-Search/VehicleSearch.js';
 import Advantages from './components/Home/Advantages/Advantages.js';
-import Services from './components/Vehicle/Vehicle-Search/VehicleSearch.js';
+import VehicleServices from './components/Vehicle/Vehicle-Services/VehicleServices.js';
 import VehicleOffers from './components/Vehicle/Vehicle-Offers/VehicleOffers.js';
 import Footer from './components/Common/Footer/Footer.js';
 import Brands from './components/Home/Brands/Brands.js';
@@ -24,7 +24,7 @@ function App() {
       <main className='App-main'>
         <VehicleSearch></VehicleSearch>
         <Advantages> </Advantages>
-        <Services> </Services>
+        <VehicleServices> </VehicleServices>
         <VehicleOffers></VehicleOffers>
         <VehicleTypes></VehicleTypes>
         <About></About>

@@ -4,7 +4,6 @@ import dealership from '../../../assets/icons/dealership.png';
 import prices from '../../../assets/icons/prices.png';
 import safety from '../../../assets/icons/safety.png';
 
-// Styles and Assets
 import './Advantages.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
@@ -34,7 +33,7 @@ class Advantages extends Component {
     }
 
     render() {
-    const arrowUpIcon = <FontAwesomeIcon icon={faArrowUp} />
+        const arrowUpIcon = <FontAwesomeIcon icon={faArrowUp} />
 
         return (
             <div className='Advantages'>

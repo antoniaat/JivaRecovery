@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
+import vehiclesData from './vehicleOffersData.json';
+
 import Vehicle from '../Vehicle.js'
 import './VehicleOffers.scss';
 
-import vehiclesData from './data.json';
 import tlogo from '../../../assets/tlogo.png'
 
 class VehicleOffers extends Component {
