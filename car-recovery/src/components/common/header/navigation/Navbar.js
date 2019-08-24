@@ -1,29 +1,28 @@
 import React from 'react';
 import logo from '../../../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 import './Navbar.scss';
 
-function Navbar() {
-    return (
-        <div>
-            <div className='Navbar-main-navigation'>
-                <section>
-                    <img src={logo}></img>
-                </section>
-                <section>
-                    <nav>
-                        <ul>
-                            <li><a href='#'>Home</a></li>
-                            <li><a href='#'>About us</a></li>
-                            <li><a href='#'>Auto Listing</a></li>
-                            <li><a href='#'>News</a></li>
-                            <li><a href='#'><button className='button'>Contact</button></a></li>
-                        </ul>
-                    </nav>
-                </section>
-            </div>
+const Navbar = () => (
+    <div>
+        <div className='Navbar-main-navigation'>
+            <section>
+                <img src={logo}></img>
+            </section>
+            <section>
+                <nav>
+                    <ul>
+                        <li><Link to='/home'>Home</Link></li>
+                        <li><Link to='/about'>About us</Link></li>
+                        <li><Link to='#'>Auto Listing</Link></li>
+                        <li><Link to='/news'>News</Link></li>
+                        <li><Link to='/contact'><button className='button'>Contact</button></Link></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
-    );
-}
+    </div>
+);
 
 export default Navbar;

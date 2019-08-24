@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import vehiclesTypesData from './vehicleTypesData.json';
 import VehicleModel from './../VehicleModel.js'
-
 import './VehicleTypes.scss';
 
 class VehicleTypes extends Component {
