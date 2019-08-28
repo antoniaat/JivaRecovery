@@ -1,5 +1,6 @@
 import React from "react";
 import MapContainer from '../../containers/Map/MapContainer.js';
+import ContactForm from '../Forms/Contact/ContactForm.js';
 
 class ContactPage extends React.PureComponent {
     state = {
@@ -23,9 +24,16 @@ class ContactPage extends React.PureComponent {
 
     render() {
         return (
-            <MapContainer
-                isMarkerShown={this.state.isMarkerShown}
-                onMarkerClick={this.handleMarkerClick} />
+            <div className='ContactPage'>
+                <section>
+                    <MapContainer
+                        isMarkerShown={this.state.isMarkerShown}
+                        onMarkerClick={this.handleMarkerClick} />
+                </section>
+                <section>
+                    <ContactForm></ContactForm>
+                </section>
+            </div>
         )
     }
 }

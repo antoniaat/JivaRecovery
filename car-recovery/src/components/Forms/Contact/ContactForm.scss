@@ -14,4 +14,13 @@
         color: $redColor;
         font-weight: bold;
     }
+
+    input:nth-child(1) {
+        margin: 1%;
+    }
+
+    textarea {
+        margin: 1% auto;
+        width: 92%;
+    }
 }
