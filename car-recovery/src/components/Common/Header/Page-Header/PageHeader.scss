@@ -1,6 +1,8 @@
 @import "../../../../styles/scss/styles.scss";
 
 .PageHeader {
+    height: 210px;
+
     img {
         width: 100%;
         max-width: 100%;
@@ -10,9 +12,21 @@
 
     h1 {
         position: relative;
-        top: -150px;
+        top: -164px;
         z-index: 1;
         color: white;
         padding: 0 3rem;
+    }
+
+    .breadcrumbs {
+        position: relative;
+        top: -95px;
+        z-index: 1;
+        padding: 0 .5rem;
+
+        a {
+            color: white;
+
+        }
     }
 }
