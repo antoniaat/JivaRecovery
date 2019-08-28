@@ -1,6 +1,6 @@
 import React from "react";
-import MapContainer from '../../containers/Map/MapContainer.js';
-import ContactForm from '../Forms/Contact/ContactForm.js';
+import MapContainer from '../Map/MapContainer.js';
+import ContactForm from '../../components/Forms/Contact/ContactForm.js';
 
 class ContactPage extends React.PureComponent {
     state = {
