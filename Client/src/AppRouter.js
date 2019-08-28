@@ -6,6 +6,7 @@ import AboutPage from './containers/Pages/AboutPage.js';
 import ContactPage from './containers/Pages/ContactPage.js';
 import NewsPage from './containers/Pages/NewsPage.js';
 import NotFoundPage from './containers/Pages/NotFoundPage.js';
+import LoginPage from './containers/Pages/LoginPage.js';
 
 const AppRouter = () => (
     <div>
@@ -17,6 +18,7 @@ const AppRouter = () => (
             <Route path='/contact' component={ContactPage} />
             <Route path='/news' component={NewsPage} />
             <Route path='/blog' component={NewsPage} />
+            <Route path='/login' component={LoginPage} />
 
             {/* <Route component={NotFoundPage} /> */}
             <Redirect to='/home'></Redirect>

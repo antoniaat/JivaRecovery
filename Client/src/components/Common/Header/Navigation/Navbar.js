@@ -17,6 +17,7 @@ const Navbar = () => (
                         <li><Link to='/about'>About us</Link></li>
                         <li><Link to='#'>Auto Listing</Link></li>
                         <li><Link to='/news'>News</Link></li>
+                        <li><Link to='/login'>Login</Link></li>
                         <li><Link to='/contact'><button className='button'>Contact</button></Link></li>
                     </ul>
                 </nav>
