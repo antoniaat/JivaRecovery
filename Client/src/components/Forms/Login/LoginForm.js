@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./LoginForm.scss";
 import tlogo from "../../../assets/tlogo.png";
 
-class LoginForm extends React.Component {
+class LoginForm extends Component {
   constructor(props) {
     super(props);
 
@@ -69,7 +69,7 @@ class LoginForm extends React.Component {
               <a href="#">FORGOT PASSWORD</a>
             </span>
             <span>
-              <a href="#">NEW TO JIVATRADE?</a>
+              <a href="/register">NEW TO JIVATRADE?</a>
             </span>
           </label>
         </form>

@@ -1,74 +1,74 @@
 [
-        {
-                "name": "BMW X5 XDrive40i",
-                "price": "$50",
-                "year": "2014",
-                "mileage": "4980",
-                "transmission": "Manual",
-                "rental": true,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/bmw_x5_xdrive40i_2018_4k-1280x720-640x362.jpg"
-        },
-        {
-                "name": "Audi E-Tron 2019 4K",
-                "price": "$6,700",
-                "year": "2013",
-                "mileage": "1200",
-                "transmission": "Manual",
-                "rental": false,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/audi_e_tron_2019_4k-1280x720-1-640x362.jpg"
-        },
-        {
-                "name": "Lexus LS 500",
-                "price": "$7, 000",
-                "year": "2017",
-                "mileage": "84500",
-                "transmission": "Manual",
-                "rental": false,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/04/2018_lexus_ls_500_4k_2-1280x720-640x362.jpg"
-        },
-        {
-                "name": "Audi E-Tron 2019 4K",
-                "price": "$6,700",
-                "year": "2013",
-                "mileage": "1200",
-                "transmission": "Manual",
-                "rental": false,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/audi_e_tron_2019_4k-1280x720-1-640x362.jpg"
-        },
-        {
-                "name": "Volkswagen Atlas Cross",
-                "price": "$11,300",
-                "year": "2014",
-                "mileage": "4980",
-                "transmission": "Manual",
-                "rental": true,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/volkswagen_atlas_cross_sport_concept_2018-1280x720-640x362.jpg"
-        },
-        {
-                "name": "Chevrolet Orlando Redline",
-                "price": "$70",
-                "year": "2014",
-                "mileage": "4980",
-                "transmission": "Manual",
-                "rental": true,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/chevrolet_orlando_redline_2018_4k-1280x720-640x362.jpg"
-        },
-        {
-                "name": "Hyundai Santa Fe 2019 4K",
-                "price": "$4,800",
-                "year": "2011",
-                "mileage": "76500",
-                "transmission": "Automatic",
-                "rental": false,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/hyundai_santa_fe_2019_4k-1280x720-640x362.jpg"
-        },
-        {
-                "name": "Volkswagen Tiguan Offroad",
-                "price": "$12,870",
-                "year": "2011",
-                "mileage": "84500",
-                "transmission": "Manual",
-                "rental": false,
-                "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-640x362.jpg"
-        }
+  {
+    "name": "BMW X5 XDrive40i",
+    "price": "$50",
+    "year": "2014",
+    "mileage": "4980",
+    "transmission": "Manual",
+    "rental": true,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/bmw_x5_xdrive40i_2018_4k-1280x720-640x362.jpg"
+  },
+  {
+    "name": "Audi E-Tron 2019 4K",
+    "price": "$6,700",
+    "year": "2013",
+    "mileage": "1200",
+    "transmission": "Manual",
+    "rental": false,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/audi_e_tron_2019_4k-1280x720-1-640x362.jpg"
+  },
+  {
+    "name": "Lexus LS 500",
+    "price": "$7, 000",
+    "year": "2017",
+    "mileage": "84500",
+    "transmission": "Manual",
+    "rental": false,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/04/2018_lexus_ls_500_4k_2-1280x720-640x362.jpg"
+  },
+  {
+    "name": "Audi E-Tron 2019 4K",
+    "price": "$6,700",
+    "year": "2013",
+    "mileage": "1200",
+    "transmission": "Manual",
+    "rental": false,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/audi_e_tron_2019_4k-1280x720-1-640x362.jpg"
+  },
+  {
+    "name": "Volkswagen Atlas Cross",
+    "price": "$11,300",
+    "year": "2014",
+    "mileage": "4980",
+    "transmission": "Manual",
+    "rental": true,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/volkswagen_atlas_cross_sport_concept_2018-1280x720-640x362.jpg"
+  },
+  {
+    "name": "Chevrolet Orlando Redline",
+    "price": "$70",
+    "year": "2014",
+    "mileage": "4980",
+    "transmission": "Manual",
+    "rental": true,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/chevrolet_orlando_redline_2018_4k-1280x720-640x362.jpg"
+  },
+  {
+    "name": "Hyundai Santa Fe 2019 4K",
+    "price": "$4,800",
+    "year": "2011",
+    "mileage": "76500",
+    "transmission": "Automatic",
+    "rental": false,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/hyundai_santa_fe_2019_4k-1280x720-640x362.jpg"
+  },
+  {
+    "name": "Volkswagen Tiguan Offroad",
+    "price": "$12,870",
+    "year": "2011",
+    "mileage": "84500",
+    "transmission": "Manual",
+    "rental": false,
+    "img": "http://autoimage.templines.org/wp-content/uploads/2018/10/volkswagen_tiguan_offroad_4k-1280x720-640x362.jpg"
+  }
 ]

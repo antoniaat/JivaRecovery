@@ -1,65 +1,96 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './ContactForm.scss';
+import "./ContactForm.scss";
 
 class ContactForm extends React.Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            name: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: ''
-        };
+  constructor(props) {
+    super(props);
 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    };
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-        this.setState({
-            [name]: value
-        });
-    }
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
 
-    handleSubmit(event) {
-        // TODO: 
-    }
+    this.setState({
+      [name]: value
+    });
+  }
 
-    render() {
-        return (
-            <div className='ContactForm'>
-                <h1>Contact Us</h1>
-                <p><span>-</span> DROP US LINE <span>-</span></p>
+  handleSubmit(event) {
+    // TODO:
+  }
 
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        <input type="text" name='name' value={this.state.name} onChange={this.handleInputChange} placeholder='NAME' />
-                    </label>
-                    <label>
-                        <input type="email" name='email' value={this.state.email} onChange={this.handleInputChange} placeholder='EMAIL' />
-                    </label>
-                    <label>
-                        <input type="text" name='phone' value={this.state.phone} onChange={this.handleInputChange} placeholder='PHONE' />
-                    </label>
-                    <label>
-                        <input type="text" name='subject' value={this.state.subject} onChange={this.handleInputChange} placeholder='SUBJECT' />
-                    </label>
-                    <label>
-                        <textarea name='message' value={this.state.message} onChange={this.handleInputChange} placeholder='MESSAGE' />
-                    </label>
+  render() {
+    return (
+      <div className="ContactForm">
+        <h1>Contact Us</h1>
+        <p>
+          <span>-</span> DROP US LINE <span>-</span>
+        </p>
 
-                    <input type="submit" value="SEND MESSAGE" />
-                </form>
-            </div>
-        );
-    }
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <input
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              placeholder="NAME"
+            />
+          </label>
+          <label>
+            <input
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              placeholder="EMAIL"
+            />
+          </label>
+          <label>
+            <input
+              type="text"
+              name="phone"
+              value={this.state.phone}
+              onChange={this.handleInputChange}
+              placeholder="PHONE"
+            />
+          </label>
+          <label>
+            <input
+              type="text"
+              name="subject"
+              value={this.state.subject}
+              onChange={this.handleInputChange}
+              placeholder="SUBJECT"
+            />
+          </label>
+          <label>
+            <textarea
+              name="message"
+              value={this.state.message}
+              onChange={this.handleInputChange}
+              placeholder="MESSAGE"
+            />
+          </label>
+
+          <input type="submit" value="SEND MESSAGE" />
+        </form>
+      </div>
+    );
+  }
 }
 
 export default ContactForm;
