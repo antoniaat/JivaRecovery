@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 
 import "./HeaderSlider.scss";
-import "./Animations.js";
+// import "./Animations.js";
 
 import firstSlide from "../../../../assets/header-slider/1.jpg";
 import secondSlide from "../../../../assets/header-slider/2.jpg";
