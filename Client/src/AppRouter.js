@@ -8,6 +8,7 @@ import NewsPage from "./containers/Pages/NewsPage.js";
 import NotFoundPage from "./containers/Pages/NotFoundPage.js";
 import RegisterPage from "./containers/Pages/RegisterPage.js";
 import LoginPage from "./containers/Pages/LoginPage.js";
+import AutoListingPage from "./containers/Pages/AutoListingPage.js";
 
 const AppRouter = () => (
   <div>
@@ -21,6 +22,8 @@ const AppRouter = () => (
       <Route path="/blog" component={NewsPage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
+      <Route path="/auto-listing" component={AutoListingPage} />
+      <Route path="/all" component={AutoListingPage} />
 
       {/* <Route component={NotFoundPage} /> */}
       <Redirect to="/home"></Redirect>
