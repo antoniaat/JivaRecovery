@@ -2,37 +2,63 @@ import React, { Component } from "react";
 
 import "./LoginForm.scss";
 import tlogo from "../../../assets/tlogo.png";
+import AuthenticationService from "../../../services/authentication-service.js";
 
 class LoginForm extends Component {
+  static service = new AuthenticationService();
+
   constructor(props) {
     super(props);
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      error: "",
+      isLoggedIn: false
     };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-
+  handleInputChange = ({ target }) => {
     this.setState({
-      [name]: value
+      [target.name]: target.value
     });
-  }
+  };
 
   handleSubmit(event) {
-    // TODO:
+    event.preventDefault();
+
+    this.setState(
+      {
+        error: ""
+      },
+      async () => {
+        try {
+          const result = await LoginForm.service.login();
+
+          if (!result.success) {
+            const errors = Object.values(result.errors).join(" ");
+            throw new Error(errors);
+          }
+          this.setState({
+            isLoggedIn: true
+          });
+        } catch (error) {
+          this.setState({
+            error: error.message
+          });
+        }
+      }
+    );
   }
 
   render() {
+    const { email, password, isLoggedIn, error } = this.state;
+
     return (
       <div className="LoginForm">
+        {error.length ? <div> Something went wrong: {error}</div> : null}
         <img src={tlogo}></img>
         <h1>Login</h1>
         <p>

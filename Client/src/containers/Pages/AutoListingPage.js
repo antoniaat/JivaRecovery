@@ -20,7 +20,7 @@ class AutoListingPage extends Component {
     if (vehicles.length && !isLoading) {
       return (
         <div>
-          <h1>No vehicles</h1>
+          <h1>No vehicles :(</h1>
         </div>
       );
     }
@@ -29,9 +29,10 @@ class AutoListingPage extends Component {
       <Fragment>
         <h2>Top rated</h2>
         <div>
-          {vehicles.map(vehicle => {
+          {console.log(vehicles)}
+          {/* {vehicles.map(vehicle => {
             <VehicleModel key={vehicle.id} {...vehicle} />;
-          })}
+          })} */}
         </div>
       </Fragment>
     );
