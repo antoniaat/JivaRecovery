@@ -28,7 +28,7 @@ function TopBar() {
         </p>
         <p>
           <span>{mailIcon}</span>
-          EMAIL: SUPPORT@EXAMPLE.COM
+          EMAIL: INFO@JIVATRADE.COM
         </p>
       </section>
       <section>
