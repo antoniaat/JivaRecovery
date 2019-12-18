@@ -1,43 +1,71 @@
-import React from "react";
-import logo from "../../../../assets/logo.png";
+import React, { Fragment, useCallback, useContext } from "react";
 import { Link } from "react-router-dom";
 
+// Import services
+import { UserContext } from "../../../Context-Wrapper/ContextWrapper.js";
+import userService from "../../../../services/user-service.js";
+
+// Import styles
 import "./Navbar.scss";
 
-const Navbar = () => (
-  <div>
-    <div className="Navbar-main-navigation">
-      <section>
-        <img src={logo}></img>
-      </section>
-      <section>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About us</Link>
-            </li>
-            <li>
-              <Link to="/auto-listing">Auto Listing</Link>
-            </li>
-            <li>
-              <Link to="/news">News</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/contact">
-                <button className="button">Contact</button>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </section>
+// Import images and assets
+import logo from "../../../../assets/logo.png";
+import { toast } from "react-toastify";
+
+const Navbar = () => {
+  const { user, setUser, isLogged, isAdmin } = useContext(UserContext);
+
+  const handleLogoutClick = useCallback(async () => {
+    await userService.logout();
+    setUser(null);
+    toast.success("Logged out successfully!");
+  }, [setUser]);
+
+  return (
+    <div>
+      <div className="Navbar-main-navigation">
+        <section>
+          <img src={logo}></img>
+        </section>
+        <section>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/auto-listing">Auto Listing</Link>
+              </li>
+              <li>
+                <Link to="/news">News</Link>
+              </li>
+              {!isLogged ? (
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              ) : null}
+              {isLogged ? (
+                <li>
+                  <Link onClick={handleLogoutClick} to="/home">
+                    Logout
+                  </Link>
+                </li>
+              ) : null}
+
+              <li>
+                <Link to="/contact">
+                  <button className="button">Contact</button>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Navbar;
