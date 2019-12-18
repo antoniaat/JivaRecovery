@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useContext } from "react";
+import React, { useCallback, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // Import services
@@ -13,7 +13,8 @@ import logo from "../../../../assets/logo.png";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const { user, setUser, isLogged, isAdmin } = useContext(UserContext);
+  const { setUser, isLogged } = useContext(UserContext);
+  // const { user, setUser, isLogged, isAdmin } = useContext(UserContext);
 
   const handleLogoutClick = useCallback(async () => {
     await userService.logout();
@@ -25,7 +26,7 @@ const Navbar = () => {
     <div>
       <div className="Navbar-main-navigation">
         <section>
-          <img src={logo}></img>
+          <img src={logo} alt="logo"></img>
         </section>
         <section>
           <nav>
@@ -49,6 +50,7 @@ const Navbar = () => {
               ) : null}
               {isLogged ? (
                 <li>
+                  {console.log(isLogged)}
                   <Link onClick={handleLogoutClick} to="/home">
                     Logout
                   </Link>

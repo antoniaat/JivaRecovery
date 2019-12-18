@@ -17,7 +17,7 @@ const Vehicle = props => {
       <div className={props.vehicle.rental ? "vehicle-rental" : "hidden"}>
         RENTAL
       </div>
-      <img src={props.vehicle.img}></img>
+      <img src={props.vehicle.img} alt="vehicle-img"></img>
       <p className="vehicle-price">{props.vehicle.price}</p>
       <h5 className="vehicle-name">{props.vehicle.name}</h5>
       <div className="vehicle-specifications">

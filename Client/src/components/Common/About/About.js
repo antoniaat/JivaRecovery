@@ -39,7 +39,7 @@ class About extends Component {
   render() {
     return (
       <div className="About">
-        <img src={tlogo}></img>
+        <img src={tlogo} alt="logo"></img>
         <h2>About JivaTrade</h2>
 
         <section>
@@ -57,14 +57,14 @@ class About extends Component {
           </p>
 
           <article className="benefits-article">
-            {this.state.benefits.map(c => (
-              <Benefit benefits={c}></Benefit>
+            {this.state.benefits.map((object, i) => (
+              <Benefit key={i} benefits={object}></Benefit>
             ))}
           </article>
         </section>
 
         <section>
-          <img src={aboutBgImage}></img>
+          <img src={aboutBgImage} alt="about-img"></img>
         </section>
       </div>
     );

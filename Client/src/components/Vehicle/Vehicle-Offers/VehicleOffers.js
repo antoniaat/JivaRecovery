@@ -18,12 +18,12 @@ class VehicleOffers extends Component {
     return (
       <div className="VehicleOffers">
         <section>
-          <img src={tlogo}></img>
+          <img src={tlogo} alt="logo"></img>
           <h1>Best Vehicle Offers</h1>
         </section>
         <section>
-          {this.state.map(c => (
-            <Vehicle vehicle={c}></Vehicle>
+          {this.state.map((object, i) => (
+            <Vehicle key={i} vehicle={object}></Vehicle>
           ))}
         </section>
         <button className="light-button">BROWSE ALL</button>

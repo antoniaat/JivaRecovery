@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from "react";
+import React, { PureComponent } from "react";
 import MapContainer from "../Map/MapContainer.js";
 import ContactForm from "../../components/Forms/Contact/ContactForm.js";
 import PageHeader from "../../components/Common/Header/Page-Header/PageHeader.js";

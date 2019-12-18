@@ -64,7 +64,7 @@ const RegisterForm = ({ history }) => {
 
   return (
     <div className="RegisterForm">
-      <img src={tlogo}></img>
+      <img src={tlogo} alt="logo"></img>
       <h1>Register</h1>
       <p>
         <span>-</span> Explore all avaliable vehicles <span>-</span>
@@ -124,7 +124,6 @@ const RegisterForm = ({ history }) => {
             name="password"
             value={password}
             onChange={ev => setPassword(ev.target.value)}
-            value={password}
             placeholder="PASSWORD"
           />
         </label>
@@ -134,7 +133,6 @@ const RegisterForm = ({ history }) => {
           <input
             type="password"
             name="rePassword"
-            value={rePassword}
             onChange={ev => setRePassword(ev.target.value)}
             value={rePassword}
             placeholder="CONFIRM PASSWORD"
@@ -142,7 +140,7 @@ const RegisterForm = ({ history }) => {
         </label>
         <label className="terms-and-conditions">
           <span>
-            I accept to the <a href="#">Terms and Privacy Policy</a>
+            I accept to the <a href="/home">Terms and Privacy Policy</a>
           </span>
         </label>
         <input type="submit" value="REGISTER" />

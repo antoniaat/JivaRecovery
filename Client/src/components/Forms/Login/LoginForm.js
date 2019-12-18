@@ -49,7 +49,7 @@ const LoginForm = ({ history }) => {
 
   return (
     <div className="LoginForm">
-      <img src={tlogo}></img>
+      <img src={tlogo} alt="logo"></img>
       <h1>Login</h1>
       <p>
         <span>-</span> Explore all avaliable vehicles <span>-</span>
@@ -79,13 +79,13 @@ const LoginForm = ({ history }) => {
         </label>
         <label className="terms-and-conditions">
           <span>
-            I accept to the <a href="#">Terms & Privacy Policy</a>
+            I accept to the <a href="/home">Terms & Privacy Policy</a>
           </span>
         </label>
         <input type="submit" value="LOGIN" />
         <label className="additional-links">
           <span>
-            <a href="#">FORGOT PASSWORD</a>
+            <a href="/home">FORGOT PASSWORD</a>
           </span>
           <span>
             <a href="/register">NEW TO JIVATRADE?</a>

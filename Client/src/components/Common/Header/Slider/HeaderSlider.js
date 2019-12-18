@@ -26,7 +26,7 @@ class HeaderSlider extends React.Component {
     return (
       <Slider {...settings} className="HeaderSlider">
         <div>
-          <img src={firstSlide}></img>
+          <img src={firstSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">
             <h1>Jiva Trade UK</h1>
             <p className="HeaderSlider-text">
@@ -38,7 +38,7 @@ class HeaderSlider extends React.Component {
           </div>
         </div>
         <div>
-          <img src={secondSlide}></img>
+          <img src={secondSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">
             <h1>Jiva Trade UK</h1>
             <p className="HeaderSlider-text">
@@ -50,7 +50,7 @@ class HeaderSlider extends React.Component {
           </div>
         </div>
         <div>
-          <img src={firstSlide}></img>
+          <img src={firstSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">
             <h1>Jiva Trade UK</h1>
             <p className="HeaderSlider-text">

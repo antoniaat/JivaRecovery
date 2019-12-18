@@ -23,7 +23,7 @@ function Services() {
       <section>
         <article>
           <Tabs
-            vertical="true"
+            vertical={true}
             defaultTab="autoReparing"
             onChange={tabId => {
               console.log(tabId);
@@ -31,15 +31,15 @@ function Services() {
           >
             <TabList>
               <Tab tabFor="autoReparing">
-                <img src={autoReparingIcon}></img>
+                <img src={autoReparingIcon} alt="icon"></img>
                 <p>Auto Repairing</p>
               </Tab>
               <Tab tabFor="transmissionChekup">
-                <img src={transmissionChekupIcon}></img>
+                <img src={transmissionChekupIcon} alt="icon"></img>
                 <p>Transmission Checkup</p>
               </Tab>
               <Tab tabFor="vehicleInspection">
-                <img src={vehicleInspectionIcon}></img>
+                <img src={vehicleInspectionIcon} alt="icon"></img>
                 <p>Vehicle Inspection</p>
               </Tab>
             </TabList>

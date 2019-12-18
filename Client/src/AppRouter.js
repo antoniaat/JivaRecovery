@@ -5,7 +5,6 @@ import HomePage from "./containers/Pages/HomePage.js";
 import AboutPage from "./containers/Pages/AboutPage.js";
 import ContactPage from "./containers/Pages/ContactPage.js";
 import NewsPage from "./containers/Pages/NewsPage.js";
-import NotFoundPage from "./containers/Pages/NotFoundPage.js";
 import RegisterPage from "./containers/Pages/RegisterPage.js";
 import LoginPage from "./containers/Pages/LoginPage.js";
 import AutoListingPage from "./containers/Pages/AutoListingPage.js";

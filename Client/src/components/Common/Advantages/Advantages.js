@@ -38,7 +38,7 @@ class Advantages extends Component {
     return (
       <div className="Advantages">
         <article>
-          <img src={tlogo}></img>
+          <img src={tlogo} alt="logo"></img>
           <h1>Our Advantages</h1>
         </article>
         <article>
@@ -46,7 +46,7 @@ class Advantages extends Component {
             onClick={this.firstArticleClick}
             className={this.state.firstIsActive ? "active" : "notActive"}
           >
-            <img src={dealership}></img>
+            <img src={dealership} alt="dealership-img"></img>
             <h5>Largest Dealership</h5>
             <p>
               AutoImage is aliquip consequat to duis elit tam cillum dolore
@@ -58,7 +58,7 @@ class Advantages extends Component {
             onClick={this.secondArticleClick}
             className={this.state.secondIsActive ? "active" : "notActive"}
           >
-            <img src={prices}></img>
+            <img src={prices} alt="prices-img"></img>
             <h5>Lower Car Prices</h5>
             <p>
               AutoImage is aliquip consequat to duis elit tam cillum dolore
@@ -70,7 +70,7 @@ class Advantages extends Component {
             onClick={this.thirdArticleClick}
             className={this.state.thirdIsActive ? "active" : "notActive"}
           >
-            <img src={safety}></img>
+            <img src={safety} alt="safety-img"></img>
             <h5>Multipoint Safety</h5>
             <p>
               AutoImage is aliquip consequat to duis elit tam cillum dolore

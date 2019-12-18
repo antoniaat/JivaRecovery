@@ -6,7 +6,7 @@ const VehicleModel = props => {
   return (
     <div className="VehicleModel">
       <div>
-        <img src={props.vehicleModel.img}></img>
+        <img src={props.vehicleModel.img} alt="vehicle-img"></img>
         <h6>{props.vehicleModel.name}</h6>
         <p>
           {props.vehicleModel.offersCount} offers starting from $

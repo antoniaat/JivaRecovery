@@ -19,8 +19,8 @@ class VehicleTypes extends Component {
         </p>
 
         <div className="vehicle-types">
-          {this.state.cars.map(c => (
-            <VehicleModel vehicleModel={c}></VehicleModel>
+          {this.state.cars.map((object, i) => (
+            <VehicleModel key={i} vehicleModel={object}></VehicleModel>
           ))}
         </div>
       </div>
