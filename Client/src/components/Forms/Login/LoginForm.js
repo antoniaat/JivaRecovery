@@ -14,11 +14,7 @@ const schema = yup.object().shape({
     .string()
     .required("Email is required!")
     .email("Email is not valid!"),
-  password: yup
-    .string()
-    .required("Password is required!")
-    .min(8, "Password must be atleast 8 symbols!")
-    .max(12, "Password must not exceed 12 symbols!")
+  password: yup.string().required("Password is required!")
 });
 
 const LoginForm = ({ history }) => {
@@ -34,6 +30,7 @@ const LoginForm = ({ history }) => {
         await schema.validate({ email, password }, { abortEarly: false });
         const user = await userService.login({ email, password });
         setUser(user);
+        console.log(user);
         redirectWithNotification(
           history,
           "/",
@@ -60,6 +57,7 @@ const LoginForm = ({ history }) => {
           <input
             onChange={ev => setEmail(ev.target.value)}
             value={email}
+            name="email"
             className="form-control"
             type="text"
             id="email"
@@ -71,6 +69,7 @@ const LoginForm = ({ history }) => {
           <input
             onChange={ev => setPassword(ev.target.value)}
             value={password}
+            name="password"
             className="form-control"
             type="password"
             id="password"

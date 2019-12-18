@@ -13,8 +13,8 @@ import logo from "../../../../assets/logo.png";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const { setUser, isLogged } = useContext(UserContext);
-  // const { user, setUser, isLogged, isAdmin } = useContext(UserContext);
+  // const { setUser, isLogged } = useContext(UserContext);
+  const { user, setUser, isLogged, isAdmin } = useContext(UserContext);
 
   const handleLogoutClick = useCallback(async () => {
     await userService.logout();
@@ -24,6 +24,8 @@ const Navbar = () => {
 
   return (
     <div>
+      {/* <UserContext.Consumer>{value => console.log(value)}</UserContext.Consumer> */}
+
       <div className="Navbar-main-navigation">
         <section>
           <img src={logo} alt="logo"></img>
@@ -48,9 +50,10 @@ const Navbar = () => {
                   <Link to="/login">Login</Link>
                 </li>
               ) : null}
+              {console.log(isLogged)}
+
               {isLogged ? (
                 <li>
-                  {console.log(isLogged)}
                   <Link onClick={handleLogoutClick} to="/home">
                     Logout
                   </Link>

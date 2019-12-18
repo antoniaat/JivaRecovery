@@ -8,6 +8,12 @@ const userSchema = new Schema({
     required: [true, "Username is required!"],
     unique: true
   },
+  firstName: {
+    type: Schema.Types.String
+  },
+  lastName: {
+    type: Schema.Types.String
+  },
   password: {
     type: Schema.Types.String,
     required: [true, "Password is required!"]

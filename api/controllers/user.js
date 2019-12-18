@@ -33,7 +33,14 @@ module.exports = {
   post: {
     register: async (req, res, next) => {
       try {
-        const { username, email, password, rePassword } = req.body;
+        const {
+          username,
+          email,
+          firstName,
+          lastName,
+          password,
+          rePassword
+        } = req.body;
 
         if (password !== rePassword) {
           res.status(406).send({ msg: "Both passwords must match!" });
@@ -43,10 +50,13 @@ module.exports = {
         const createdUser = await models.User.create({
           username,
           email,
+          firstName,
+          lastName,
           password
         });
         res.json(createdUser);
       } catch (err) {
+        console.log(err);
         next(err);
       }
     },

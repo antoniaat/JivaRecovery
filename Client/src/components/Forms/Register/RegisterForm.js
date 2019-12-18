@@ -36,6 +36,8 @@ const schema = yup.object().shape({
 const RegisterForm = ({ history }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
 
@@ -45,10 +47,17 @@ const RegisterForm = ({ history }) => {
 
       try {
         await schema.validate(
-          { email, username, password, rePassword },
+          { email, username, firstName, lastName, password, rePassword },
           { abortEarly: false }
         );
-        await userService.register({ email, username, password, rePassword });
+        await userService.register({
+          email,
+          firstName,
+          lastName,
+          username,
+          password,
+          rePassword
+        });
         redirectWithNotification(
           history,
           "/user/login",
@@ -78,6 +87,7 @@ const RegisterForm = ({ history }) => {
             value={email}
             className="form-control"
             type="text"
+            name="email"
             id="email"
             placeholder="EMAIL"
           />
@@ -90,6 +100,7 @@ const RegisterForm = ({ history }) => {
             value={username}
             className="form-control"
             type="text"
+            name="username"
             id="username"
             placeholder="USERNAME"
           />
@@ -100,8 +111,8 @@ const RegisterForm = ({ history }) => {
           <input
             type="text"
             name="firstName"
-            // value={this.state.firstName}
-            // onChange={this.hadleInputChange}
+            onChange={ev => setFirstName(ev.target.value)}
+            value={firstName}
             placeholder="FIRST NAME"
           />
         </label>
@@ -111,8 +122,8 @@ const RegisterForm = ({ history }) => {
           <input
             type="text"
             name="lastName"
-            // value={this.state.lastName}
-            // onChange={this.handleInputChange}
+            onChange={ev => setLastName(ev.target.value)}
+            value={lastName}
             placeholder="LAST NAME"
           />
         </label>

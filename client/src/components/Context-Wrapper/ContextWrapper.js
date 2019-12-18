@@ -5,6 +5,7 @@ export const UserContext = React.createContext({});
 
 const ContextWrapper = ({ children }) => {
   const [user, setUser] = useState(undefined);
+  debugger;
   const [isLogged, setIsLogged] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
