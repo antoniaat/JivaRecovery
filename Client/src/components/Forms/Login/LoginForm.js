@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useContext } from "react";
 import * as yup from "yup";
 
-import { UserContext } from "../../Context-Wrapper/";
+import { UserContext } from "../../Context-Wrapper/ContextWrapper.js";
 import userService from "../../../services/user-service.js";
 import redirectWithNotification from "../../../utils/redirect-with-notification";
 import handleErrors from "../../../utils/handle-errors";
