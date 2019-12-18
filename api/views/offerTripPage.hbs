@@ -1,0 +1,63 @@
+<section class="py-5" style="height: 90vh;">
+  <div class="container">
+    <h1 style="margin: 2%; text-align: center;">Offer Tripp</h1>
+    <div style="padding: 5%;">
+      <form action="/trip/create" method="POST">
+        <div class="form-group">
+          <label for="startAndEndPoint">Starting Point - End Point</label>
+          <input
+            type="text"
+            class="form-control"
+            name="startAndEndPoint"
+            id="startAndEndPoint"
+            aria-describedby="emailHelp"
+            placeholder="Studentski grad - Pamporovo"
+          />
+        </div>
+        <div class="form-group">
+          <label for="dateTime">Date - Time</label>
+          <input
+            name="dateTime"
+            type="text"
+            class="form-control"
+            id="dateTime"
+            placeholder="29 December 2019 - 19:00"
+          />
+        </div>
+        <div class="form-group">
+          <label for="carImage">Car Image</label>
+          <input
+            name="carImage"
+            type="text"
+            class="form-control"
+            id="carImage"
+            placeholder="https://..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="seats">Seats</label>
+          <input
+            name="seats"
+            min="1"
+            max="6"
+            type="number"
+            class="form-control"
+            id="seats"
+            placeholder="4..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            name="description"
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="Price, Car information..."
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>

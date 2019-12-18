@@ -1,8 +1,10 @@
 import React from "react";
 
+// Core Components
 import TopBar from "./components/Common/Header/Top-Bar/TopBar.js";
 import Navbar from "./components/Common/Header/Navigation/Navbar.js";
 import Footer from "./components/Common/Footer/Footer.js";
+
 import AppRouter from "./AppRouter.js";
 
 function App() {

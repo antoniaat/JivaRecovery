@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import RegisterForm from "../../components/Forms/Register/RegisterForm.js";
 
-const RegisterPage = () => (
-  <div>
-    <RegisterForm></RegisterForm>
-  </div>
-);
+const RegisterPage = ({ history }) => {
+  return (
+    <Fragment>
+      <RegisterForm history={history} />
+    </Fragment>
+  );
+};
 
 export default RegisterPage;

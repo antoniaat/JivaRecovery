@@ -1,14 +1,12 @@
 import React, { Fragment, Component } from "react";
-import VehiclesService from "../../services/VehiclesService.js";
-import VehicleModel from "../../components/Vehicle/VehicleModel.js";
+// import vehicleService from "../../services/vehicleService.js";
+// import VehicleModel from "../../components/Vehicle/VehicleModel.js";
 
 class AutoListingPage extends Component {
   state = {
     vehicles: [],
     isLoading: false
   };
-
-  static service = new VehiclesService();
 
   render() {
     const { vehicles, isLoading } = this.state;

@@ -2,11 +2,8 @@ import React, { Component } from "react";
 
 import "./LoginForm.scss";
 import tlogo from "../../../assets/tlogo.png";
-import AuthenticationService from "../../../services/authentication-service.js";
 
 class LoginForm extends Component {
-  static service = new AuthenticationService();
-
   constructor(props) {
     super(props);
 
