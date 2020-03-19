@@ -1,75 +1,15 @@
 import React, { useState, useCallback } from "react";
-import * as yup from "yup";
-
 import tlogo from "../../../assets/tlogo.png";
 import { Link } from "react-router-dom";
-
-// Services
-import userService from "../../../services/user-service.js";
-import redirectWithNotification from "../../../utils/redirect-with-notification.js";
-import handleErrors from "../../../utils/handle-errors.js";
-
-// Styles
 import "./RegisterForm.scss";
 
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required!")
-    .email("Email is not valid!"),
-  username: yup
-    .string()
-    .required("Username is required!")
-    .min(4, "Username must be atleast 4 symbols!")
-    .max(12, "Username must not exceed 12 symbols!"),
-  password: yup
-    .string()
-    .required("Password is required!")
-    .min(8, "Password must be atleast 8 symbols!")
-    .max(12, "Password must not exceed 12 symbols!"),
-  rePassword: yup
-    .string()
-    .oneOf([yup.ref("password"), null], "Passwords don't match!")
-    .required("Repeat password is required!")
-});
-
-const RegisterForm = ({ history }) => {
+const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
-
-  const handleFormSubmit = useCallback(
-    async ev => {
-      ev.preventDefault();
-
-      try {
-        await schema.validate(
-          { email, username, firstName, lastName, password, rePassword },
-          { abortEarly: false }
-        );
-        await userService.register({
-          email,
-          firstName,
-          lastName,
-          username,
-          password,
-          rePassword
-        });
-        redirectWithNotification(
-          history,
-          "/user/login",
-          "success",
-          "Registered successfully!"
-        );
-      } catch (err) {
-        handleErrors(err);
-      }
-    },
-    [email, history, password, rePassword, username]
-  );
 
   return (
     <div className="RegisterForm">
@@ -79,8 +19,7 @@ const RegisterForm = ({ history }) => {
         <span>-</span> Explore all avaliable vehicles <span>-</span>
       </p>
 
-      <form onSubmit={handleFormSubmit}>
-        {/* Email */}
+      <form>
         <label htmlFor="email">
           <input
             onChange={ev => setEmail(ev.target.value)}
@@ -93,7 +32,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        {/* Username */}
         <label htmlFor="username">
           <input
             onChange={ev => setUsername(ev.target.value)}
@@ -106,7 +44,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        {/* First name */}
         <label>
           <input
             type="text"
@@ -117,7 +54,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        {/* Last name */}
         <label>
           <input
             type="text"
@@ -128,7 +64,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        {/* Password */}
         <label>
           <input
             type="password"
@@ -139,7 +74,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        {/* Confirm password */}
         <label>
           <input
             type="password"

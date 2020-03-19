@@ -1,49 +1,9 @@
-import React, { useState, useCallback, useContext } from "react";
-import * as yup from "yup";
-
-import { UserContext } from "../../Context-Wrapper/ContextWrapper.js";
-import userService from "../../../services/user-service.js";
-import redirectWithNotification from "../../../utils/redirect-with-notification";
-import handleErrors from "../../../utils/handle-errors";
+import React from "react";
 
 import "./LoginForm.scss";
 import tlogo from "../../../assets/tlogo.png";
 
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required!")
-    .email("Email is not valid!"),
-  password: yup.string().required("Password is required!")
-});
-
-const LoginForm = ({ history }) => {
-  const { setUser } = useContext(UserContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleFormSubmit = useCallback(
-    async ev => {
-      ev.preventDefault();
-
-      try {
-        await schema.validate({ email, password }, { abortEarly: false });
-        const user = await userService.login({ email, password });
-        setUser(user);
-        console.log(user);
-        redirectWithNotification(
-          history,
-          "/",
-          "success",
-          "Logged in successfully!"
-        );
-      } catch (err) {
-        handleErrors(err);
-      }
-    },
-    [email, history, password, setUser]
-  );
-
+const LoginForm = () => {
   return (
     <div className="LoginForm">
       <img src={tlogo} alt="logo"></img>
@@ -52,11 +12,11 @@ const LoginForm = ({ history }) => {
         <span>-</span> Explore all avaliable vehicles <span>-</span>
       </p>
 
-      <form onSubmit={handleFormSubmit}>
+      <form>
         <label htmlFor="email">
           <input
-            onChange={ev => setEmail(ev.target.value)}
-            value={email}
+            // onChange={ev => setEmail(ev.target.value)}
+            // value={email}
             name="email"
             className="form-control"
             type="text"
@@ -67,8 +27,8 @@ const LoginForm = ({ history }) => {
 
         <label htmlFor="password">
           <input
-            onChange={ev => setPassword(ev.target.value)}
-            value={password}
+            // onChange={ev => setPassword(ev.target.value)}
+            // value={password}
             name="password"
             className="form-control"
             type="password"
