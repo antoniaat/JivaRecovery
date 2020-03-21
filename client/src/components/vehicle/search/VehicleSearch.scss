@@ -1,0 +1,51 @@
+@import '../../../styles/styles.scss';
+
+.VehicleSearch {
+    display: block;
+    margin-top: 11rem;
+
+    section:nth-child(1) {
+        background: $mainColor;
+        padding: 2.5rem;
+
+        article {
+            text-align: center;
+        }
+
+        h1,
+        p,
+        span {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            display: inline;
+        }
+
+        span {
+            padding: 0 8px;
+        }
+    }
+
+    section:nth-child(2) {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: -1rem;
+        padding: 2.5rem;
+        background-color: $darkColor;
+        color: white;
+        vertical-align: top;
+
+        article {
+            display: inline-block;
+            width: 18%;
+            margin: .6rem;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}

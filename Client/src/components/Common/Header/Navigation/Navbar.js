@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
-import logo from "../../../../assets/logo.png";
+import logo from "../../../../assets/images/logo.png";
 
 const Navbar = () => {
   return (
@@ -15,27 +15,27 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <Link to="/home">Начало</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about">Информация</Link>
               </li>
               <li>
-                <Link to="/auto-listing">Auto Listing</Link>
+                <Link to="/auto-listing">Услуги</Link>
               </li>
               <li>
-                <Link to="/news">News</Link>
+                <Link to="/news">Новини</Link>
               </li>
               <li>
-                <Link to="/login">Login</Link>
+                <Link to="/login">Вход</Link>
               </li>
 
               <li>
-                <Link to="/home">Logout</Link>
+                <Link to="/home">Изход</Link>
               </li>
               <li>
                 <Link to="/contact">
-                  <button className="button">Contact</button>
+                  <button className="button">Контакти</button>
                 </Link>
               </li>
             </ul>

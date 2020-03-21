@@ -3,8 +3,8 @@ import Slider from "react-slick";
 
 import "./HeaderSlider.scss";
 
-import firstSlide from "../../../../assets/header-slider/1.jpg";
-import secondSlide from "../../../../assets/header-slider/2.jpg";
+import firstSlide from "../../../../assets/images/header-slider/1.jpg";
+import secondSlide from "../../../../assets/images/header-slider/2.jpg";
 
 class HeaderSlider extends React.Component {
   render() {
@@ -24,7 +24,6 @@ class HeaderSlider extends React.Component {
 
     return (
       <Slider {...settings} className="HeaderSlider">
-       
         <div>
           <img src={secondSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">

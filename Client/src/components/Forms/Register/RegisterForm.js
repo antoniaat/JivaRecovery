@@ -1,26 +1,33 @@
-import React, { useState, useCallback } from "react";
-import tlogo from "../../../assets/tlogo.png";
+import React, { useState } from "react";
+import tlogo from "../../../assets/images/tlogo.png";
 import { Link } from "react-router-dom";
+import userService from "../../../services/user-service";
 import "./RegisterForm.scss";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
 
+  function handleFormSubmit() {
+    const user = { email, firstName, lastName, password };
+    userService.register(user);
+    // history.push("/login");
+  }
+
   return (
     <div className="RegisterForm">
       <img src={tlogo} alt="logo"></img>
-      <h1>Register</h1>
+      <h1>Регистрация</h1>
       <p>
-        <span>-</span> Explore all avaliable vehicles <span>-</span>
+        <span>-</span> Добавете Вашите транспортни услуги в платформата{" "}
+        <span>-</span>
       </p>
 
-      <form>
-        <label htmlFor="email">
+      <form onSubmit={handleFormSubmit}>
+        <label>
           <input
             onChange={ev => setEmail(ev.target.value)}
             value={email}
@@ -28,19 +35,7 @@ const RegisterForm = () => {
             type="text"
             name="email"
             id="email"
-            placeholder="EMAIL"
-          />
-        </label>
-
-        <label htmlFor="username">
-          <input
-            onChange={ev => setUsername(ev.target.value)}
-            value={username}
-            className="form-control"
-            type="text"
-            name="username"
-            id="username"
-            placeholder="USERNAME"
+            placeholder="Имейл"
           />
         </label>
 
@@ -50,7 +45,7 @@ const RegisterForm = () => {
             name="firstName"
             onChange={ev => setFirstName(ev.target.value)}
             value={firstName}
-            placeholder="FIRST NAME"
+            placeholder="Име"
           />
         </label>
 
@@ -60,7 +55,7 @@ const RegisterForm = () => {
             name="lastName"
             onChange={ev => setLastName(ev.target.value)}
             value={lastName}
-            placeholder="LAST NAME"
+            placeholder="Фамилия"
           />
         </label>
 
@@ -70,7 +65,7 @@ const RegisterForm = () => {
             name="password"
             value={password}
             onChange={ev => setPassword(ev.target.value)}
-            placeholder="PASSWORD"
+            placeholder="Парола"
           />
         </label>
 
@@ -80,18 +75,19 @@ const RegisterForm = () => {
             name="rePassword"
             onChange={ev => setRePassword(ev.target.value)}
             value={rePassword}
-            placeholder="CONFIRM PASSWORD"
+            placeholder="Повторете паролата"
           />
         </label>
         <label className="terms-and-conditions">
           <span>
-            I accept to the <a href="/home">Terms and Privacy Policy</a>
+            Приемам <a hreg="home"> правилата </a> и
+            <a href="/home"> политиката за поверителност на сайта</a>.
           </span>
         </label>
-        <input type="submit" value="REGISTER" />
+        <input type="submit" value="РЕГИСТРАЦИЯ" />
         <label className="additional-links">
           <span>
-            <Link to="/login">HAVE AN ACCOUNT?</Link>
+            <Link to="/login">ВЕЧЕ ИМАТЕ ПРОФИЛ?</Link>
           </span>
         </label>
       </form>

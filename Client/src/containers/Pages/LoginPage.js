@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import LoginForm from "../../components/Forms/Login/LoginForm.js";
+import LoginForm from "../../components/forms/login/LoginForm.js";
 
 const LoginPage = ({ history }) => {
   return (

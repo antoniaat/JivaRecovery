@@ -1,12 +1,12 @@
 import React from "react";
 import "./PageHeader.scss";
-import Breadcrumbs from "../Navigation/Breadcrumbs/Breadcrumbs.js";
+import Breadcrumbs from "../navigation/breadcrumbs/Breadcrumbs.js";
 
-const PageHeader = props => {
+const PageHeader = ({ img, title }) => {
   return (
-    <div className="PageHeader">
-      <img src={props.img} alt="logo"></img>
-      <h1>{props.title}</h1>
+    <div className="page-header">
+      <img src={img} alt="logo"></img>
+      <h1>{title}</h1>
       <div className="breadcrumbs">
         <Breadcrumbs></Breadcrumbs>
       </div>

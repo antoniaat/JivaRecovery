@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import About from "../../components/Common/About/About.js";
-import Brands from "../../components/Common/Brands/Brands.js";
-import PageHeader from "../../components/Common/Header/Page-Header/PageHeader.js";
+import About from "../../components/about/About.js";
+import Brands from "../../components/brands/Brands.js";
+import PageHeader from "../../components/common/header/page-header/PageHeader.js";
 
 class AboutPage extends Component {
   constructor(props) {

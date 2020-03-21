@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./LoginForm.scss";
-import tlogo from "../../../assets/tlogo.png";
+import tlogo from "../../../assets/images/tlogo.png";
 
 const LoginForm = () => {
   return (

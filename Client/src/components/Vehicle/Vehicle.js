@@ -1,37 +1,28 @@
 import React from "react";
-
 import "./Vehicle.scss";
+import icons from "../icons/FontAwesomeIcons";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar } from "@fortawesome/free-solid-svg-icons";
-import { faRoad } from "@fortawesome/free-solid-svg-icons";
-import { faCar } from "@fortawesome/free-solid-svg-icons";
-
-const Vehicle = props => {
-  const calendarIcon = <FontAwesomeIcon icon={faCalendar} />;
-  const roadIcon = <FontAwesomeIcon icon={faRoad} />;
-  const transmissionIcon = <FontAwesomeIcon icon={faCar} />;
+const Vehicle = ({ vehicle }) => {
+  const { rental, img, price, name, year, mileage, transmission } = vehicle;
 
   return (
-    <div className="Vehicle">
-      <div className={props.vehicle.rental ? "vehicle-rental" : "hidden"}>
-        RENTAL
-      </div>
-      <img src={props.vehicle.img} alt="vehicle-img"></img>
-      <p className="vehicle-price">{props.vehicle.price}</p>
-      <h5 className="vehicle-name">{props.vehicle.name}</h5>
+    <div className="vehicle">
+      <div className={rental ? "vehicle-rental" : "hidden"}>RENTAL</div>
+      <img src={img} alt="vehicle-img"></img>
+      <p className="vehicle-price">{price}</p>
+      <h5 className="vehicle-name">{name}</h5>
       <div className="vehicle-specifications">
         <div>
-          <span>{calendarIcon}</span>
-          {props.vehicle.year}
+          <span>{icons.calendar}</span>
+          {year}
         </div>
         <div>
-          <span>{roadIcon}</span>
-          {props.vehicle.mileage}
+          <span>{icons.road}</span>
+          {mileage}
         </div>
         <div>
-          <span>{transmissionIcon}</span>
-          {props.vehicle.transmission}
+          <span>{icons.transmission}</span>
+          {transmission}
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 import React from "react";
 
-// Core Components
-import TopBar from "./components/Common/Header/Top-Bar/TopBar.js";
-import Navbar from "./components/Common/Header/Navigation/Navbar.js";
-import Footer from "./components/Common/Footer/Footer.js";
+import TopBar from "./components/common/header/topbar/TopBar.js";
+import Navbar from "./components/common/header/navigation/Navbar.js";
+import Footer from "./components/common/footer/Footer.js";
 
 import AppRouter from "./AppRouter.js";
 

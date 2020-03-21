@@ -1,66 +1,39 @@
+import handleResponse from "../utils/handle-response";
+
 const userService = {
-  register: async data => {
-    const res = await fetch("http://localhost:8080/api/user/register", {
-      headers: {
-        "Content-Type": "application/json"
-      },
+  register: function(data) {
+    return fetch(`http://localhost:9999/api/user/register`, {
+      body: JSON.stringify(data),
       method: "POST",
-      body: JSON.stringify(data)
-    });
-
-    if (res.status === 422) {
-      const parsedRes = await res.json();
-
-      if (parsedRes.msg.includes("email")) {
-        throw new Error("Email is already taken");
-      } else {
-        throw new Error("Username is already taken");
+      headers: {
+        "Content-type": "application/json"
       }
-    }
-
-    return res.json();
+    }).then(handleResponse);
   },
-  login: async data => {
-    const res = await fetch("http://localhost:8080/api/user/login", {
-      headers: {
-        "Content-Type": "application/json"
-      },
-      credentials: "include",
+
+  login: function(data) {
+    return fetch(`http://localhost:9999/api/user/login`, {
+      body: JSON.stringify(data),
       method: "POST",
-      body: JSON.stringify(data)
-    });
-
-    if (res.status === 401) {
-      throw new Error("Unauthorized");
-    }
-
-    return res.json();
-  },
-  logout: async () => {
-    const res = await fetch("http://localhost:8080/api/user/logout", {
       headers: {
-        "Content-Type": "applicataion/json"
+        "Content-type": "application/json"
       },
+      credentials: "include"
+    }).then(handleResponse);
+  },
+
+  logout: function() {
+    return fetch(`http://localhost:9999/api/user/logout`, {
       method: "POST",
       credentials: "include"
-    });
-
-    return res.json();
+    }).then(handleResponse);
   },
-  auth: async () => {
-    const res = await fetch("http://localhost:8080/api/user/auth", {
-      headers: {
-        "Content-Type": "applicataion/json"
-      },
+
+  getAllUsers: function() {
+    return fetch(`http://localhost:9999/api/user`, {
       method: "GET",
       credentials: "include"
-    });
-
-    if (res.status === 401) {
-      throw new Error("Unauthorized!");
-    }
-
-    return res.json();
+    }).then(handleResponse);
   }
 };
 

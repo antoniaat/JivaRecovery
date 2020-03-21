@@ -1,0 +1,39 @@
+@import "../../../../styles/styles.scss";
+
+.top-bar {
+    background: $mainColor;
+    font-family: $mainFont;
+    margin: 0;
+    padding: 0 3rem;
+
+    section {
+        padding: 1em;
+        display: inline-block;
+
+        p {
+            display: inline;
+            flex-direction: row;
+            color: white;
+
+            span {
+                padding: 10px;
+            }
+        }
+    }
+
+    .contacts-container {
+        width: 81%;
+    }
+
+    .social-icons-container {
+        display: inline;
+        text-align: right;
+
+        span {
+            color: white;
+            font-size: 1.2em;
+            padding: 0 0 0 22px;
+            cursor: pointer;
+        }
+    }
+}

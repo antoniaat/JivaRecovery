@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
-import MapContainer from "../Map/MapContainer.js";
-import ContactForm from "../../components/Forms/Contact/ContactForm.js";
-import PageHeader from "../../components/Common/Header/Page-Header/PageHeader.js";
+import MapContainer from "../map/MapContainer.js";
+import ContactForm from "../../components/forms/contact/ContactForm";
+import PageHeader from "../../components/common/header/page-header/PageHeader";
 
 class ContactPage extends PureComponent {
   constructor(props) {

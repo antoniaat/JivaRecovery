@@ -1,0 +1,12 @@
+@import '../../../styles/styles.scss';
+
+.VehicleOffers {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+
+    section:nth-child(1) {
+        text-align: center;
+        margin: 2em auto;
+    }
+}

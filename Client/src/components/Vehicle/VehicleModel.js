@@ -3,14 +3,15 @@ import React from "react";
 import "./VehicleModel.scss";
 
 const VehicleModel = props => {
+  const { img, name, offersCount, lowestPriceOffer } = props.vehicleModel;
+
   return (
-    <div className="VehicleModel">
+    <div className="vehicle-model">
       <div>
-        <img src={props.vehicleModel.img} alt="vehicle-img"></img>
-        <h6>{props.vehicleModel.name}</h6>
+        <img src={img} alt="vehicle-img"></img>
+        <h6>{name}</h6>
         <p>
-          {props.vehicleModel.offersCount} offers starting from $
-          {props.vehicleModel.lowestPriceOffer}
+          {offersCount} offers starting from ${lowestPriceOffer}
         </p>
       </div>
     </div>

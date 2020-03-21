@@ -1,13 +1,13 @@
 import React from "react";
 import { Redirect, Switch, Route } from "react-router-dom";
 
-import HomePage from "./containers/Pages/HomePage.js";
-import AboutPage from "./containers/Pages/AboutPage.js";
-import ContactPage from "./containers/Pages/ContactPage.js";
-import NewsPage from "./containers/Pages/NewsPage.js";
-import RegisterPage from "./containers/Pages/RegisterPage.js";
-import LoginPage from "./containers/Pages/LoginPage.js";
-import AutoListingPage from "./containers/Pages/AutoListingPage.js";
+import HomePage from "./containers/pages/HomePage.js";
+import AboutPage from "./containers/pages/AboutPage.js";
+import ContactPage from "./containers/pages/ContactPage.js";
+import NewsPage from "./containers/pages/NewsPage.js";
+import RegisterPage from "./containers/pages/RegisterPage.js";
+import LoginPage from "./containers/pages/LoginPage.js";
+import AutoListingPage from "./containers/pages/AutoListingPage.js";
 
 const AppRouter = () => (
   <div>

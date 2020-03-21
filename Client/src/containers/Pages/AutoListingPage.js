@@ -1,6 +1,4 @@
 import React, { Fragment, Component } from "react";
-// import vehicleService from "../../services/vehicleService.js";
-// import VehicleModel from "../../components/Vehicle/VehicleModel.js";
 
 class AutoListingPage extends Component {
   state = {
