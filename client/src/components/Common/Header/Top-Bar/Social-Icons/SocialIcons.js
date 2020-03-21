@@ -1,12 +1,13 @@
 import React from "react";
+import icons from "../../../Icons/FontAwesomeIcons";
 
 const SocialIcons = () => {
   return (
     <section className="social-icons-container">
-      <span>{FontAwesomeIcons.fbIcon}</span>
-      <span>{FontAwesomeIcons.twitterIcon}</span>
-      <span>{FontAwesomeIcons.instagramIcon}</span>
-      <span>{FontAwesomeIcons.youtubeIcon}</span>
+      <span>{icons.fbIcon}</span>
+      <span>{icons.twitterIcon}</span>
+      <span>{icons.instagramIcon}</span>
+      <span>{icons.youtubeIcon}</span>
     </section>
   );
 };
