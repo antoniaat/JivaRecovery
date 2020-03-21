@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 
 import "./HeaderSlider.scss";
-// import "./Animations.js";
 
 import firstSlide from "../../../../assets/header-slider/1.jpg";
 import secondSlide from "../../../../assets/header-slider/2.jpg";
@@ -25,24 +24,13 @@ class HeaderSlider extends React.Component {
 
     return (
       <Slider {...settings} className="HeaderSlider">
-        <div>
-          <img src={firstSlide} alt="slide-img"></img>
-          <div className="HeaderSlider-center">
-            <h1>Jiva Trade UK</h1>
-            <p className="HeaderSlider-text">
-              Jiva Trade is dolor sit amet consectetur adipisicing elit.
-              Cupiditate incidunt praesentium, rerum voluptatem in reiciendis
-              officia harum repudiandae tempore suscipit ex ea, adipisci ab
-              porro.
-            </p>
-          </div>
-        </div>
+       
         <div>
           <img src={secondSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">
-            <h1>Jiva Trade UK</h1>
+            <h1>VehRecovery</h1>
             <p className="HeaderSlider-text">
-              Jiva Trade is dolor sit amet consectetur adipisicing elit.
+              VehRecovery is dolor sit amet consectetur adipisicing elit.
               Cupiditate incidunt praesentium, rerum voluptatem in reiciendis
               officia harum repudiandae tempore suscipit ex ea, adipisci ab
               porro.
@@ -52,9 +40,9 @@ class HeaderSlider extends React.Component {
         <div>
           <img src={firstSlide} alt="slide-img"></img>
           <div className="HeaderSlider-center">
-            <h1>Jiva Trade UK</h1>
+            <h1>VehRecovery</h1>
             <p className="HeaderSlider-text">
-              Jiva Trade is dolor sit amet consectetur adipisicing elit.
+              VehRecovery is dolor sit amet consectetur adipisicing elit.
               Cupiditate incidunt praesentium, rerum voluptatem in reiciendis
               officia harum repudiandae tempore suscipit ex ea, adipisci ab
               porro.

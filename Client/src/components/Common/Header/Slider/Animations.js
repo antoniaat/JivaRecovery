@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
   var text = document.getElementsByClassName("HeaderSlider-text")[0];
   var newDom = "";
   var animationDelay = 6;
