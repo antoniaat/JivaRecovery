@@ -1,46 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.scss";
-
 import logo from "../../../../assets/images/logo.png";
+import ListItem from "./list-item/ListItem";
+import ButtonListItem from "./button-list-item/ButtonListItem";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="Navbar-main-navigation">
-        <section>
+      <div className="navbar">
+        <section className="logo-container">
           <img src={logo} alt="logo"></img>
         </section>
-        <section>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/home">Начало</Link>
-              </li>
-              <li>
-                <Link to="/about">Информация</Link>
-              </li>
-              <li>
-                <Link to="/auto-listing">Услуги</Link>
-              </li>
-              <li>
-                <Link to="/news">Новини</Link>
-              </li>
-              <li>
-                <Link to="/login">Вход</Link>
-              </li>
-
-              <li>
-                <Link to="/home">Изход</Link>
-              </li>
-              <li>
-                <Link to="/contact">
-                  <button className="button">Контакти</button>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </section>
+        <nav>
+          <ul>
+            <ListItem link="/home" text="Начало" />
+            <ListItem link="/about" text="Информация" />
+            <ListItem link="/auto-listing" text="Услуги" />
+            <ListItem link="/news" text="Новини" />
+            <ListItem link="/login" text="Вход" />
+            <ListItem link="/home" text="Изход" />
+            <ButtonListItem link="/contact" text="Контакти" />
+          </ul>
+        </nav>
       </div>
     </div>
   );
