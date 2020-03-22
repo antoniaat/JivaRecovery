@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { withRouter } from "react-router-dom";
 import FormHeader from "../form-header/FormHeader";
 import userService from "../../../services/user-service";
+import AuthContext from "../../../ContextWrapper";
 import "./LoginForm.scss";
 
 const LoginForm = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const { auth, setAuth } = useContext(AuthContext);
 
   function handleFormSubmit() {
     const user = { email, password };
-    userService.login(user);
-    history.push("/home");
+    userService.login(user).then(data => {
+      history.push("/home");
+      // setAuth(true);
+    });
   }
 
   return (
@@ -54,4 +59,4 @@ const LoginForm = ({ history }) => {
   );
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);

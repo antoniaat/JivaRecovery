@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import logo from "../../../../../assets/images/logo.png";
 import ListItem from "../list-item/ListItem";
 import userService from "../../../../../services/user-service";
 import { AuthContext } from "../../../../../ContextWrapper";
+import NavHeader from "../nav-header/NavHeader";
 
 const AuthorizedNav = ({ history }) => {
   const { _, updateAuth } = useContext(AuthContext);
@@ -17,9 +17,7 @@ const AuthorizedNav = ({ history }) => {
 
   return (
     <div className="navbar">
-      <section className="logo-container">
-        <img src={logo} alt="logo" />
-      </section>
+      <NavHeader />
       <nav>
         <ul>
           <ListItem link="/home" text="Начало" />

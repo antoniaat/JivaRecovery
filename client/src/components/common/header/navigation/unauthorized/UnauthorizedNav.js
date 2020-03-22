@@ -1,15 +1,13 @@
 import React from "react";
-import logo from "../../../../../assets/images/logo.png";
 import ListItem from "../list-item/ListItem";
 import ButtonListItem from "../button-list-item/ButtonListItem";
+import NavHeader from "../nav-header/NavHeader";
 
 const UnauthorizedNav = () => {
   return (
     <div>
       <div className="navbar">
-        <section className="logo-container">
-          <img src={logo} alt="logo" />
-        </section>
+        <NavHeader />
         <nav>
           <ul>
             <ListItem link="/home" text="Начало" />

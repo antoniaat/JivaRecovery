@@ -6,6 +6,8 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const { auth } = useContext(AuthContext);
+  debugger;
+  console.log(auth);
 
   return <>{auth ? <AuthorizedNav /> : <UnauthorizedNav />}</>;
 };
