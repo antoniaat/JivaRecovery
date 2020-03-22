@@ -5,22 +5,19 @@ import Navbar from "./components/common/header/navigation/Navbar.js";
 import Footer from "./components/common/footer/Footer.js";
 
 import AppRouter from "./AppRouter.js";
+import ContextWrapper from "./ContextWrapper";
 
 function App() {
   return (
     <div className="App">
-      <header>
+      <ContextWrapper>
         <TopBar />
         <Navbar />
-      </header>
 
-      <main>
         <AppRouter />
-      </main>
 
-      <footer>
         <Footer />
-      </footer>
+      </ContextWrapper>
     </div>
   );
 }
