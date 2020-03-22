@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import tlogo from "../../../assets/images/tlogo.png";
 import { Link } from "react-router-dom";
+import FormHeader from "../form-header/FormHeader";
+import TermsAndConditions from "../terms-and-conditions/TermsAndConditions";
 import userService from "../../../services/user-service";
 import "./RegisterForm.scss";
 
-const RegisterForm = () => {
+const RegisterForm = ({ history }) => {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,24 +15,21 @@ const RegisterForm = () => {
   function handleFormSubmit() {
     const user = { email, firstName, lastName, password };
     userService.register(user);
-    // history.push("/login");
+    history.push("/login");
   }
 
   return (
-    <div className="RegisterForm">
-      <img src={tlogo} alt="logo"></img>
-      <h1>Регистрация</h1>
-      <p>
-        <span>-</span> Добавете Вашите транспортни услуги в платформата{" "}
-        <span>-</span>
-      </p>
+    <div className="register-form">
+      <FormHeader
+        title="Регистрация"
+        subtitle="Добавете Вашите транспортни услуги в платформата"
+      />
 
       <form onSubmit={handleFormSubmit}>
         <label>
           <input
             onChange={ev => setEmail(ev.target.value)}
             value={email}
-            className="form-control"
             type="text"
             name="email"
             id="email"
@@ -78,12 +76,7 @@ const RegisterForm = () => {
             placeholder="Повторете паролата"
           />
         </label>
-        <label className="terms-and-conditions">
-          <span>
-            Приемам <a hreg="home"> правилата </a> и
-            <a href="/home"> политиката за поверителност на сайта</a>.
-          </span>
-        </label>
+        <TermsAndConditions />
         <input type="submit" value="РЕГИСТРАЦИЯ" />
         <label className="additional-links">
           <span>

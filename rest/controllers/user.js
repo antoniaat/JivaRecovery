@@ -11,15 +11,15 @@ module.exports = {
 
   post: {
     register: (req, res, next) => {
-      const { username, password, firstName, lastName, bestGame } = req.body;
-      models.User.create({ username, password, firstName, lastName, bestGame })
+      const { email, password, firstName, lastName } = req.body;
+      models.User.create({ email, password, firstName, lastName })
         .then(createdUser => res.send(createdUser))
         .catch(next);
     },
 
     login: (req, res, next) => {
-      const { username, password } = req.body;
-      models.User.findOne({ username })
+      const { email, password } = req.body;
+      models.User.findOne({ email })
         .then(user =>
           !!user
             ? Promise.all([user, user.matchPassword(password)])
@@ -27,7 +27,7 @@ module.exports = {
         )
         .then(([user, match]) => {
           if (!match) {
-            res.status(401).send("Invalid username or password");
+            res.status(401).send("Invalid email or password");
             return;
           }
 
@@ -52,12 +52,9 @@ module.exports = {
 
   put: (req, res, next) => {
     const id = req.params.id;
-    const { username, password, firstName, lastName, bestGame } = req.body;
+    const { email, password, firstName, lastName } = req.body;
 
-    models.User.update(
-      { _id: id },
-      { username, password, firstName, lastName, bestGame }
-    )
+    models.User.update({ _id: id }, { email, password, firstName, lastName })
       .then(updatedUser => res.send(updatedUser))
       .catch(next);
   },

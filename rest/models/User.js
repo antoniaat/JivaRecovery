@@ -4,10 +4,10 @@ const saltRounds = 10;
 
 const Schema = mongoose.Schema;
 const Model = mongoose.model;
-const { String, Number, Boolean, ObjectId } = Schema.Types;
+const { String, Number } = Schema.Types;
 
 const userSchema = new Schema({
-  username: {
+  email: {
     type: String,
     unique: true,
     required: true
@@ -24,10 +24,6 @@ const userSchema = new Schema({
 
   lastName: {
     type: String
-  },
-
-  bestGame: {
-    type: Number
   }
 });
 

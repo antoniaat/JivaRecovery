@@ -1,53 +1,52 @@
-import React from "react";
-
+import React, { useState } from "react";
+import FormHeader from "../form-header/FormHeader";
+import userService from "../../../services/user-service";
 import "./LoginForm.scss";
-import tlogo from "../../../assets/images/tlogo.png";
 
-const LoginForm = () => {
+const LoginForm = ({ history }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleFormSubmit() {
+    const user = { email, password };
+    userService.login(user);
+    history.push("/home");
+  }
+
   return (
-    <div className="LoginForm">
-      <img src={tlogo} alt="logo"></img>
-      <h1>Login</h1>
-      <p>
-        <span>-</span> Explore all avaliable vehicles <span>-</span>
-      </p>
+    <div className="login-form">
+      <FormHeader
+        title="Вход"
+        subtitle="Добавете Вашите транспортни услуги в платформата"
+      />
 
-      <form>
-        <label htmlFor="email">
+      <form onSubmit={handleFormSubmit}>
+        <label>
           <input
-            // onChange={ev => setEmail(ev.target.value)}
-            // value={email}
+            onChange={ev => setEmail(ev.target.value)}
+            value={email}
             name="email"
-            className="form-control"
             type="text"
-            id="email"
-            placeholder="EMAIL"
+            placeholder="Имейл"
           />
         </label>
 
-        <label htmlFor="password">
+        <label>
           <input
-            // onChange={ev => setPassword(ev.target.value)}
-            // value={password}
+            onChange={ev => setPassword(ev.target.value)}
+            value={password}
             name="password"
-            className="form-control"
             type="password"
-            id="password"
-            placeholder="PASSWORD"
+            placeholder="Парола"
           />
         </label>
-        <label className="terms-and-conditions">
-          <span>
-            I accept to the <a href="/home">Terms & Privacy Policy</a>
-          </span>
-        </label>
-        <input type="submit" value="LOGIN" />
+        <input type="submit" value="ВХОД" />
         <label className="additional-links">
           <span>
-            <a href="/home">FORGOT PASSWORD</a>
+            <a href="/home">ЗАБРАВЕНА ПАРОЛА?</a>
           </span>
           <span>
-            <a href="/register">NEW TO JIVATRADE?</a>
+            <a href="/register">НОВИ СТЕ ТУК?</a>
           </span>
         </label>
       </form>

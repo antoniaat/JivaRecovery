@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import LoginForm from "../../components/forms/login/LoginForm.js";
 
 const LoginPage = ({ history }) => {
   return (
-    <Fragment>
+    <>
       <LoginForm history={history} />
-    </Fragment>
+    </>
   );
 };
 

@@ -9,17 +9,17 @@ import AppRouter from "./AppRouter.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <TopBar></TopBar>
-        <Navbar></Navbar>
+      <header>
+        <TopBar />
+        <Navbar />
       </header>
 
-      <main className="App-main">
-        <AppRouter></AppRouter>
+      <main>
+        <AppRouter />
       </main>
 
-      <footer className="App-footer">
-        <Footer></Footer>
+      <footer>
+        <Footer />
       </footer>
     </div>
   );
