@@ -1,72 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
+import Benefit from "./benefits/Benefit.js";
 
 import "./About.scss";
+import icons from "../icons/FontAwesomeIcons";
 
 import tlogo from "../../assets/images/tlogo.png";
 import aboutBgImage from "../../assets/images/about-bg.jpg";
 
-import icons from "../icons/FontAwesomeIcons";
+const About = () => {
+  const benefits = [
+    {
+      icon: icons.money,
+      title: "Добри цени",
+      subtitle: "Тук може да намерите едни от най-добрите цени"
+    },
+    {
+      icon: icons.suitcase,
+      title: "Доверили се клиенти",
+      subtitle: "Благодарим на всички доверили се клиенти"
+    },
+    {
+      icon: icons.puzzlePiece,
+      title: "Голяма верига",
+      subtitle: "Най-голямата верига от доставчици"
+    }
+  ];
 
-import Benefit from "./benefits/Benefit.js";
+  return (
+    <div className="About">
+      <img src={tlogo} alt="logo"></img>
+      <h2>За нас</h2>
+      <section>
+        <p className="lead">
+          Ние предлагаме висококачествени транспортни услуги и пътна помощ на
+          невероятни цени.
+        </p>
+        <p>
+          Предлагаме услуги, свързани с товарен транспорт по направления в
+          София, страната и чужбина. Разчитаме на опита си и надеждния автопарк,
+          за да предложим качествена и точна услуга. През годините сме
+          превозвали много товари на фирми, партньори и частни лица и знаем, че
+          всички очакват бързина, точност и добра цена, независимо от характера
+          на пратката.
+        </p>
+        <article className="benefits-article">
+          {benefits.map((item, i) => (
+            <Benefit key={i} benefits={item} />
+          ))}
+        </article>
+      </section>
 
-class About extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      benefits: [
-        {
-          icon: icons.money,
-          title: "Affordable Auto Prices",
-          subtitle: "AutoDrive is nisi aliquip consequat duis velit esse"
-        },
-        {
-          icon: icons.suitcase,
-          title: "20 Years in Business",
-          subtitle: "Vehicles is nisi aliquip consequat duis velit"
-        },
-        {
-          icon: icons.puzzlePiece,
-          title: "Trusted & Genuine Parts",
-          subtitle: "Autos Drive is nisi aliquip consequat duis ted"
-        }
-      ]
-    };
-  }
-
-  render() {
-    return (
-      <div className="About">
-        <img src={tlogo} alt="logo"></img>
-        <h2>About JivaTrade</h2>
-
-        <section>
-          <p className="lead">
-            We offer high quality vehicles at unbelievable prices and creates
-            pleasant buying experience.
-          </p>
-          <p>
-            AutoImage is nisi aliquip consequat duis velit esse cillum dolore
-            fugiat nulla pariatur excepteur sint occaecat. Lorem ipsum dolor sit
-            amt consectetur adipisicing elit sed eiusmod tempor incididuntu
-            labore et dolore magna aliqua enimad minim veniam quis nostrud
-            exercitation ullamco laboris nisi aliquip. Duis aute irure dolor in
-            reprehenderitn voluptate.
-          </p>
-
-          <article className="benefits-article">
-            {this.state.benefits.map((object, i) => (
-              <Benefit key={i} benefits={object}></Benefit>
-            ))}
-          </article>
-        </section>
-
-        <section>
-          <img src={aboutBgImage} alt="about-img"></img>
-        </section>
-      </div>
-    );
-  }
-}
+      <section>
+        <img src={aboutBgImage} alt="about-img"></img>
+      </section>
+    </div>
+  );
+};
 
 export default About;
