@@ -2,8 +2,8 @@ import './advantages.scss';
 
 import React from 'react';
 import imageIcons from '../icons/ImageIcons';
-import Advantage from './advantage';
-import AdvantagesHeader from './advantages-header';
+import Advantage from './advantage/advantage';
+import AdvantagesHeader from './header/advantages-header';
 
 const advantages = [
   {

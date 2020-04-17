@@ -9,51 +9,8 @@
         }
     }
 
-    article:nth-child(1) {
-        text-align: center;
-        font-weight: bold;
-    }
-
-    article:nth-child(2) {
+    .advantages-wrapper {
         width: 94%;
         margin: 0 auto;
-
-        div {
-            padding: 2rem;
-            display: inline-block;
-            width: 33%;
-            text-align: center;
-
-            h5 {
-                font-weight: bold;
-            }
-
-            img {
-                padding: 1rem;
-            }
-
-            button {
-                background: transparent;
-                font-size: 26px;
-                padding: .3em .4em;
-                color: $main-color;
-                border: none;
-                outline: none;
-            }
-        }
-
-        div {
-            background: $light-gray;
-            border-bottom: 3px solid $light-gray;
-        }
-
-        .active {
-            background: white;
-            border-bottom: 3px solid $dark-color;
-        }
-
-        .not-active {
-            background: $light-gray;
-        }
     }
 }

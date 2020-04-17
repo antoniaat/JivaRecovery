@@ -1,0 +1,22 @@
+@import 'styles/styles.scss';
+@import './theme-advantage.scss';
+
+.advantage {
+    padding: 2rem;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+
+    h5 {
+        font-weight: bold;
+    }
+
+    img {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 26px;
+        padding: .3em .4em;
+    }
+}
