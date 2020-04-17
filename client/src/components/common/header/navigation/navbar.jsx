@@ -12,8 +12,10 @@ const Navbar = () => {
   const { auth } = useContext(AuthContext);
   return (
     <nav className="navbar">
-      <NavHeader />
-      {auth ? <AuthorizedNav /> : <UnauthorizedNav />}
+      <div className="navbar-wrapper">
+        <NavHeader />
+        {auth ? <AuthorizedNav /> : <UnauthorizedNav />}
+      </div>
     </nav>
   );
 };
