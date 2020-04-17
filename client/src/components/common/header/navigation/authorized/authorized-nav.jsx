@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import ListItem from '../list-item/ListItem';
+import ListItem from '../list-item/list-item';
 import userService from '../../../../../services/user-service';
 import { AuthContext } from '../../../../../ContextWrapper';
-import NavHeader from '../nav-header/NavHeader';
 
 const AuthorizedNav = ({ history }) => {
   const { _, updateAuth } = useContext(AuthContext);
@@ -16,19 +15,14 @@ const AuthorizedNav = ({ history }) => {
   }
 
   return (
-    <div className="navbar">
-      <NavHeader />
-      <nav>
-        <ul>
-          <ListItem link="/home" text="Начало" />
-          <ListItem link="/about" text="Информация" />
-          <ListItem link="/auto-listing" text="Услуги" />
-          <ListItem link="/news" text="Новини" />
-          <ListItem link="/home" text="Профил" />
-          <ListItem link="/home" text="Изход" onClick={logout} />
-        </ul>
-      </nav>
-    </div>
+    <ul>
+      <ListItem link="/home" text="Начало" />
+      <ListItem link="/about" text="Информация" />
+      <ListItem link="/auto-listing" text="Услуги" />
+      <ListItem link="/news" text="Новини" />
+      <ListItem link="/home" text="Профил" />
+      <ListItem link="/home" text="Изход" onClick={logout} />
+    </ul>
   );
 };
 

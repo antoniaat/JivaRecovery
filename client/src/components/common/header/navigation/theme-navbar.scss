@@ -1,0 +1,13 @@
+.navbar {
+    font-family: $main-font;
+    background: $dark-color;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px;
+        text-transform: uppercase;
+        font-size: 0.8em;
+    }
+}

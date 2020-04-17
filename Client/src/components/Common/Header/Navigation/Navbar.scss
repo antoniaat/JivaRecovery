@@ -1,32 +1,21 @@
 @import "../../../../styles/styles.scss";
+@import "./theme-navbar.scss";
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: $main-font;
-    background: $dark-color;
     padding: 0 3rem;
 
     .logo-container img {
         width: 75%;
     }
 
-    nav {
-        ul {
-            padding-bottom: 0;
+    ul {
+        padding-bottom: 0;
 
-            li {
-                display: inline-block;
-
-                a {
-                    color: white;
-                    text-decoration: none;
-                    padding: 8px;
-                    text-transform: uppercase;
-                    font-size: 13px;
-                }
-            }
+        li {
+            display: inline-block;
         }
     }
 }
