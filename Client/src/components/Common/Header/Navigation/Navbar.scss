@@ -1,22 +1,44 @@
-@import "../../../../styles/styles.scss";
+@import "styles/styles.scss";
 @import "./theme-navbar.scss";
 
 .navbar-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
+    padding-bottom: 2em;
 
-.logo-container img {
-    width: 70%;
-}
+    @include for-tablet-portrait-up {
+        display: block;
+    }
 
-ul {
-    padding-bottom: 0;
+    @include for-desktop-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-    li {
-        display: inline-block;
+    .logo-container {
+        text-align: center;
+
+        img {
+            width: 50%;
+
+            @include for-desktop-up {
+                width: 70%;
+            }
+        }
+    }
+
+    ul {
+        padding-bottom: 0;
+
+        li {
+            text-align: center;
+            padding: 0.3em;
+
+            @include for-desktop-up {
+                display: inline-block;
+            }
+        }
     }
 }
