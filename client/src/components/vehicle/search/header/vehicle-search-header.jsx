@@ -12,6 +12,7 @@ const VehicleSearchHeader = ({ header, deliversCount }) => (
       <span className="vehicle-search-header-line">-</span>
       <p className="vehicle-search-header-text">
         ОТ
+        {' '}
         {deliversCount}
         + ДОСТАВЧИКА
       </p>
