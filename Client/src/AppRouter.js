@@ -1,13 +1,13 @@
-import React from "react";
-import { Redirect, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Redirect, Switch, Route } from 'react-router-dom';
 
-import HomePage from "./containers/pages/HomePage.js";
-import AboutPage from "./containers/pages/AboutPage.js";
-import ContactPage from "./containers/pages/ContactPage.js";
-import NewsPage from "./containers/pages/NewsPage.js";
-import RegisterPage from "./containers/pages/RegisterPage.js";
-import LoginPage from "./containers/pages/LoginPage.js";
-import AutoListingPage from "./containers/pages/AutoListingPage.js";
+import HomePage from './containers/pages/home-page';
+import AboutPage from './containers/pages/about-page';
+import ContactPage from './containers/pages/contact-page';
+import NewsPage from './containers/pages/news-page';
+import RegisterPage from './containers/pages/register-page';
+import LoginPage from './containers/pages/login-page';
+import AutoListingPage from './containers/pages/auto-listing-page';
 
 const AppRouter = () => (
   <div>
@@ -25,7 +25,7 @@ const AppRouter = () => (
       <Route path="/all" component={AutoListingPage} />
 
       {/* <Route component={NotFoundPage} /> */}
-      <Redirect to="/home"></Redirect>
+      <Redirect to="/home" />
     </Switch>
   </div>
 );

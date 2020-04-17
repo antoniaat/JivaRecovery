@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import TopBar from "./components/common/header/topbar/TopBar.js";
-import Navbar from "./components/common/header/navigation/Navbar.js";
-import Footer from "./components/common/footer/Footer.js";
+import TopBar from './components/common/header/topbar/top-bar';
+import Navbar from './components/common/header/navigation/navbar';
+import Footer from './components/common/footer/footer';
 
-import AppRouter from "./AppRouter.js";
-import ContextWrapper from "./ContextWrapper";
+import AppRouter from './AppRouter.js';
+import ContextWrapper from './ContextWrapper';
 
 function App() {
   return (
@@ -13,9 +13,7 @@ function App() {
       <ContextWrapper>
         <TopBar />
         <Navbar />
-
         <AppRouter />
-
         <Footer />
       </ContextWrapper>
     </div>
