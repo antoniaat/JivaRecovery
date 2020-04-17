@@ -1,8 +1,12 @@
-@import 'styles/styles.scss';
-@import './theme-social-icons.scss';
+@import "styles/styles.scss";
+@import "./theme-social-icons.scss";
 
 .social-icons {
-    text-align: right;
+    padding: 1em 0;
+
+    @include for-desktop-up {
+        text-align: right;
+    }
 
     span {
         padding: 0 0 0 22px;
