@@ -1,0 +1,17 @@
+@import "styles/styles.scss";
+
+.vehicle-service {
+    .vehicle-service-description {
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .tab-right-article {
+        .vehicle-service-benefit-icon {
+            color: #fff;
+        }
+    }
+}

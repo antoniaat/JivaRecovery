@@ -1,0 +1,30 @@
+@import "styles/styles.scss";
+@import "./theme-vehicle-service.scss";
+
+.vehicle-service {
+    text-align: left;
+
+    article {
+        display: inline-block;
+        vertical-align: top;
+        width: 46%;
+        margin: 0 1rem;
+        padding-top: 0;
+    }
+
+    .vehicle-service-description {
+        position: relative;
+        top: -15px;
+    }
+
+    .tab-right-article {
+        .vehicle-service-benefit {
+            list-style-type: none;
+            padding: 8px 0;
+
+            .vehicle-service-benefit-text {
+                top: 0;
+            }
+        }
+    }
+}
