@@ -1,16 +1,16 @@
 import './page-header.scss';
 
 import React from 'react';
-import Breadcrumbs from '../breadcrumbs/breadcrumbs';
+import { string } from 'prop-types';
 
-const PageHeader = ({ img, title }) => (
+const PageHeader = ({ title }) => (
   <div className="page-header">
-    <img src={img} alt="logo" />
-    <h1>{title}</h1>
-    <div className="breadcrumbs">
-      <Breadcrumbs />
-    </div>
+    <h1 className="page-header-title">{title}</h1>
   </div>
 );
+
+PageHeader.propTypes = {
+  title: string.isRequired,
+};
 
 export default PageHeader;

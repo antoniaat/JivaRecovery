@@ -1,7 +1,12 @@
-@import "../../../styles/styles.scss";
+@import "styles/styles.scss";
+@import './theme-page-header.scss';
 
 .page-header {
-    height: 210px;
+    background: url('../../../assets/images/page-header-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4em 0;
 
     img {
         width: 100%;
@@ -10,11 +15,8 @@
         height: 200px;
     }
 
-    h1 {
-        position: relative;
-        top: -164px;
-        z-index: 1;
-        color: white;
-        padding: 0 3rem;
+    .page-header-title {
+        width: 90%;
+        margin: 0 auto;
     }
 }

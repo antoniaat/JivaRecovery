@@ -5,12 +5,7 @@ import Partners from 'components/partners/partners';
 
 const AboutPage = () => (
   <>
-    <div>
-      <PageHeader
-        img="http://autoimage.templines.org/wp-content/uploads/2018/10/fbg.jpg"
-        title="About Us"
-      />
-    </div>
+    <PageHeader title="За нас" />
     <About />
     <Partners />
   </>
