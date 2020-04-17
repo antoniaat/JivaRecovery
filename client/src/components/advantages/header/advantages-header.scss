@@ -3,4 +3,9 @@
 .advantages-header {
     text-align: center;
     font-weight: bold;
+    padding-bottom: 1.5em;
+
+    @include for-desktop-up {
+        padding-bottom: 0;
+    }
 }

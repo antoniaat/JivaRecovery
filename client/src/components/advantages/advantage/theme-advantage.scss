@@ -1,6 +1,7 @@
+@import 'styles/styles.scss';
+
 .advantage {
-    background: $light-gray;
-    border-bottom: 3px solid $light-gray;
+    border: 2px solid $light-gray;
 
     button {
         background: transparent;
@@ -10,7 +11,7 @@
     }
 
     .active {
-        background: white;
+        background: #fff;
         border-bottom: 3px solid $dark-color;
     }
 
