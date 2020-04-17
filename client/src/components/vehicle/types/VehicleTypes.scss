@@ -1,7 +1,7 @@
 @import '../../../styles/styles.scss';
 
 .VehicleTypes {
-    background: $darkColor;
+    background: $dark-color;
     color: white;
     text-align: center;
     padding: 3.5rem;
@@ -12,7 +12,7 @@
     }
 
     span {
-        color: $redColor;
+        color: $red-color;
         font-weight: bold;
         padding: 0 7px;
     }

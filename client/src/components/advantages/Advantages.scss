@@ -36,7 +36,7 @@
                 background: transparent;
                 font-size: 26px;
                 padding: .3em .4em;
-                color: $mainColor;
+                color: $main-color;
                 border: none;
                 outline: none;
             }
@@ -49,7 +49,7 @@
 
         .active {
             background: white;
-            border-bottom: 3px solid $darkColor;
+            border-bottom: 3px solid $dark-color;
         }
 
         .not-active {

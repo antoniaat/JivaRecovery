@@ -16,7 +16,7 @@
     }
 
     span {
-        color: $redColor;
+        color: $red-color;
         font-weight: bold;
     }
 
@@ -28,7 +28,7 @@
     .terms-and-conditions span,
     .additional-links span a {
         display: block;
-        color: $darkColor;
+        color: $dark-color;
         font-weight: lighter;
         font-size: 16px;
         cursor: pointer;

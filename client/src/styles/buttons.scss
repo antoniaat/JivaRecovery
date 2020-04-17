@@ -25,8 +25,8 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $mainColor;
-            border-color: $mainColor;
+            background-color: $main-color;
+            border-color: $main-color;
         }
     }
 
@@ -59,7 +59,7 @@
     &:hover {
         font-size: 20px;
         color: white;
-        background: $mainColor;
-        border: 2px solid $mainColor;
+        background: $main-color;
+        border: 2px solid $main-color;
     }
 }

@@ -1,0 +1,17 @@
+@import "../../../../styles/styles.scss";
+@import "./theme-top-bar.scss";
+
+.top-bar {
+    background: $main-color;
+    font-family: $main-font;
+
+    p {
+        color: #fff;
+    }
+
+    .social-icons-container span {
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+}

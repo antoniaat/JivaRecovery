@@ -2,7 +2,7 @@
 @import '../../../../node_modules/react-web-tabs/dist/react-web-tabs.css';
 
 .VehicleServices {
-    background-color: $darkColor;
+    background-color: $dark-color;
     color: white;
     padding: 4rem;
     margin-top: 3rem;
@@ -12,7 +12,7 @@
     }
 
     span {
-        color: $mainColor;
+        color: $main-color;
         font-weight: bold;
         padding-right: 8px;
     }
