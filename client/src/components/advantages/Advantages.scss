@@ -43,8 +43,8 @@
         }
 
         div {
-            background: $lightGrey;
-            border-bottom: 3px solid $lightGrey;
+            background: $light-gray;
+            border-bottom: 3px solid $light-gray;
         }
 
         .active {
@@ -53,7 +53,7 @@
         }
 
         .not-active {
-            background: $lightGrey;
+            background: $light-gray;
         }
     }
 }
