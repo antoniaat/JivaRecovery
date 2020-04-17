@@ -20,6 +20,10 @@
     .logo-container {
         text-align: center;
 
+        @include for-desktop-up {
+            text-align: left;
+        }
+
         img {
             width: 50%;
 
@@ -38,6 +42,10 @@
 
             @include for-desktop-up {
                 display: inline-block;
+            }
+
+            a {
+                font-size: 0.8em;
             }
         }
     }
