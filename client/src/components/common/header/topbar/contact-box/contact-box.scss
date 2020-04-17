@@ -1,0 +1,13 @@
+@import '../../../../../styles/styles.scss';
+
+.contact-box {
+    font-size: 0.8em;
+
+    @include for-tablet-portrait-up {
+        margin: 1em 0;
+    }
+
+    span {
+        padding: 10px;
+    }
+}

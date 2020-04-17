@@ -1,3 +1,5 @@
+import './social-icons.scss';
+
 import React from 'react';
 import {
   // eslint-disable-next-line import/named
@@ -5,7 +7,7 @@ import {
 } from '../../../../icons/FontAwesomeIcons';
 
 const SocialIcons = () => (
-  <section className="social-icons-wrapper">
+  <section className="social-icons">
     <span>{fbIcon}</span>
     <span>{twitterIcon}</span>
     <span>{instagramIcon}</span>

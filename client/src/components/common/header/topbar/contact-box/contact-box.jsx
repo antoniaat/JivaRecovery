@@ -8,7 +8,7 @@ const ContactBox = ({ icon, text }) => (
   </p>
 );
 
-ContactBox.prototypes = {
+ContactBox.propTypes = {
   icon: string.isRequired,
   text: string.isRequired,
 };

@@ -4,6 +4,14 @@
 .top-bar {
     margin: 0;
 
+    @include for-tablet-portrait-up {
+       
+    }
+
+    @include for-phone-only {
+        
+    }
+
     .top-bar-wrapper {
         width: 90%;
         margin: 0 auto;
@@ -15,22 +23,9 @@
     .contacts-container {
         display: flex;
         justify-content: space-between;
-    }
 
-    .contact-box {
-        font-size: 0.8em;
-
-        span {
-            padding: 10px;
-        }
-    }
-
-    .social-icons-wrapper {
-        text-align: right;
-
-        span {
-            padding: 0 0 0 22px;
-            cursor: pointer;
+        @include for-tablet-portrait-up {
+            display: block;
         }
     }
 }
