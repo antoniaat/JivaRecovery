@@ -1,4 +1,5 @@
-@import "../../../styles/styles.scss";
+@import "styles/styles.scss";
+@import './theme-slider.scss';
 
 @import "../../../../node_modules/slick-carousel/slick/slick.css";
 @import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -22,18 +23,6 @@
   .slick-dots {
     position: absolute;
     top: 467px;
-
-    li button:before {
-      color: white;
-    }
-
-    li.slick-active>button {
-
-      &::before,
-      &:hover {
-        color: white;
-      }
-    }
   }
 
   div.header-slider-center {
@@ -43,27 +32,17 @@
   }
 
   .header-slider-center h1 {
-    font-family: $main-font;
-    font-size: 30px;
-    font-weight: bold;
     position: absolute;
     top: 73px;
-    z-index: 1;
     padding: 0;
-    color: white;
     margin: 1.7em;
-    padding: 3px;
   }
 
   .header-slider-text {
     position: absolute;
     top: 130px;
-    background: rgba(0, 0, 0, .5);
-    z-index: 1;
     width: 40%;
     padding: 1em;
-    color: white;
-    letter-spacing: 1px;
     margin: 3em;
     border-radius: 3px;
   }
@@ -80,20 +59,10 @@
 
   .mylink {
     position: absolute;
-    z-index: 150;
+    z-index: 1;
     bottom: 0;
     right: 0;
     width: 100%;
     padding: .6rem;
-  }
-
-  .mylink a {
-    color: #fff;
-    opacity: .5;
-    transition: opacity .3s;
-  }
-
-  .mylink a:hover {
-    opacity: 1
   }
 }

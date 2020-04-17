@@ -1,0 +1,38 @@
+.header-slider {
+  .slick-dots {
+    li button:before {
+      color: white;
+    }
+
+    li.slick-active>button {
+      &::before,
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .header-slider-center h1 {
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .header-slider-text {
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .mylink a {
+    color: #fff;
+    opacity: .5;
+    transition: opacity .3s;
+  }
+
+  .mylink a:hover {
+    opacity: 1
+  }
+}
