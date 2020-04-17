@@ -42,15 +42,15 @@ const Services = () => (
         <TabList>
           <Tab tabFor="autoReparing">
             <img className="vehicle-services-tabs-img" src={autoReparingIcon} alt="auto-repairing" />
-            <p>Пътна помощ</p>
+            <p className="vehicle-services-tablist-title">Пътна помощ</p>
           </Tab>
           <Tab tabFor="transmissionChekup">
             <img className="vehicle-services-tabs-img" src={transmissionChekupIcon} alt="transmission-checkup" />
-            <p>Доставка на части</p>
+            <p className="vehicle-services-tablist-title">Доставка на части</p>
           </Tab>
           <Tab tabFor="vehicleInspection">
             <img className="vehicle-services-tabs-img" src={vehicleInspectionIcon} alt="vehicle-inspection" />
-            <p>Автосервизи</p>
+            <p className="vehicle-services-tablist-title">Автосервизи</p>
           </Tab>
         </TabList>
 

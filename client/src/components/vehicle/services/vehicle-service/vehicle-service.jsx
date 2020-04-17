@@ -9,7 +9,7 @@ const VehicleService = ({
 }) => (
   <section className="vehicle-service">
     <article className="tab-left-article">
-      <h4>{title}</h4>
+      <h2 className="vehicle-service-title">{title}</h2>
       <p className="vehicle-service-description">
         {description}
       </p>

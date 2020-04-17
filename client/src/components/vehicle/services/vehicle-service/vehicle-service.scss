@@ -4,26 +4,31 @@
 .vehicle-service {
     text-align: left;
 
-    article {
-        display: inline-block;
-        vertical-align: top;
-        width: 46%;
-        margin: 0 1rem;
-        padding-top: 0;
+    @include for-tablet-portrait-up {
+        padding: 1.5em;
     }
 
-    .vehicle-service-description {
-        position: relative;
-        top: -15px;
+    article {
+        @include for-desktop-up {
+            display: inline-block;
+            vertical-align: top;
+            width: 46%;
+            margin: 0 1rem;
+            padding-top: 0;
+        }
     }
 
     .tab-right-article {
+        font-size: 1.1em;
+        padding-top: 2em;
+
         .vehicle-service-benefit {
             list-style-type: none;
             padding: 8px 0;
 
             .vehicle-service-benefit-text {
-                top: 0;
+                display: inline;
+                padding: 1em;
             }
         }
     }
