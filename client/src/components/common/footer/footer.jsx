@@ -1,57 +1,49 @@
+import './footer.scss';
+
 import tlogo from 'assets/images/tlogo.png';
 
 import React from 'react';
-
-import './footer.scss';
+import Copyright from './copyright/copyright';
 
 const Footer = () => (
-  <div className="footer">
-    <section>
+  <footer className="footer">
+    <section className="main-footer-wrapper">
       <article>
-        <img src={tlogo} alt="logo" />
-        <p>
-          Copyright ©
-          {' '}
-          {new Date().getFullYear()}
-          {' '}
-          <strong>antoniaat</strong>
-          .
-        </p>
+        <img className="footer-logo" src={tlogo} alt="logo" />
       </article>
       <article>
-        <h6>USEFUL LINKS</h6>
-        <a href="/home">About us</a>
-        <a href="/home">Our Services</a>
-        <a href="/home">Information</a>
-        <a href="/home">Privacy Policy</a>
+        <h6>ПОЛЕЗНИ ЛИНКОВЕ</h6>
+        <ul>
+          <li>
+            <a href="/about">За нас</a>
+          </li>
+          <li>
+            <a href="/home">Услуги</a>
+          </li>
+          <li>
+            <a href="/about">Информация</a>
+          </li>
+        </ul>
+
       </article>
       <article>
-        <h6>OUR TERMS</h6>
-        <a href="/home">Support</a>
-        <a href="/home">Contacts</a>
-        <a href="/home">Typography</a>
+        <h6>КОНТАКТ</h6>
+        <ul />
+        <a href="/home">Контакти</a>
         <a href="/home">FAQ</a>
       </article>
       <article>
-        <h6>SHOWROOM</h6>
+        <h6>КЪДЕ ДА НИ НАМЕРИТЕ</h6>
         <p>
-          UK, Auto, King St. 665087 Phone.: +7 234 949-58-83 E-mail.:
-          info@example.com © 2019 Jiva Trade
+          UK, Auto, King St. 665087 Телефон.: +7 234 949-58-83 E-mail.:
+          info@vehrecoverys.com
         </p>
       </article>
     </section>
-    <section>
-      <p>
-        Copyright ©
-        {' '}
-        {new Date().getFullYear()}
-        {' '}
-        <strong>antoniaat</strong>
-        . All
-        Rights Reserved.
-      </p>
+    <section className="bottom-footer-wrapper">
+      <Copyright />
     </section>
-  </div>
+  </footer>
 );
 
 export default Footer;
