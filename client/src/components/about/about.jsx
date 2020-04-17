@@ -30,19 +30,19 @@ const About = ({ mainTitle, mainSubtitle, description }) => (
   <div className="about">
     <img src={tlogo} alt="logo" />
     <h2>{mainTitle}</h2>
-    <section>
-      <p className="about-subtitle">{mainSubtitle}</p>
-      <p className="about-description">
-        {description}
-      </p>
-      {benefits.map(({ icon, title, subtitle }) => (
-        <Benefit icon={icon} title={title} subtitle={subtitle} />
-      ))}
-    </section>
+    <div className="about-wrapper">
+      <section className="about-content-wrapper">
+        <p className="about-subtitle">{mainSubtitle}</p>
+        <p className="about-description">
+          {description}
+        </p>
+        {benefits.map(({ icon, title, subtitle }) => (
+          <Benefit icon={icon} title={title} subtitle={subtitle} />
+        ))}
+      </section>
+      <img className="about-image" src={aboutBgImage} alt="about-img" />
+    </div>
 
-    <section>
-      <img src={aboutBgImage} alt="about-img" />
-    </section>
   </div>
 );
 
