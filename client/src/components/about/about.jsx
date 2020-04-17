@@ -1,61 +1,55 @@
 import './about.scss';
 
-import React from 'react';
-import Benefit from '../benefits/benefit';
-
-import icons from '../icons/FontAwesomeIcons';
-
 import tlogo from 'assets/images/tlogo.png';
 import aboutBgImage from 'assets/images/about-bg.jpg';
 
-const About = () => {
-  const benefits = [
-    {
-      icon: icons.money,
-      title: 'Добри цени',
-      subtitle: 'Тук може да намерите едни от най-добрите цени',
-    },
-    {
-      icon: icons.suitcase,
-      title: 'Доверили се клиенти',
-      subtitle: 'Благодарим на всички доверили се клиенти',
-    },
-    {
-      icon: icons.puzzlePiece,
-      title: 'Голяма верига',
-      subtitle: 'Най-голямата верига от доставчици',
-    },
-  ];
+import React from 'react';
+import { string } from 'prop-types';
+import Benefit from '../benefits/benefit';
+import { money, suitcase, puzzlePiece } from '../icons/FontAwesomeIcons';
 
-  return (
-    <div className="about">
-      <img src={tlogo} alt="logo" />
-      <h2>За нас</h2>
-      <section>
-        <p className="lead">
-          Ние предлагаме висококачествени транспортни услуги и пътна помощ на
-          невероятни цени.
-        </p>
-        <p>
-          Предлагаме услуги, свързани с товарен транспорт по направления в
-          София, страната и чужбина. Разчитаме на опита си и надеждния автопарк,
-          за да предложим качествена и точна услуга. През годините сме
-          превозвали много товари на фирми, партньори и частни лица и знаем, че
-          всички очакват бързина, точност и добра цена, независимо от характера
-          на пратката.
-        </p>
-        <article className="benefits-article">
-          {benefits.map((item, i) => (
-            <Benefit key={i} benefits={item} />
-          ))}
-        </article>
-      </section>
+const benefits = [
+  {
+    icon: money,
+    title: 'Добри цени',
+    subtitle: 'Тук може да намерите едни от най-добрите цени',
+  },
+  {
+    icon: suitcase,
+    title: 'Доверили се клиенти',
+    subtitle: 'Благодарим на всички доверили се клиенти',
+  },
+  {
+    icon: puzzlePiece,
+    title: 'Голяма верига',
+    subtitle: 'Най-голямата верига от доставчици',
+  },
+];
 
-      <section>
-        <img src={aboutBgImage} alt="about-img" />
-      </section>
-    </div>
-  );
+const About = ({ mainTitle, mainSubtitle, description }) => (
+  <div className="about">
+    <img src={tlogo} alt="logo" />
+    <h2>{mainTitle}</h2>
+    <section>
+      <p className="about-subtitle">{mainSubtitle}</p>
+      <p className="about-description">
+        {description}
+      </p>
+      {benefits.map(({ icon, title, subtitle }) => (
+        <Benefit icon={icon} title={title} subtitle={subtitle} />
+      ))}
+    </section>
+
+    <section>
+      <img src={aboutBgImage} alt="about-img" />
+    </section>
+  </div>
+);
+
+About.propTypes = {
+  mainTitle: string.isRequired,
+  mainSubtitle: string.isRequired,
+  description: string.isRequired,
 };
 
 export default About;

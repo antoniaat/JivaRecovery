@@ -7,6 +7,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 4em 0;
+    text-align: center;
+
+    @include for-desktop-up {
+        text-align: left;
+    }
 
     img {
         width: 100%;

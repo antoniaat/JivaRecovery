@@ -3,7 +3,7 @@
 .benefit {
     margin: 1rem 0;
 
-    .icon-box {
+    .benefit-icon-wrapper {
         padding-right: 12px;
         float: left;
 
@@ -13,23 +13,21 @@
         }
     }
 
-    .content-box {
+    .benefit-content-box {
         display: inline;
 
-        .title {
+        .benefit-content-box-title {
             font-weight: bold;
             margin: 0;
             padding: 0;
         }
 
-        .subtitle {
+        .benefit-content-box-subtitle {
             font-size: 15px;
             font-weight: lighter;
             margin: 0;
             padding: 0;
             display: inline;
-            width: auto;
-            height: auto;
             color: #666666;
         }
     }
