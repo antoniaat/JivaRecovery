@@ -5,8 +5,8 @@ import Benefit from '../benefits/benefit';
 
 import icons from '../icons/FontAwesomeIcons';
 
-import tlogo from '../../assets/images/tlogo.png';
-import aboutBgImage from '../../assets/images/about-bg.jpg';
+import tlogo from 'assets/images/tlogo.png';
+import aboutBgImage from 'assets/images/about-bg.jpg';
 
 const About = () => {
   const benefits = [

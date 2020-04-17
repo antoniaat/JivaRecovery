@@ -1,4 +1,4 @@
-import brands from '../../assets/images/brands.png';
+import brands from 'assets/images/brands.png';
 
 import './partners.scss';
 

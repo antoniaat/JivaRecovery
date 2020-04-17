@@ -1,4 +1,4 @@
-import tlogo from '../../../assets/images/tlogo.png';
+import tlogo from 'assets/images/tlogo.png';
 
 import React from 'react';
 

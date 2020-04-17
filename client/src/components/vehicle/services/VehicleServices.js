@@ -4,9 +4,9 @@ import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import "./VehicleServices.scss";
 import icons from "../../icons/FontAwesomeIcons";
 
-import autoReparingIcon from "../../../assets/icons/icon-repair.png";
-import transmissionChekupIcon from "../../../assets/icons/icon-tabs02.png";
-import vehicleInspectionIcon from "../../../assets/icons/icon-tabs03.png";
+import autoReparingIcon from "assets/icons/icon-repair.png";
+import transmissionChekupIcon from "assets/icons/icon-tabs02.png";
+import vehicleInspectionIcon from "assets/icons/icon-tabs03.png";
 
 function Services() {
   return (

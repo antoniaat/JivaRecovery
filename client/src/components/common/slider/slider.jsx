@@ -1,9 +1,9 @@
-import React from 'react';
-import Slider from 'react-slick';
-import firstSlide from '../../../assets/images/header-slider/1.jpg';
-import secondSlide from '../../../assets/images/header-slider/2.jpg';
 import './slider.scss';
 
+import React from 'react';
+import Slider from 'react-slick';
+import firstSlide from 'assets/images/header-slider/1.jpg';
+import secondSlide from 'assets/images/header-slider/2.jpg';
 
 import Slide from './slide';
 

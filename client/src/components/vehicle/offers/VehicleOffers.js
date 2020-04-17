@@ -5,7 +5,7 @@ import vehiclesData from "./vehicleOffersData.json";
 import Vehicle from "../Vehicle.js";
 import "./VehicleOffers.scss";
 
-import tlogo from "../../../assets/images/tlogo.png";
+import tlogo from "assets/images/tlogo.png";
 
 class VehicleOffers extends Component {
   constructor(props) {
