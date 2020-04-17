@@ -3,8 +3,8 @@ import './top-bar.scss';
 import React from 'react';
 
 import icons from '../../../icons/FontAwesomeIcons';
-import SocialIcons from './social-icons/SocialIcons';
-import ContactBox from './contact-box/ContactBox';
+import SocialIcons from './social-icons/social-icons';
+import ContactBox from './contact-box/contact-box';
 
 const TopBar = () => (
   <div className="top-bar">

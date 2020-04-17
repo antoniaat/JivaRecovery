@@ -17,11 +17,15 @@
         justify-content: space-between;
     }
 
-    p span {
-        padding: 10px;
+    .contact-box {
+        font-size: 0.8em;
+
+        span {
+            padding: 10px;
+        }
     }
 
-    .social-icons-container {
+    .social-icons-wrapper {
         text-align: right;
 
         span {
