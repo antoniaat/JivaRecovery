@@ -11,7 +11,7 @@ const VehicleSearch = () => (
   <div className="vehicle-search">
     <VehicleSearchHeader deliversCount={200} />
 
-    <main>
+    <main className="vehicle-search-wrapper">
       <DropdownItem
         title="Град"
         data={citiesData}
@@ -22,7 +22,7 @@ const VehicleSearch = () => (
         data={servicesData}
         placeholder="Изберете услуга"
       />
-      <article>
+      <article className="vehicle-search-btn-wrapper">
         <button type="button" className="button-secondary">Търсене</button>
       </article>
     </main>

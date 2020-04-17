@@ -1,0 +1,18 @@
+@import 'styles/styles.scss';
+@import './theme-vehicle-search-header.scss';
+
+.vehicle-search-header {
+    padding: 2.5rem;
+
+    article {
+        text-align: center;
+    }
+
+    .vehicle-search-header-text {
+        display: inline;
+    }
+
+    .vehicle-search-header-line {
+        padding: 0 8px;
+    }
+}

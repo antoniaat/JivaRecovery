@@ -1,45 +1,20 @@
 @import "../../../../node_modules//react-dropdown/style.css";
 @import 'styles/styles.scss';
+@import './theme-vehicle-search.scss';
 
 .vehicle-search {
     display: block;
-    margin-top: 11rem;
+    margin-top: 14rem;
 
-    header {
-        background: $main-color;
-        padding: 2.5rem;
-
-        article {
-            text-align: center;
-        }
-
-        h1,
-        p,
-        span {
-            text-align: center;
-            color: white;
-        }
-
-        p {
-            display: inline;
-        }
-
-        span {
-            padding: 0 8px;
-        }
-    }
-
-    main {
+    .vehicle-search-wrapper {
         width: 90%;
         margin: 0 auto;
         position: relative;
         top: -1rem;
         padding: 2.5rem;
-        background-color: $dark-color;
-        color: white;
         vertical-align: top;
 
-        article {
+        .vehicle-search-btn-wrapper {
             display: inline-block;
             width: 31%;
             margin: .6rem;
