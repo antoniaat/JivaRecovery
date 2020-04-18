@@ -1,5 +1,5 @@
 input {
-    border: 0.1em solid #eeeeee;
+    border: 0.1em solid #eee;
     cursor: text;
     user-select: none;
     transition: all .3s ease-in-out;
@@ -22,7 +22,7 @@ input:nth-child(1) {
 }
 
 textarea {
-    border: 0.1em solid #eeeeee;
+    border: 0.1em solid #eee;
     display: block;
     width: 95%;
     font-size: 16px;
