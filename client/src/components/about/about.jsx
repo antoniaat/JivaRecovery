@@ -6,7 +6,7 @@ import aboutBgImage from 'assets/images/about-bg.jpg';
 import React from 'react';
 import { string } from 'prop-types';
 import Benefit from '../benefits/benefit';
-import { money, suitcase, puzzlePiece } from '../icons/FontAwesomeIcons';
+import { money, suitcase, puzzlePiece } from '../icons/font-awesome-icons';
 
 const benefits = [
   {

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import MapContainer from "../map/MapContainer.js";
+import MapContainer from "../map/map-container";
 import ContactForm from "components/forms/contact/contact-form";
 import PageHeader from "components/common/page-header/page-header";
 

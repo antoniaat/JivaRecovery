@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from 'react';
+import vehiclesData from './vehicleOffersData.json';
 
-import vehiclesData from "./vehicleOffersData.json";
+import Vehicle from '../vehicle.jsx';
+import './vehicle-offers.scss';
 
-import Vehicle from "../Vehicle.js";
-import "./VehicleOffers.scss";
-
-import tlogo from "assets/images/tlogo.png";
+import tlogo from 'assets/images/tlogo.png';
 
 class VehicleOffers extends Component {
   constructor(props) {
@@ -18,12 +17,12 @@ class VehicleOffers extends Component {
     return (
       <div className="VehicleOffers">
         <section>
-          <img src={tlogo} alt="logo"></img>
+          <img src={tlogo} alt="logo" />
           <h1>Best Vehicle Offers</h1>
         </section>
         <section>
           {this.state.map((object, i) => (
-            <Vehicle key={i} vehicle={object}></Vehicle>
+            <Vehicle key={i} vehicle={object} />
           ))}
         </section>
         <button className="light-button">BROWSE ALL</button>

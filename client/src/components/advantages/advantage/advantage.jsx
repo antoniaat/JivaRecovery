@@ -2,7 +2,7 @@ import './advantage.scss';
 
 import React from 'react';
 import { string } from 'prop-types';
-import { arrowUp } from '../../icons/FontAwesomeIcons';
+import { arrowUp } from '../../icons/font-awesome-icons';
 
 const Advantage = ({ img, title, text }) => (
   <article className="advantage">

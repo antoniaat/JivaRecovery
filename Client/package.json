@@ -20,6 +20,7 @@
     "react-slick": "^0.25.2",
     "react-toastify": "^5.4.1",
     "react-web-tabs": "^1.0.1",
+    "recompose": "^0.30.0",
     "slick-carousel": "^1.8.1",
     "yup": "^0.28.0"
   },

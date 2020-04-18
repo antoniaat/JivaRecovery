@@ -2,7 +2,7 @@ import './top-bar.scss';
 
 import React from 'react';
 
-import { phoneIcon, mailIcon } from '../../../icons/FontAwesomeIcons';
+import { phoneIcon, mailIcon } from '../../../icons/font-awesome-icons';
 import SocialIcons from './social-icons/social-icons';
 import ContactBox from './contact-box/contact-box';
 

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import vehiclesTypesData from "./vehicleTypesData.json";
-import VehicleModel from "./../VehicleModel.js";
-import "./VehicleTypes.scss";
+import React, { Component } from 'react';
+import vehiclesTypesData from './vehicleTypesData.json';
+import VehicleModel from '../vehicle-model.jsx';
+import './VehicleTypes.scss';
 
 class VehicleTypes extends Component {
   constructor(props) {
@@ -15,12 +15,16 @@ class VehicleTypes extends Component {
       <div className="VehicleTypes">
         <h1>Types of Vehicles</h1>
         <p>
-          <span>-</span> THE AUTOS WE DEALS IN <span>-</span>
+          <span>-</span>
+          {' '}
+          THE AUTOS WE DEALS IN
+          {' '}
+          <span>-</span>
         </p>
 
         <div className="vehicle-types">
           {this.state.cars.map((object, i) => (
-            <VehicleModel key={i} vehicleModel={object}></VehicleModel>
+            <VehicleModel key={i} vehicleModel={object} />
           ))}
         </div>
       </div>

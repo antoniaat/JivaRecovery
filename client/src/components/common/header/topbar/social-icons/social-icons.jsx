@@ -4,7 +4,7 @@ import React from 'react';
 import {
   // eslint-disable-next-line import/named
   fbIcon, twitterIcon, instagramIcon, youtubeIcon,
-} from '../../../../icons/FontAwesomeIcons';
+} from '../../../../icons/font-awesome-icons';
 
 const SocialIcons = () => (
   <section className="social-icons">

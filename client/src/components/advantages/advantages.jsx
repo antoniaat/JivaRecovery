@@ -1,7 +1,7 @@
 import './advantages.scss';
 
 import React from 'react';
-import imageIcons from '../icons/ImageIcons';
+import imageIcons from '../icons/image-icons';
 import Advantage from './advantage/advantage';
 import AdvantagesHeader from './header/advantages-header';
 
