@@ -1,0 +1,26 @@
+@import 'styles/styles.scss';
+
+.vehicle {
+    background-color: $light-gray;
+    color: #000;
+
+    .vehicle-price {
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+
+    .vehicle-specifications div {
+        background: #fff;
+        border: 1px solid #ccc;
+
+        span {
+            color: #444;
+        }
+    }
+
+    .vehicle-rental {
+        background: $red-color;
+        color: #fff;
+    }
+
+}

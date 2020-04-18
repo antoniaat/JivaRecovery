@@ -1,10 +1,13 @@
-@import 'styles/styles.scss';
+@import "styles/styles.scss";
 
 .vehicle-model {
-    display: inline-block;
-    width: 25%;
-    vertical-align: bottom;
     margin: 1rem 0;
+
+    @include for-desktop-up {
+        display: inline-block;
+        width: 25%;
+        vertical-align: bottom;
+    }
 
     p {
         font-size: 16px;

@@ -1,0 +1,16 @@
+@import "styles/styles.scss";
+
+.vehicle-specification {
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    padding: 8px;
+    width: 26%;
+    text-align: center;
+    margin: 1em;
+    font-size: 12px;
+
+    .vehicle-specification-icon {
+        display: block;
+    }
+}

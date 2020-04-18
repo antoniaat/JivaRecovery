@@ -1,34 +1,26 @@
-import React, { Component } from 'react';
-import vehiclesData from './vehicle-offers-data.json';
-
-import Vehicle from '../vehicle.jsx';
-import './vehicle-offers.scss';
-
 import tlogo from 'assets/images/tlogo.png';
 
-class VehicleOffers extends Component {
-  constructor(props) {
-    super(props);
+import React from 'react';
+import vehicles from './vehicle-offers-data';
 
-    this.state = vehiclesData;
-  }
+import Vehicle from '../vehicle';
+import './vehicle-offers.scss';
 
-  render() {
-    return (
-      <div className="VehicleOffers">
-        <section>
-          <img src={tlogo} alt="logo" />
-          <h1>Best Vehicle Offers</h1>
-        </section>
-        <section>
-          {this.state.map((object, i) => (
-            <Vehicle key={i} vehicle={object} />
-          ))}
-        </section>
-        <button className="light-button">BROWSE ALL</button>
-      </div>
-    );
-  }
-}
+const VehicleOffers = () => (
+  <div className="vehicle-offers">
+    <section>
+      <img src={tlogo} alt="logo" />
+      <h1>Най-добрите оферти на едно място</h1>
+    </section>
+    <section>
+      {vehicles.map(({
+        name, price, year, mileage, transmission, rental, img,
+      }) => (
+        <Vehicle name={name} price={price} year={year} mileage={mileage} vehicleTransmission={transmission} rental={rental} img={img} />
+      ))}
+    </section>
+    <button type="button" className="light-button">BROWSE ALL</button>
+  </div>
+);
 
 export default VehicleOffers;

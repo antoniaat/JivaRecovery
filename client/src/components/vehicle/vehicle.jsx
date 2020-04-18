@@ -1,10 +1,12 @@
 import './vehicle.scss';
 
 import React from 'react';
+import { string, boolean, number } from 'prop-types';
 import { calendar, road, transmission } from '../icons/font-awesome-icons';
+import VehicleSpecification from './specification/vehicle-specification';
 
 const Vehicle = ({
-  rental, img, price, name, year, mileage, vehicleTransmission,
+  name, price, year, mileage, vehicleTransmission, rental, img,
 }) => (
   <div className="vehicle">
     <div className={rental ? 'vehicle-rental' : 'hidden'}>RENTAL</div>
@@ -12,20 +14,26 @@ const Vehicle = ({
     <p className="vehicle-price">{price}</p>
     <h5 className="vehicle-name">{name}</h5>
     <div className="vehicle-specifications">
-      <div>
-        <span>{calendar}</span>
-        {year}
-      </div>
-      <div>
-        <span>{road}</span>
-        {mileage}
-      </div>
-      <div>
-        <span>{transmission}</span>
-        {vehicleTransmission}
-      </div>
+      <VehicleSpecification icon={calendar} text={year} />
+      <VehicleSpecification icon={road} text={mileage} />
+      <VehicleSpecification icon={transmission} text={vehicleTransmission} />
     </div>
   </div>
 );
+
+Vehicle.defaultProps = {
+  vehicleTransmission: 'Manual',
+  rental: true,
+};
+
+Vehicle.propTypes = {
+  name: string.isRequired,
+  price: number.isRequired,
+  year: number.isRequired,
+  mileage: number.isRequired,
+  img: string.isRequired,
+  vehicleTransmission: string,
+  rental: boolean,
+};
 
 export default Vehicle;
