@@ -2,7 +2,7 @@ import './vehicle-service.scss';
 
 import React from 'react';
 import PropTypes, { string } from 'prop-types';
-import { checkCircle } from 'components/vehicle/services/vehicle-service/node_modules/components/icons/FontAwesomeIcons';
+import { checkCircle } from 'components/icons/font-awesome-icons';
 
 const VehicleService = ({
   title, description, benefits,

@@ -1,5 +1,5 @@
-import React from 'react';
-import vehiclesData from './vehicleOffersData.json';
+import React, { Component } from 'react';
+import vehiclesData from './vehicle-offers-data.json';
 
 import Vehicle from '../vehicle.jsx';
 import './vehicle-offers.scss';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import vehiclesTypesData from './vehicleTypesData.json';
-import VehicleModel from '../vehicle-model.jsx';
-import './VehicleTypes.scss';
+import vehiclesTypesData from './vehicle-types-data.json';
+import VehicleModel from '../vehicle-model';
+import './vehicle-types.scss';
 
 class VehicleTypes extends Component {
   constructor(props) {
