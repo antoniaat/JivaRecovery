@@ -1,53 +1,37 @@
-import React, { PureComponent } from "react";
-import MapContainer from "../map/map-container";
-import ContactForm from "components/forms/contact/contact-form";
-import PageHeader from "components/common/page-header/page-header";
+import React, { useState, useEffect } from 'react';
 
-export default class ContactPage extends PureComponent {
-  constructor(props) {
-    super(props);
+import ContactForm from 'components/forms/contact/contact-form';
+import PageHeader from 'components/common/page-header/page-header';
+import MapContainer from '../map/map-container';
 
-    this.state = {
-      isMarkerShown: false,
-      img: "http://autoimage.templines.org/wp-content/uploads/2018/10/fbg.jpg",
-      title: "Contact Us"
-    };
-  }
+const ContactPage = () => {
+  const [marker, isMarkerShown] = useState(false);
 
-  componentDidMount() {
-    this.delayedShowMarker();
-  }
-
-  delayedShowMarker = () => {
+  function delayedShowMarker() {
     setTimeout(() => {
-      this.setState({ isMarkerShown: true });
+      isMarkerShown(!marker);
     }, 3000);
-  };
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false });
-    this.delayedShowMarker();
-  };
-
-  render() {
-    return (
-      <div className="ContactPage">
-        <div>
-          <PageHeader
-            img={this.state.img}
-            title={this.state.title}
-          ></PageHeader>
-        </div>
-        <section>
-          <ContactForm></ContactForm>
-        </section>
-        <section>
-          <MapContainer
-            isMarkerShown={this.state.isMarkerShown}
-            onMarkerClick={this.handleMarkerClick}
-          />
-        </section>
-      </div>
-    );
   }
-}
+
+  useEffect(() => {
+    delayedShowMarker();
+  });
+
+  function handleMarkerClick() {
+    isMarkerShown(!marker);
+    delayedShowMarker();
+  }
+
+  return (
+    <div className="contact-page">
+      <PageHeader title="Свържете се с нас" />
+      <ContactForm />
+      <MapContainer
+        isMarkerShown={marker}
+        onMarkerClick={handleMarkerClick}
+      />
+    </div>
+  );
+};
+
+export default ContactPage;
