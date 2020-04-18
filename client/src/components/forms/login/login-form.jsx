@@ -2,58 +2,46 @@ import './login-form.scss';
 
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import FormHeader from '../form-header/form-header';
 import userService from '../../../services/user-service';
+import FormHeader from '../form-header/form-header';
+import Label from '../label';
+import Submit from '../submit';
+import AdditionalLinks from '../additional-links';
+
+const additionalLinks = [
+  {
+    link: '/home',
+    text: 'ЗАБРАВЕНА ПАРОЛА?',
+  },
+  {
+    link: '/register',
+    text: 'НОВИ СТЕ ТУК?',
+  },
+];
 
 const LoginForm = ({ history }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   // const { auth, setAuth } = useContext(AuthContext);
 
   function handleFormSubmit() {
-    const user = { email, password };
-    userService.login(user).then((data) => {
-      history.push('/home');
-      // setAuth(true);
-    });
+    // const user = { email, password };
+    // userService.login(user).then((data) => {
+    //   history.push('/home');
+    //   // setAuth(true);
+    // });
   }
 
   return (
     <div className="login-form">
       <FormHeader
         title="Вход"
-        subtitle="Добавете Вашите транспортни услуги в платформата"
+        subtitle="Добавете вашите транспортни услуги в платформата"
       />
 
       <form onSubmit={handleFormSubmit}>
-        <label>
-          <input
-            onChange={(ev) => setEmail(ev.target.value)}
-            value={email}
-            name="email"
-            type="text"
-            placeholder="Имейл"
-          />
-        </label>
-
-        <label>
-          <input
-            onChange={(ev) => setPassword(ev.target.value)}
-            value={password}
-            name="password"
-            type="password"
-            placeholder="Парола"
-          />
-        </label>
-        <input type="submit" value="ВХОД" />
-        <label className="additional-links">
-          <span>
-            <a href="/home">ЗАБРАВЕНА ПАРОЛА?</a>
-          </span>
-          <span>
-            <a href="/register">НОВИ СТЕ ТУК?</a>
-          </span>
-        </label>
+        <Label type="email" name="email" placeholder="ИМЕЙЛ" />
+        <Label type="password" name="password" placeholder="ПАРОЛА" />
+        <Submit value="ВХОД" />
+        <AdditionalLinks links={additionalLinks} />
       </form>
     </div>
   );

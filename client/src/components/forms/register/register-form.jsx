@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormHeader from '../form-header/form-header';
-import TermsAndConditions from '../terms-and-conditions/TermsAndConditions';
+import TermsAndConditions from '../terms-and-conditions';
 import userService from '../../../services/user-service';
 import './register-form.scss';
 
