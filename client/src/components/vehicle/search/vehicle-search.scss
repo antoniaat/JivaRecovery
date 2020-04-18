@@ -1,0 +1,49 @@
+@import "../../../../node_modules//react-dropdown/style.css";
+@import "styles/styles.scss";
+@import "./theme-vehicle-search.scss";
+
+.vehicle-search {
+    display: block;
+    margin-top: 14rem;
+
+    h6 {
+        font-size: 1.3em;
+        padding: 0.3em 0;
+    }
+
+    @include for-tablet-portrait-up {
+        margin-top: 12rem;
+    }
+
+    @include for-desktop-up {
+        margin-top: 11rem;
+    }
+
+    .vehicle-search-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        vertical-align: top;
+        top: -1rem;
+        padding: 2.5rem;
+
+        article {
+            @include for-desktop-up {
+               display: inline-block;
+               width: 30%;
+               margin: 0 1em;
+            }
+        }
+
+        .vehicle-search-btn-wrapper {
+            display: inline-block;
+            width: 31%;
+            margin: 3em auto 0 auto;
+
+            @include for-desktop-up {
+                text-align: right;
+                margin: 0.6rem;
+            }
+        }
+    }
+}

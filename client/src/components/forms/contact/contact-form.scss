@@ -1,0 +1,26 @@
+@import 'styles/styles.scss';
+
+.contact-form {
+    width: 50%;
+    margin: 1.5rem auto;
+    text-align: center;
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    span {
+        color: $red-color;
+        font-weight: bold;
+    }
+
+    input:nth-child(1) {
+        margin: 1%;
+    }
+
+    textarea {
+        margin: 1% auto;
+        width: 92%;
+    }
+}

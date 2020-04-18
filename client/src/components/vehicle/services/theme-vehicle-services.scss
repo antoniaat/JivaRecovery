@@ -1,0 +1,15 @@
+@import "styles/styles.scss";
+@import "../../../../node_modules/react-web-tabs/dist/react-web-tabs.css";
+
+.vehicle-services {
+    background-color: $dark-color;
+    color: #fff;
+
+    .vehicle-services-tablist-title {
+        color: #fff;
+    }
+
+    .rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
+        border-right: 3px solid $main-color;
+    }
+}

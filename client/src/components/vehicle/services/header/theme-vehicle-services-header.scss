@@ -1,0 +1,14 @@
+@import 'styles/styles.scss';
+
+.vehicle-services-header {
+    text-align: center;
+
+    @include for-desktop-up {
+        text-align: left;
+    }
+    
+    .vehicle-services-header-line {
+        color: $main-color;
+        font-weight: bold;
+    }
+}

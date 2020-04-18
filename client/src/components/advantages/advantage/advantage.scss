@@ -1,0 +1,28 @@
+@import "styles/styles.scss";
+@import "./theme-advantage.scss";
+
+.advantage {
+    text-align: center;
+    padding: 1rem;
+    margin: 1em;
+
+    @include for-desktop-up {
+        padding: 2rem;
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    img {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 26px;
+        padding: 0.3em 0.4em;
+    }
+}

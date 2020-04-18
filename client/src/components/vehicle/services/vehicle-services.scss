@@ -1,0 +1,36 @@
+@import "styles/styles.scss";
+@import "../../../../node_modules/react-web-tabs/dist/react-web-tabs.css";
+@import "./theme-vehicle-services.scss";
+
+.vehicle-services {
+    padding: 4rem;
+    margin-top: 3rem;
+
+    .vehicle-services-tabs-wrapper {
+        padding-top: 3.5rem;
+        text-align: left;
+
+        .vehicle-services-tablist-title {
+            padding: 0.7em;
+        }
+
+        .vehicle-services-tabs-img {
+            padding-right: 20px;
+        }
+
+        .rwt__tabs[data-rwt-vertical="true"] {
+            display: block;
+
+            @include for-desktop-up {
+                display: flex;
+            }
+        }
+
+        @include for-tablet-portrait-up {
+        }
+
+        .rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
+            right: -2px;
+        }
+    }
+}

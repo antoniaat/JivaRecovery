@@ -1,0 +1,45 @@
+@import "styles/styles.scss";
+@import "./theme-footer.scss";
+
+.footer {
+    .main-footer-wrapper {
+        width: 100%;
+        padding: 1% 6%;
+        text-align: center;
+
+        article {
+            margin: 1em;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.9em;
+
+            @include for-desktop-up {
+                display: inline-block;
+                width: 22%;
+            }
+
+            .footer-logo {
+                padding-bottom: 8%;
+            }
+
+            li {
+                list-style: none;
+
+                a {
+                    display: block;
+                }
+            }
+
+            h6 {
+                padding-bottom: 5%;
+            }
+        }
+    }
+
+    .bottom-footer-wrapper {
+        padding: 1.2%;
+        padding-bottom: 0;
+        text-align: center;
+        font-size: 15px;
+    }
+}

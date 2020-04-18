@@ -1,0 +1,14 @@
+@import 'styles/styles.scss';
+
+.contact-box {
+    font-size: 1em;
+    padding: 1em;
+
+    @include for-desktop-up {
+        padding: 1em 1em 0 0;
+    }
+
+    span {
+        padding: 0 .5em 0 0;
+    }
+}

@@ -1,0 +1,19 @@
+@import 'styles/styles.scss';
+
+.VehicleTypes {
+    background: $dark-color;
+    color: white;
+    text-align: center;
+    padding: 3.5rem;
+
+    .vehicle-types {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    span {
+        color: $red-color;
+        font-weight: bold;
+        padding: 0 7px;
+    }
+}
