@@ -1,17 +1,15 @@
-@import 'styles/styles.scss';
+@import 'theme-partners.scss';
 
 .partners {
-    background: $light-gray;
     text-align: center;
     padding: 3% 15%;
 
-    p {
+    .partners-subtitle {
         display: inline;
         font-size: 15px;
     }
 
-    span {
-        color: $red-color;
+    .partners-line {
         padding: 0 1%;
         font-weight: bold;
     }
