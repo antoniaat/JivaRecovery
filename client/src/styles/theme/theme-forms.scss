@@ -1,0 +1,24 @@
+@import '../variables.scss';
+
+input {
+    border: 0.1em solid #eee;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: $gray-200;
+}
+
+textarea {
+    border: 0.1em solid #eee;
+}
+
+textarea:focus,
+input:focus {
+    border: 0.1em solid $red-color;
+}
+
+input[type='submit'] {
+    background: $red-color;
+    color: #eee;
+}
