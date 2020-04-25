@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { string } from 'prop-types';
 
-const Label = ({ type, name, placeholder }) => {
+const Label = ({
+  className, type, name, placeholder,
+}) => {
   const [value, setValue] = useState('');
 
   return (
-    <label htmlFor>
+    <label className={className} htmlFor>
       <input
         type={type}
         name={name}
@@ -17,10 +19,15 @@ const Label = ({ type, name, placeholder }) => {
   );
 };
 
+Label.defaultProps = {
+  className: '',
+};
+
 Label.propTypes = {
   type: string.isRequired,
   name: string.isRequired,
   placeholder: string.isRequired,
+  className: string,
 };
 
 export default Label;

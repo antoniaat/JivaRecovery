@@ -6,8 +6,20 @@
 
     @include for-desktop-up {
         width: 50%;
-        margin: 1.5rem auto;
+        margin: 1.5em auto;
         text-align: center;
+    }
+
+    textarea {
+        @include for-desktop-up {
+            width: 93%;
+        }
+    }
+
+    .name-label, .phone-label {
+        @include for-desktop-up {
+            margin-right: 1em;
+        }
     }
 
     .contact-form-title,

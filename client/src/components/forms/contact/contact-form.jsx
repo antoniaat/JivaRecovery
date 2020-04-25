@@ -15,9 +15,9 @@ const ContactForm = () => (
     </p>
 
     <form>
-      <Label type="text" name="name" placeholder="ИМЕНА" />
+      <Label className="name-label" type="text" name="name" placeholder="ИМЕНА" />
       <Label type="email" name="email" placeholder="ИМЕЙЛ" />
-      <Label type="number" name="phone" placeholder="ТЕЛЕФОН" />
+      <Label className="phone-label" type="number" name="phone" placeholder="ТЕЛЕФОН" />
       <Label type="text" name="subject" placeholder="ТЕМА" />
       <Textarea name="message" placeholder="СЪОБЩЕНИЕ" />
       <Submit />
