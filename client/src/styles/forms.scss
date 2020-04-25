@@ -1,50 +1,53 @@
+@import './breakpoints.scss';
+
 input {
+    width: 90%;
+    margin: 0.5em auto;
     border: 0.1em solid #eee;
     cursor: text;
     user-select: none;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     padding: 0.2em;
-    width: 45%;
     border-radius: 1px;
     outline: none;
+
+    @include for-desktop-up {
+        width: 45%;
+    }
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #bbbbbb;
+    color: $gray-200;
     font-weight: 600;
     font-size: 15px;
 }
 
-input:nth-child(1) {
-    margin-right: 5%;
-    margin-bottom: 1rem;
-}
-
 textarea {
-    border: 0.1em solid #eee;
     display: block;
-    width: 95%;
+    width: 90%;
+    height: 180px;
+    margin: 0 auto;
     font-size: 16px;
     font-weight: 600;
+    border: 0.1em solid #eee;
     padding: 0.2em;
+    outline: none;
     resize: none;
     border-radius: 1px;
-    outline: none;
-    transition: all .3s ease-in-out;
-    height: 180px;
+    transition: all 0.3s ease-in-out;
 }
 
 textarea:focus,
 input:focus {
     border: 0.1em solid $red-color;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 input[type='submit'] {
     border: none;
     background: $red-color;
-    color: white;
+    color: #eee;
     font-weight: lighter;
     width: auto;
     margin: 1rem;

@@ -7,11 +7,11 @@ import Submit from '../submit';
 
 const ContactForm = () => (
   <div className="contact-form">
-    <h1>Свържете се с нас</h1>
-    <p>
-      <span> - </span>
+    <h1 className="contact-form-title">Свържете се с нас</h1>
+    <p className="contact-form-subtitle">
+      <span className="contact-form-subtitle-line"> - </span>
       Тук сме, за да помогнем
-      <span> - </span>
+      <span className="contact-form-subtitle-line"> - </span>
     </p>
 
     <form>

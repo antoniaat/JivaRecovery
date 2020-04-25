@@ -1,26 +1,25 @@
-@import 'styles/styles.scss';
+@import 'theme-contact-form.scss';
 
 .contact-form {
-    width: 50%;
-    margin: 1.5rem auto;
+    padding: 1.5em;
     text-align: center;
 
-    h1,
-    p {
+    @include for-desktop-up {
+        width: 50%;
+        margin: 1.5rem auto;
         text-align: center;
     }
 
-    span {
-        color: $red-color;
-        font-weight: bold;
+    .contact-form-title,
+    .contact-form-subtitle {
+        text-align: center;
     }
 
-    input:nth-child(1) {
-        margin: 1%;
-    }
+    .contact-form-subtitle {
+        margin: .5em auto;
 
-    textarea {
-        margin: 1% auto;
-        width: 92%;
+        .contact-form-subtitle-line {
+            font-weight: bold;
+        }
     }
 }
