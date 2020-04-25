@@ -1,0 +1,10 @@
+@import 'styles/styles.scss';
+
+.vehicle-types {
+    background: $dark-color;
+    color: #fff;
+
+    .vehicle-types-line {
+        color: $red-color;
+    }
+}

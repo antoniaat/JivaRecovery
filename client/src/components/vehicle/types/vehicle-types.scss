@@ -1,18 +1,15 @@
-@import 'styles/styles.scss';
+@import 'theme-vehicle-types.scss';
 
-.VehicleTypes {
-    background: $dark-color;
-    color: white;
+.vehicle-types {
     text-align: center;
     padding: 3.5rem;
 
-    .vehicle-types {
+    .vehicle-types-container {
         width: 80%;
         margin: 1rem auto;
     }
 
-    span {
-        color: $red-color;
+    .vehicle-types-line {
         font-weight: bold;
         padding: 0 7px;
     }

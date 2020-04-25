@@ -1,35 +1,27 @@
-import React, { Component } from 'react';
-import vehiclesTypesData from './vehicle-types-data.json';
-import VehicleModel from '../vehicle-model';
+
 import './vehicle-types.scss';
 
-class VehicleTypes extends Component {
-  constructor(props) {
-    super(props);
+import React from 'react';
+import VehicleModel from '../vehicle-model';
+import cars from './vehicle-types-data';
 
-    this.state = { cars: vehiclesTypesData };
-  }
+const VehicleTypes = () => (
+  <div className="vehicle-types">
+    <h1 className="vehicle-types-title">Types of Vehicles</h1>
+    <p>
+      <span className="vehicle-types-line">-</span>
+      {' '}
+      THE AUTOS WE DEALS IN
+      {' '}
+      <span className="vehicle-types-line">-</span>
+    </p>
 
-  render() {
-    return (
-      <div className="VehicleTypes">
-        <h1>Types of Vehicles</h1>
-        <p>
-          <span>-</span>
-          {' '}
-          THE AUTOS WE DEALS IN
-          {' '}
-          <span>-</span>
-        </p>
-
-        <div className="vehicle-types">
-          {this.state.cars.map((object, i) => (
-            <VehicleModel key={i} vehicleModel={object} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-}
+    <div className="vehicle-types-container">
+      {cars.map((object, i) => (
+        <VehicleModel vehicleModel={object} />
+      ))}
+    </div>
+  </div>
+);
 
 export default VehicleTypes;
