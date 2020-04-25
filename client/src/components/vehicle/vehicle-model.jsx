@@ -1,26 +1,36 @@
 import React from 'react';
+import { string, number } from 'prop-types';
 
 import './vehicle-model.scss';
 
-const VehicleModel = (props) => {
-  const {
-    img, name, offersCount, lowestPriceOffer,
-  } = props.vehicleModel;
-
-  return (
-    <div className="vehicle-model">
-      <div>
-        <img src={img} alt="vehicle-img" />
-        <h6>{name}</h6>
-        <p>
-          {offersCount}
-          {' '}
-          offers starting from $
-          {lowestPriceOffer}
-        </p>
-      </div>
+const VehicleModel = ({
+  img, name, offersCount, lowestPriceOffer,
+}) => (
+  <div className="vehicle-model">
+    <div>
+      <img src={img} alt={name} />
+      <h6>{name}</h6>
+      <p>
+        {offersCount}
+        {' '}
+        offers starting from $
+        {lowestPriceOffer}
+      </p>
     </div>
-  );
+  </div>
+);
+
+VehicleModel.defaultProps = {
+  name: '',
+  offersCount: 0,
+  lowestPriceOffer: 0,
+};
+
+VehicleModel.propTypes = {
+  img: string.isRequired,
+  name: string,
+  offersCount: number,
+  lowestPriceOffer: number,
 };
 
 export default VehicleModel;

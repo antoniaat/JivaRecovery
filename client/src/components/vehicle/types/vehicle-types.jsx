@@ -17,9 +17,9 @@ const VehicleTypes = () => (
     </p>
 
     <div className="vehicle-types-container">
-      {cars.map((object, i) => (
-        <VehicleModel vehicleModel={object} />
-      ))}
+      {cars.map(({
+        img, name, offersCount, lowestPriceOffer,
+      }) => (<VehicleModel img={img} name={name} offersCount={offersCount} lowestPriceOffer={lowestPriceOffer} />)) }
     </div>
   </div>
 );
