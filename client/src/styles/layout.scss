@@ -2,3 +2,20 @@
     .hidden {
         display: none;
     }
+
+    // Services page styles
+    .services-page-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 2em auto;
+
+        .services-page-vehicles {
+            padding-right: 2em;
+        }
+
+        // Override vehicle styles for displaying 3 vehicles on row
+        .vehicle {
+            width: 30%;
+        }
+    }
