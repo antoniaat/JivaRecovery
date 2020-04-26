@@ -1,47 +1,19 @@
-import React, { Fragment, Component } from "react";
+import React from 'react';
+import Vehicle from '../../components/vehicle/vehicle';
+import PageHeader from '../../components/common/page-header/page-header';
+import vehicles from '../../components/vehicle/offers/vehicle-offers-data';
 
-class AutoListingPage extends Component {
-  state = {
-    vehicles: [],
-    isLoading: false
-  };
-
-  render() {
-    const { vehicles, isLoading } = this.state;
-
-    if (isLoading) {
-      return <div>loaded successfuly</div>;
-    }
-
-    if (vehicles.length && !isLoading) {
-      return (
-        <div>
-          <h1>No vehicles :(</h1>
-        </div>
-      );
-    }
-
-    return (
-      <Fragment>
-        <h2>Top rated</h2>
-        <div>
-          {console.log(vehicles)}
-          {/* {vehicles.map(vehicle => {
-            <VehicleModel key={vehicle.id} {...vehicle} />;
-          })} */}
-        </div>
-      </Fragment>
-    );
-  }
-
-  async componentDidMount() {
-    try {
-      const vehicles = await AutoListingPage.service.getTopRatedVehicles();
-      this.setState({ vehicles });
-    } catch (error) {
-      console.error(error);
-    }
-  }
-}
+const AutoListingPage = () => (
+  <>
+    <PageHeader title="Доставчици" subtitle="Пътна помощ и транспортни услуги за цялата страна" />
+    <section>
+      {vehicles.map(({
+        name, price, year, mileage, transmission, rental, img,
+      }) => (
+        <Vehicle name={name} price={price} year={year} mileage={mileage} vehicleTransmission={transmission} rental={rental} img={img} />
+      ))}
+    </section>
+  </>
+);
 
 export default AutoListingPage;
