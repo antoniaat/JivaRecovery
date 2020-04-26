@@ -7,7 +7,7 @@ import ContactPage from './containers/pages/contact-page';
 import NewsPage from './containers/pages/news-page';
 import RegisterPage from './containers/pages/register-page';
 import LoginPage from './containers/pages/login-page';
-import AutoListingPage from './containers/pages/auto-listing-page';
+import ServicesPage from './containers/pages/services-page';
 
 const AppRouter = () => (
   <div>
@@ -21,10 +21,8 @@ const AppRouter = () => (
       <Route path="/blog" component={NewsPage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
-      <Route path="/auto-listing" component={AutoListingPage} />
-      <Route path="/all" component={AutoListingPage} />
+      <Route path="/services" component={ServicesPage} />
 
-      {/* <Route component={NotFoundPage} /> */}
       <Redirect to="/home" />
     </Switch>
   </div>

@@ -7,7 +7,7 @@ const UnauthorizedNav = () => (
   <ul>
     <ListItem link="/home" text="Начало" />
     <ListItem link="/about" text="Информация" />
-    <ListItem link="/auto-listing" text="Услуги" />
+    <ListItem link="/services" text="Услуги" />
     <ListItem link="/news" text="Новини" />
     <ListItem link="/contact" text="Контакти" />
     <ButtonListItem link="/login" text="Вход" />
