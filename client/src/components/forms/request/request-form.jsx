@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import requestService from '../../../services/request-service';
 import FormHeader from "../form-header/form-header";
 
 const RequestForm = () => {
@@ -12,6 +13,19 @@ const RequestForm = () => {
   const [condition, setCondition] = useState("");
 
   function handleFormSubmit() {
+      const request = {
+        brand,
+        model,
+        year,
+        pickupLocation,
+        deliveryLocation,
+        pickupDate,
+        deliveryDate,
+        condition,
+      };
+      debugger;
+      requestService.add(request);
+      // history.push("/login");
     console.log("yee");
   }
 
