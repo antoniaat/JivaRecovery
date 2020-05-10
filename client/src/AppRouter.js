@@ -9,6 +9,7 @@ import RegisterPage from "./containers/pages/register-page";
 import LoginPage from "./containers/pages/login-page";
 import ServicesPage from "./containers/pages/services-page";
 import ProfilePage from "./containers/pages/profile-page";
+import RequestPage from "./containers/pages/request-page";
 
 const AppRouter = () => (
   <Switch>
@@ -23,6 +24,7 @@ const AppRouter = () => (
     <Route path="/register" component={RegisterPage} />
     <Route path="/services" component={ServicesPage} />
     <Route path="/profile" component={ProfilePage} />
+    <Route path="/request" component={RequestPage} />
 
     <Redirect to="/home" />
   </Switch>
