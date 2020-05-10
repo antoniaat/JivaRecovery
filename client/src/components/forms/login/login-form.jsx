@@ -1,15 +1,11 @@
 import "./login-form.scss";
 
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { withRouter } from "react-router-dom";
 import userService from "../../../services/user-service";
-import FormHeader from "../form-header/form-header";
-// import Label from '../label';
-import Submit from "../submit";
-import AdditionalLinks from "../additional-links";
-
 import { AuthContext } from "../../../ContextWrapper";
-import { func } from "prop-types";
+import FormHeader from "../form-header/form-header";
+import AdditionalLinks from "../additional-links";
 
 const additionalLinks = [
   {
@@ -36,8 +32,8 @@ const LoginForm = ({ history }) => {
     const password = state.password;
     const user = { email, password };
 
-    userService.login(user).then(() => {
-      setAuth(true);
+    userService.login(user).then((res) => {
+      setAuth(res._id);
       history.push("/home");
     });
   }

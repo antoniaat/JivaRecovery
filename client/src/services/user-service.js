@@ -1,6 +1,13 @@
 import handleResponse from "../utils/handle-response";
 
 const userService = {
+  getUser: function (id) {
+    return fetch(`http://localhost:9999/api/user/${id}`, {
+      method: "GET",
+      credentials: "include",
+    }).then(handleResponse);
+  },
+
   register: function (data) {
     return fetch(`http://localhost:9999/api/user/register`, {
       body: JSON.stringify(data),

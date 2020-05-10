@@ -4,8 +4,9 @@ const utils = require("../utils");
 
 module.exports = {
   get: (req, res, next) => {
-    models.User.find()
-      .then((users) => res.send(users))
+    const { id } = req.body;
+    models.User.findOne({ id })
+      .then((user) => res.send(user))
       .catch(next);
   },
 

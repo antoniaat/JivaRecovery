@@ -9,7 +9,7 @@ const AuthorizedNav = ({ history }) => {
   function logout(e) {
     e.preventDefault();
     userService.logout();
-    setAuth(false);
+    setAuth('');
   }
 
   return (
