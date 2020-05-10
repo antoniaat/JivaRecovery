@@ -18,7 +18,7 @@ const AuthorizedNav = ({ history }) => {
       <ListItem link="/about" text="Информация" />
       <ListItem link="/services" text="Услуги" />
       <ListItem link="/news" text="Новини" />
-      <ListItem link="/home" text="Профил" />
+      <ListItem link="/profile" text="Профил" />
       <li className="list-item">
         <a href='#' onClick={logout}>ИЗХОД</a>
       </li>

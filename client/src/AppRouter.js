@@ -8,7 +8,7 @@ import NewsPage from "./containers/pages/news-page";
 import RegisterPage from "./containers/pages/register-page";
 import LoginPage from "./containers/pages/login-page";
 import ServicesPage from "./containers/pages/services-page";
-import ContextWrapper from "ContextWrapper";
+import ProfilePage from "./containers/pages/profile-page";
 
 const AppRouter = () => (
   <Switch>
@@ -22,6 +22,7 @@ const AppRouter = () => (
     <Route path="/login" component={LoginPage} />
     <Route path="/register" component={RegisterPage} />
     <Route path="/services" component={ServicesPage} />
+    <Route path="/profile" component={ProfilePage} />
 
     <Redirect to="/home" />
   </Switch>

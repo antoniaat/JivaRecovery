@@ -4,36 +4,43 @@ const saltRounds = 10;
 
 const Schema = mongoose.Schema;
 const Model = mongoose.model;
-const { String, Number } = Schema.Types;
+const { String, Array, Boolean } = Schema.Types;
 
 const userSchema = new Schema({
+  name: {
+    type: String,
+  },
   email: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
-
   password: {
     type: String,
-    required: true
+    required: true,
   },
-
-  firstName: {
-    type: String
+  phone: {
+    type: String,
+    required: true,
   },
-
-  lastName: {
-    type: String
-  }
+  requests: {
+    type: Array,
+  },
+  feedback: {
+    type: Array,
+  },
+  isDeleted: {
+    type: Boolean,
+  },
 });
 
 userSchema.methods = {
-  matchPassword: function(password) {
+  matchPassword: function (password) {
     return bcrypt.compare(password, this.password);
-  }
+  },
 };
 
-userSchema.pre("save", function(next) {
+userSchema.pre("save", function (next) {
   if (this.isModified("password")) {
     bcrypt.genSalt(saltRounds, (err, salt) => {
       bcrypt.hash(this.password, salt, (err, hash) => {

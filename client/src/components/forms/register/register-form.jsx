@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import FormHeader from '../form-header/form-header';
-import TermsAndConditions from '../terms-and-conditions';
-import userService from '../../../services/user-service';
-import './register-form.scss';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import FormHeader from "../form-header/form-header";
+import TermsAndConditions from "../terms-and-conditions";
+import userService from "../../../services/user-service";
+import "./register-form.scss";
 
 const RegisterForm = ({ history }) => {
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [password, setPassword] = useState('');
-  const [rePassword, setRePassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
 
   function handleFormSubmit() {
     const user = {
-      email, firstName, lastName, password,
+      name,
+      email,
+      password,
+      phone,
     };
     userService.register(user);
-    history.push('/login');
+    history.push("/login");
   }
 
   return (
@@ -28,6 +30,15 @@ const RegisterForm = ({ history }) => {
       />
 
       <form onSubmit={handleFormSubmit}>
+        <label>
+          <input
+            type="text"
+            name="name"
+            onChange={(ev) => setName(ev.target.value)}
+            value={name}
+            placeholder="Име"
+          />
+        </label>
         <label>
           <input
             onChange={(ev) => setEmail(ev.target.value)}
@@ -42,20 +53,10 @@ const RegisterForm = ({ history }) => {
         <label>
           <input
             type="text"
-            name="firstName"
-            onChange={(ev) => setFirstName(ev.target.value)}
-            value={firstName}
-            placeholder="Име"
-          />
-        </label>
-
-        <label>
-          <input
-            type="text"
-            name="lastName"
-            onChange={(ev) => setLastName(ev.target.value)}
-            value={lastName}
-            placeholder="Фамилия"
+            name="phone"
+            onChange={(ev) => setPhone(ev.target.value)}
+            value={phone}
+            placeholder="Телефон"
           />
         </label>
 
@@ -69,15 +70,6 @@ const RegisterForm = ({ history }) => {
           />
         </label>
 
-        <label>
-          <input
-            type="password"
-            name="rePassword"
-            onChange={(ev) => setRePassword(ev.target.value)}
-            value={rePassword}
-            placeholder="Повторете паролата"
-          />
-        </label>
         <TermsAndConditions />
         <input type="submit" value="РЕГИСТРАЦИЯ" />
         <label className="additional-links">
