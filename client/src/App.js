@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import TopBar from 'components/common/header/topbar/top-bar';
-import Navbar from 'components/common/header/navigation/navbar';
-import Footer from 'components/common/footer/footer';
+import TopBar from "components/common/header/topbar/top-bar";
+import Navbar from "components/common/header/navigation/navbar";
+import Footer from "components/common/footer/footer";
 
-import AppRouter from './AppRouter.js';
-import ContextWrapper from './ContextWrapper';
+import AppRouter from "./AppRouter.js";
+import ContextWrapper from "./ContextWrapper";
 
 function App() {
   return (

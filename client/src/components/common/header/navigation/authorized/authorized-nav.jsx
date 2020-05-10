@@ -1,17 +1,15 @@
-import React, { useContext } from 'react';
-import ListItem from '../list-item/list-item';
-import userService from '../../../../../services/user-service';
-import { AuthContext } from '../../../../../ContextWrapper';
+import React, { useContext } from "react";
+import ListItem from "../list-item/list-item";
+import userService from "../../../../../services/user-service";
+import { AuthContext } from "../../../../../ContextWrapper";
 
 const AuthorizedNav = ({ history }) => {
-  const { _, updateAuth } = useContext(AuthContext);
+  const { setAuth } = useContext(AuthContext);
 
   function logout(e) {
     e.preventDefault();
     userService.logout();
-    localStorage.removeItem('user');
-    updateAuth(false);
-    history.push('/home');
+    setAuth(false);
   }
 
   return (
@@ -21,7 +19,9 @@ const AuthorizedNav = ({ history }) => {
       <ListItem link="/services" text="Услуги" />
       <ListItem link="/news" text="Новини" />
       <ListItem link="/home" text="Профил" />
-      <ListItem link="/home" text="Изход" onClick={logout} />
+      <li className="list-item">
+        <a href='#' onClick={logout}>ИЗХОД</a>
+      </li>
     </ul>
   );
 };
