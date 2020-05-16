@@ -20,7 +20,7 @@ module.exports = {
         deliveryDate,
         condition,
       } = req.body;
-      models.Request.create(
+      models.Request.create({
         brand,
         model,
         year,
@@ -28,9 +28,11 @@ module.exports = {
         deliveryLocation,
         pickupDate,
         deliveryDate,
-        condition
-      )
-        .then((createdRequest) => res.send(createdRequest))
+        condition,
+      })
+        .then((createdRequest) => {
+          res.send(createdRequest);
+        })
         .catch(next);
     },
   },
@@ -50,7 +52,7 @@ module.exports = {
       isDeleted,
     } = req.body;
 
-    models.User.update(
+    models.Request.update(
       { _id: id },
       {
         brand,

@@ -7,6 +7,6 @@ router.post("/add", controllers.request.post.add);
 
 router.put("/:id", controllers.request.put);
 
-router.delete("/:id", controllers.user.delete);
+router.delete("/:id", controllers.request.delete);
 
 module.exports = router;
