@@ -1,3 +1,4 @@
+import "./admin-panel.scss";
 import "react-tabs/style/react-tabs.css";
 
 import React from "react";
