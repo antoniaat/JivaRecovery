@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import userService from "../../services/user-service";
 import { AuthContext } from "../../ContextWrapper";
 
@@ -12,17 +12,19 @@ const ProfilePage = () => {
     feedback: [],
   });
 
-  userService.getUser(auth).then((res) => {
-    const { name, email, phone, requests, feedback } = res;
-
-    setState({
-      name: name,
-      email: email,
-      phone: phone,
-      requests: requests,
-      feedback: feedback,
+  useEffect(() => {
+    userService.getUser(auth).then((res) => {
+      const { name, email, phone, requests, feedback } = res;
+  
+      setState({
+        name: name,
+        email: email,
+        phone: phone,
+        requests: requests,
+        feedback: feedback,
+      });
     });
-  });
+  }, []);
 
   return (
     <>

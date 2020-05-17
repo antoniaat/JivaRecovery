@@ -19,7 +19,7 @@ const additionalLinks = [
 ];
 
 const LoginForm = ({ history }) => {
-  const { setAuth } = useContext(AuthContext);
+  const { auth, setAuth } = useContext(AuthContext);
   const [state, setState] = React.useState({
     email: "",
     password: "",
@@ -33,7 +33,9 @@ const LoginForm = ({ history }) => {
     const user = { email, password };
 
     userService.login(user).then((res) => {
+      // console.log(res._id);
       setAuth(res._id);
+      // console.log(auth);
       history.push("/home");
     });
   }
