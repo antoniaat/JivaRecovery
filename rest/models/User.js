@@ -29,6 +29,9 @@ const userSchema = new Schema({
   feedback: {
     type: Array,
   },
+  isAdmin: {
+    type: Boolean,
+  },
   isDeleted: {
     type: Boolean,
   },
