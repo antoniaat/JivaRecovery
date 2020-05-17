@@ -3,12 +3,13 @@ import "react-tabs/style/react-tabs.css";
 
 import React, { useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Request from "../request/request";
 import requestService from "../../../services/request-service";
 
 const AdminPanel = () => {
-  let [ requests, setRequests ] = useState([]);
+  let [requests, setRequests] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     requestService.getRequest("all").then((res) => {
       setRequests(res);
     });
@@ -18,17 +19,39 @@ const AdminPanel = () => {
     <div className="admin-panel">
       <Tabs>
         <TabList>
-          <Tab>Requests</Tab>
-          <Tab>Users</Tab>
-          <Tab>Feedbacks</Tab>
+          <Tab>Заявки</Tab>
+          <Tab>Потребители</Tab>
+          <Tab>Обратна връзка</Tab>
         </TabList>
 
         <TabPanel>
-          {requests.map(({brand, model, year, pickupLocation, deliveryLocation, pickupDate, deliveryDate, condition}) => 
-          {
-            return <div>{model}</div>
-          })}
-          <p>Requests</p>
+          {requests.length > 0
+            ? requests.map(
+              ({
+                brand,
+                model,
+                year,
+                pickupLocation,
+                deliveryLocation,
+                pickupDate,
+                deliveryDate,
+                condition,
+              }) => {
+                return (
+                  <Request
+                    brand={brand}
+                    model={model}
+                    year={year}
+                    pickupLocation={pickupLocation}
+                    deliveryLocation={deliveryLocation}
+                    pickupDate={pickupDate}
+                    deliveryDate={deliveryDate}
+                    condition={condition}
+                  />
+                );
+              }
+            )
+            : "Няма текущи заявки"}
         </TabPanel>
         <TabPanel>
           <p>Users</p>
