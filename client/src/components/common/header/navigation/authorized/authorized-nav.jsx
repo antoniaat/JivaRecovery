@@ -27,7 +27,7 @@ const AuthorizedNav = ({ history }) => {
       <ListItem link="/news" text="Новини" />
       <ListItem link="/profile" text="Профил" />
       {isAdmin 
-        ? <ListItem link="/request" text="Администрация" />
+        ? <ListItem link="/administration" text="Администрация" />
         : <ListItem link="/request" text="Нова заявка" />
       }
       <li className="list-item">
