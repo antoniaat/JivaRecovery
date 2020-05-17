@@ -17,13 +17,6 @@ const requestService = {
       },
     }).then(handleResponse);
   },
-
-  getAllRequests: function () {
-    return fetch(`http://localhost:9999/api/request`, {
-      method: "GET",
-      credentials: "include",
-    }).then(handleResponse);
-  },
 };
 
 export default requestService;

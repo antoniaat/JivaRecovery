@@ -2,10 +2,22 @@ const models = require("../models");
 
 module.exports = {
   get: (req, res, next) => {
-    const { id } = req.body;
-    models.Request.findOne({ id })
-      .then((request) => res.send(request))
-      .catch(next);
+    const id = req.params.id;
+
+    // Get all requests
+    if (id === "all") {
+      models.Request.find({})
+        .then((request) => {
+          res.send(request);
+        })
+        .catch(next);
+    } else {
+      models.Request.findOne({ _id: id })
+        .then((request) => {
+          res.send(request);
+        })
+        .catch(next);
+    }
   },
 
   post: {
