@@ -1,9 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./request.scss";
 
-import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
-import EditRequestForm from "../../forms/request/edit/edit-request-form";
+import React from "react";
+import EditRequestModal from "../../modals/edit-request";
 
 const Request = ({
   _id,
@@ -12,10 +11,6 @@ const Request = ({
   pickupDate,
   deliveryDate,
 }) => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <div className="request">
       <section className="request-main">
@@ -36,28 +31,7 @@ const Request = ({
           <span className="request-content">{deliveryDate}</span>
         </article>
       </section>
-      <button
-        className="button button-primary request-btn"
-        onClick={handleShow}
-      >
-        Редактирай
-      </button>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Редактиране</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <EditRequestForm />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Затвори
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-           Запази
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <EditRequestModal requestId={_id} />
     </div>
   );
 };

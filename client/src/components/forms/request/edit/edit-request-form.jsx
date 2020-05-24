@@ -12,6 +12,7 @@ const EditRequestForm = () => {
   const [pickupDate, setPickupDate] = useState("");
   const [deliveryDate, setDeliveryDate] = useState("");
   const [condition, setCondition] = useState("");
+  const [status, setStatus] = useState("");
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -108,6 +109,16 @@ const EditRequestForm = () => {
             onChange={(ev) => setCondition(ev.target.value)}
             value={condition}
             placeholder="Състояние на МПС"
+            required
+          />
+        </label>
+        <label>
+          <input
+            type="text"
+            name="status"
+            onChange={(ev) => setStatus(ev.target.value)}
+            value={status}
+            placeholder="Статус"
             required
           />
         </label>
