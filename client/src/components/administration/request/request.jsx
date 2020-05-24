@@ -1,4 +1,4 @@
-import './request.scss';
+import "./request.scss";
 
 import React from "react";
 
@@ -8,16 +8,24 @@ const Request = ({
   pickupDate,
   deliveryDate,
 }) => (
-  <div className="request">
-    {/* <div className="request-brand">{brand}</div> */}
-    {/* <div className="request-model">{model}</div> */}
-    {/* <div className="request-year">{year}</div> */}
-    <div className="request-pickup-location">{pickupLocation}</div>
-    <div className="request-delivery-location">{deliveryLocation}</div>
-    <div className="request-pickup-date">{pickupDate}</div>
-    <div className="request-delivery-date">{deliveryDate}</div>
-    {/* <div className="request-condition">{condition}</div> */}
-  </div>
+  <section className="request">
+    <article className="request-pickup-location">
+      <h3 className="request-heading">Място за взимане:</h3>
+      <span className="request-content">{pickupLocation}</span>
+    </article>
+    <article className="request-delivery-location">
+      <h3 className="request-heading">Място за доставяне:</h3>
+      <span className="request-content">{deliveryLocation}</span>
+    </article>
+    <article className="request-pickup-date">
+      <h3 className="request-heading">Дата за взимане:</h3>
+      <span className="request-content">{pickupDate}</span>
+    </article>
+    <article className="request-delivery-date">
+      <h3 className="request-heading">Дата за доставяне:</h3>
+      <span className="request-content">{deliveryDate}</span>
+    </article>
+  </section>
 );
 
 export default Request;
