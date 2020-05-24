@@ -31,6 +31,7 @@ module.exports = {
         pickupDate,
         deliveryDate,
         condition,
+        status,
       } = req.body;
       models.Request.create({
         brand,
@@ -41,6 +42,7 @@ module.exports = {
         pickupDate,
         deliveryDate,
         condition,
+        status,
       })
         .then((createdRequest) => {
           res.send(createdRequest);

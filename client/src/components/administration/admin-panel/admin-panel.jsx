@@ -32,6 +32,11 @@ const AdminPanel = () => {
       selector: "condition",
       sortable: true,
     },
+    {
+      name: "Статус",
+      selector: "status",
+      sortable: true,
+    },
   ];
 
   const userColumns = [
