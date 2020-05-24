@@ -1,0 +1,9 @@
+@import 'styles/styles.scss';
+@import './theme-edit-request-form.scss';
+
+.edit-request-form {
+    label, input {
+        display: block;
+        width: 100%;
+    }
+}

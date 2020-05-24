@@ -17,6 +17,15 @@ const requestService = {
       },
     }).then(handleResponse);
   },
+
+  edit: function (id) {
+    return fetch(`http://localhost:9999/api/request/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }).then(handleResponse);
+  },
 };
 
 export default requestService;
