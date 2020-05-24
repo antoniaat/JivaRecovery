@@ -35,13 +35,6 @@ const userService = {
       credentials: "include",
     }).then(handleResponse);
   },
-
-  getAllUsers: function () {
-    return fetch(`http://localhost:9999/api/user`, {
-      method: "GET",
-      credentials: "include",
-    }).then(handleResponse);
-  },
 };
 
 export default userService;

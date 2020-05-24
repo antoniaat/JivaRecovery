@@ -6,9 +6,11 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import DataTable from "react-data-table-component";
 import Request from "../request/request";
 import requestService from "../../../services/request-service";
+import userService from "../../../services/user-service";
 
 const AdminPanel = () => {
   let [requests, setRequests] = useState([]);
+  let [users, setUsers] = useState([]);
   const requestColumns = [
     {
       name: "Марка",
@@ -39,6 +41,9 @@ const AdminPanel = () => {
   useEffect(() => {
     requestService.getRequest("all").then((res) => {
       setRequests(res);
+    });
+    userService.getUser("all").then((res) => {
+      setUsers(res);
     });
   }, []);
 

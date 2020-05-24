@@ -5,11 +5,21 @@ const utils = require("../utils");
 module.exports = {
   get: (req, res, next) => {
     const id = req.params.id;
-    models.User.findOne({ _id: id })
-      .then((user) => {
-        res.send(user);
-      })
-      .catch(next);
+
+    // Get all users
+    if (id === "all") {
+      models.User.find({})
+        .then((user) => {
+          res.send(user);
+        })
+        .catch(next);
+    } else {
+      models.User.findOne({ _id: id })
+        .then((user) => {
+          res.send(user);
+        })
+        .catch(next);
+    }
   },
 
   post: {
