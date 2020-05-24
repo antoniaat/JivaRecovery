@@ -34,6 +34,24 @@ const AdminPanel = () => {
     },
   ];
 
+  const userColumns = [
+    {
+      name: "Име",
+      selector: "name",
+      sortable: true,
+    },
+    {
+      name: "Имейл",
+      selector: "email",
+      sortable: true,
+    },
+    {
+      name: "Телефон",
+      selector: "phone",
+      sortable: true,
+    },
+  ]
+
   const ExpanableRow = ({ data }) => {
     return <Request {...data} />;
   };
@@ -75,7 +93,19 @@ const AdminPanel = () => {
           )}
         </TabPanel>
         <TabPanel>
-          <p>Users</p>
+        {users.length > 0 ? (
+            <DataTable
+              columns={userColumns}
+              data={users}
+              responsive
+              defaultSortField
+              pagination
+              paginationRowsPerPageOptions={[2, 5, 10, 15, 20, 25, 30]}
+              pointerOnHover
+            />
+          ) : (
+            "Няма регистрирани потребители"
+          )}
         </TabPanel>
         <TabPanel>
           <p>Feedbacks</p>
