@@ -6,34 +6,59 @@ import { Modal, Button } from "react-bootstrap";
 import requestService from "../../services/request-service";
 
 const EditRequestModal = ({ requestId }) => {
-  const [state, setState] = useState({});
+  const [brand, setBrand] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState("");
+  const [pickupLocation, setPickupLocation] = useState("");
+  const [deliveryLocation, setDeliveryLocation] = useState("");
+  const [pickupDate, setPickupDate] = useState("");
+  const [deliveryDate, setDeliveryDate] = useState("");
+  const [condition, setCondition] = useState("");
+  const [status, setStatus] = useState("");
+
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   const handleSave = () => {
     setShow(false);
+    const updatedRequest = {
+      brand,
+      model,
+      year,
+      pickupLocation,
+      deliveryLocation,
+      pickupDate,
+      deliveryDate,
+      condition,
+      status,
+    };
 
-    requestService.edit(requestId, state).then(() => {
-      console.log(state);
-    });
-  };
-  const handleChange = (e) => {
-    e.preventDefault();
-    const { name, value } = e.target;
-
-    setState((prevState) => {
-      return {
-        ...prevState,
-        name: value,
-      };
-    });
+    requestService.edit(requestId, updatedRequest);
   };
 
   useEffect(() => {
     requestService.getRequest(requestId).then((data) => {
-      setState((prevState) => ({
-        ...data,
-      }));
+      const {
+        brand,
+        model,
+        year,
+        pickupLocation,
+        deliveryLocation,
+        pickupDate,
+        deliveryDate,
+        condition,
+        status,
+      } = data;
+
+      setBrand(brand);
+      setModel(model);
+      setYear(year);
+      setPickupLocation(pickupLocation);
+      setDeliveryLocation(deliveryLocation);
+      setPickupDate(pickupDate);
+      setDeliveryDate(deliveryDate);
+      setCondition(condition);
+      setStatus(status);
     });
   }, []);
 
@@ -56,16 +81,16 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="brand"
-                  value={state.brand}
-                  onChange={(e) => {handleChange(e)}}
+                  value={brand}
+                  onChange={(e) => setBrand(e.target.value)}
                   placeholder="Марка"
                   required
                 />
               </label>
               <label>
                 <input
-                  onChange={handleChange}
-                  value={state.model}
+                  value={model}
+                  onChange={(e) => setModel(e.target.value)}
                   type="text"
                   name="model"
                   placeholder="Модел"
@@ -74,8 +99,8 @@ const EditRequestModal = ({ requestId }) => {
               </label>
               <label>
                 <input
-                  onChange={handleChange}
-                  value={state.year}
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
                   type="number"
                   name="year"
                   placeholder="Година на производство"
@@ -86,8 +111,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="pickupLocation"
-                  onChange={handleChange}
-                  value={state.pickupLocation}
+                  value={pickupLocation}
+                  onChange={(e) => setPickupLocation(e.target.value)}
                   placeholder="Местоположение за взимане"
                   required
                 />
@@ -96,8 +121,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="deliveryLocation"
-                  onChange={handleChange}
-                  value={state.deliveryLocation}
+                  value={deliveryLocation}
+                  onChange={(e) => setDeliveryLocation(e.target.value)}
                   placeholder="Местоположение за доставяне"
                   required
                 />
@@ -106,8 +131,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="pickupDate"
-                  onChange={handleChange}
-                  value={state.pickupDate}
+                  value={pickupDate}
+                  onChange={(e) => setPickupDate(e.target.value)}
                   placeholder="Дата за взимане"
                 />
               </label>
@@ -115,8 +140,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="deliveryDate"
-                  onChange={handleChange}
-                  value={state.deliveryDate}
+                  value={deliveryDate}
+                  onChange={(e) => setDeliveryDate(e.target.value)}
                   placeholder="Дата за доставяне"
                 />
               </label>
@@ -124,8 +149,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="condition"
-                  onChange={handleChange}
-                  value={state.condition}
+                  value={condition}
+                  onChange={(e) => setCondition(e.target.value)}
                   placeholder="Състояние на МПС"
                   required
                 />
@@ -134,8 +159,8 @@ const EditRequestModal = ({ requestId }) => {
                 <input
                   type="text"
                   name="status"
-                  onChange={handleChange}
-                  value={state.status}
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
                   placeholder="Статус"
                   required
                 />
