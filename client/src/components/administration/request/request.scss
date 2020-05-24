@@ -1,0 +1,14 @@
+@import 'styles/styles.scss';
+@import './theme-request.scss';
+
+.request {
+    display: flex;
+    justify-content: space-between;
+    background: $gray-100;
+    border-radius: 4px;
+    margin: 10px auto;
+    padding: 10px;
+
+    div {
+    }
+}

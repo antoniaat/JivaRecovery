@@ -9,7 +9,7 @@ import RegisterPage from "./containers/pages/register-page";
 import LoginPage from "./containers/pages/login-page";
 import ServicesPage from "./containers/pages/services-page";
 import ProfilePage from "./containers/pages/profile-page";
-import RequestPage from "./containers/pages/register-page";
+import RequestPage from "./containers/pages/request-page";
 import AdministrationPage from "./containers/pages/administration-page";
 
 const AppRouter = () => (

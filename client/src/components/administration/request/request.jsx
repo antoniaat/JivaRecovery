@@ -1,3 +1,5 @@
+import './request.scss';
+
 import React from "react";
 
 const Request = ({

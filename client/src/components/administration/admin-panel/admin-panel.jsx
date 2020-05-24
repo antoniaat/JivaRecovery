@@ -8,6 +8,49 @@ import requestService from "../../../services/request-service";
 
 const AdminPanel = () => {
   let [requests, setRequests] = useState([]);
+  const requestColumns = [
+    {
+      name: 'Марка',
+      selector: 'brand',
+      sortable: true,
+    },
+    {
+      name: 'Модел',
+      selector: 'model',
+      sortable: true,
+    },
+    {
+      name: 'Година',
+      selector: 'year',
+      sortable: true,
+    },
+    {
+      name: 'Местоположение за взимане',
+      selector: 'pickupLocation',
+      sortable: true,
+    },
+    {
+      name: 'Местоположение за доставяне',
+      selector: 'deliveryLocation',
+      sortable: true,
+    },
+    {
+      name: 'Дата за взимане',
+      selector: 'pickupDate',
+      sortable: true,
+    },
+    {
+      name: 'Дата за доставяне',
+      selector: 'deliveryDate',
+      sortable: true,
+    },
+    {
+      name: 'Състояние',
+      selector: 'condition',
+      sortable: true,
+    },
+  ];
+  
 
   useEffect(() => {
     requestService.getRequest("all").then((res) => {
