@@ -2,19 +2,26 @@
 @import './theme-request.scss';
 
 .request {
-    display: flex;
-    justify-content: space-between;
     border-radius: 4px;
     margin: 10px auto;
     padding: 10px;
 
-    h3 {
+    .request-main {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .request-heading {
         font-size: 14px;
         font-weight: bold;
         padding-bottom: 10px;
     }
 
-    span {
+    .request-content {
         font-size: 13px;
+    }
+
+    .request-btn {
+        margin: 10px 0;
     }
 }

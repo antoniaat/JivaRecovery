@@ -6,6 +6,18 @@
     padding: 5px 11px;
     font-weight: lighter;
     cursor: pointer;
+    outline: none;
+
+    &-primary {
+        font-size: 16px;
+        background: $main-color;
+        color: #FFF;
+
+        &:hover {
+            background: $main-color;
+            color: #FFF;
+        }
+    }
 
     &-secondary {
         vertical-align: top;
