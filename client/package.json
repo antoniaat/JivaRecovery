@@ -12,6 +12,7 @@
     "npm": "^6.13.4",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-data-table-component": "^6.9.2",
     "react-dom": "^16.9.0",
     "react-dropdown": "^1.6.4",
     "react-google-maps": "^9.4.5",
@@ -22,6 +23,7 @@
     "react-web-tabs": "^1.0.1",
     "recompose": "^0.30.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.1.0",
     "yup": "^0.28.0"
   },
   "scripts": {
