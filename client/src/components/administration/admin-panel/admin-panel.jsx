@@ -25,26 +25,6 @@ const AdminPanel = () => {
       selector: "year",
       sortable: true,
     },
-    // {
-    //   name: "Взимане",
-    //   selector: "pickupLocation",
-    //   sortable: true,
-    // },
-    // {
-    //   name: "Доставяне",
-    //   selector: "deliveryLocation",
-    //   sortable: true,
-    // },
-    // {
-    //   name: "Дата - Взимане",
-    //   selector: "pickupDate",
-    //   sortable: true,
-    // },
-    // {
-    //   name: "Дата - Доставяне",
-    //   selector: "deliveryDate",
-    //   sortable: true,
-    // },
     {
       name: "Състояние",
       selector: "condition",
@@ -53,43 +33,8 @@ const AdminPanel = () => {
   ];
 
   const ExpanableRow = ({ data }) => {
-    const { pickupLocation, deliveryLocation, pickupDate, deliveryDate } = data;
-
-    return (
-      <Request
-        pickupLocation={pickupLocation}
-        deliveryLocation={deliveryLocation}
-        pickupDate={pickupDate}
-        deliveryDate={deliveryDate}
-      />
-    );
+    return <Request {...data} />;
   };
-
-  // const requestData = requests.map(
-  //   ({
-  //     brand,
-  //     model,
-  //     year,
-  //     pickupLocation,
-  //     deliveryLocation,
-  //     pickupDate,
-  //     deliveryDate,
-  //     condition,
-  //   }) => {
-  //     return (
-  //       <Request
-  //         brand={brand}
-  //         model={model}
-  //         year={year}
-  //         pickupLocation={pickupLocation}
-  //         deliveryLocation={deliveryLocation}
-  //         pickupDate={pickupDate}
-  //         deliveryDate={deliveryDate}
-  //         condition={condition}
-  //       />
-  //     );
-  //   }
-  // );
 
   useEffect(() => {
     requestService.getRequest("all").then((res) => {
@@ -109,9 +54,13 @@ const AdminPanel = () => {
         <TabPanel>
           {requests.length > 0 ? (
             <DataTable
-              title="Requests"
               columns={requestColumns}
               data={requests}
+              responsive
+              defaultSortField
+              pagination
+              paginationRowsPerPageOptions={[2, 5, 10, 15, 20, 25, 30]}
+              pointerOnHover
               expandableRows
               expandableRowDisabled={(row) => row.disabled}
               expandableRowsComponent={<ExpanableRow />}
