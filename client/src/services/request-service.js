@@ -18,8 +18,9 @@ const requestService = {
     }).then(handleResponse);
   },
 
-  edit: function (id) {
-    return fetch(`http://localhost:9999/api/request/${id}`, {
+  edit: function (id, data) {
+    return fetch(`http://localhost:9999/api/request/edit/${id}`, {
+      body: JSON.stringify(data),
       method: "PUT",
       headers: {
         "Content-type": "application/json",

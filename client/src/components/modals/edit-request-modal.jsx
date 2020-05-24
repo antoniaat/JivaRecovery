@@ -1,42 +1,41 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import './edit-request-modal.scss';
+import "./edit-request-modal.scss";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
-import requestService from '../../services/request-service';
+import requestService from "../../services/request-service";
 
-const EditRequestModal = ({ requestId, isShow }) => {
-  const [show, setShow] = useState(isShow);
-  const handleClose = () => setShow(false);
+const EditRequestModal = ({ requestId }) => {
+  const [state, setState] = useState({});
+  const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleSave = () => {
+    setShow(false);
 
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [year, setYear] = useState(2000);
-  const [pickupLocation, setPickupLocation] = useState("");
-  const [deliveryLocation, setDeliveryLocation] = useState("");
-  const [pickupDate, setPickupDate] = useState("");
-  const [deliveryDate, setDeliveryDate] = useState("");
-  const [condition, setCondition] = useState("");
-  const [status, setStatus] = useState("");
-
-  function handleFormSubmit(e) {
+    requestService.edit(requestId, state).then(() => {
+      console.log(state);
+    });
+  };
+  const handleChange = (e) => {
     e.preventDefault();
+    const { name, value } = e.target;
 
-    const request = {
-      brand,
-      model,
-      year,
-      pickupLocation,
-      deliveryLocation,
-      pickupDate,
-      deliveryDate,
-      condition,
-    };
+    setState((prevState) => {
+      return {
+        ...prevState,
+        name: value,
+      };
+    });
+  };
 
-    requestService.edit(request);
-  }
-
+  useEffect(() => {
+    requestService.getRequest(requestId).then((data) => {
+      setState((prevState) => ({
+        ...data,
+      }));
+    });
+  }, []);
 
   return (
     <>
@@ -52,21 +51,21 @@ const EditRequestModal = ({ requestId, isShow }) => {
         </Modal.Header>
         <Modal.Body>
           <div className="request-form edit-request-form">
-            <form onSubmit={handleFormSubmit}>
+            <form>
               <label>
                 <input
                   type="text"
                   name="brand"
-                  onChange={(ev) => setBrand(ev.target.value)}
-                  value={brand}
+                  value={state.brand}
+                  onChange={(e) => {handleChange(e)}}
                   placeholder="Марка"
                   required
                 />
               </label>
               <label>
                 <input
-                  onChange={(ev) => setModel(ev.target.value)}
-                  value={model}
+                  onChange={handleChange}
+                  value={state.model}
                   type="text"
                   name="model"
                   placeholder="Модел"
@@ -75,8 +74,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
               </label>
               <label>
                 <input
-                  onChange={(ev) => setYear(ev.target.value)}
-                  value={year}
+                  onChange={handleChange}
+                  value={state.year}
                   type="number"
                   name="year"
                   placeholder="Година на производство"
@@ -87,8 +86,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="pickupLocation"
-                  onChange={(ev) => setPickupLocation(ev.target.value)}
-                  value={pickupLocation}
+                  onChange={handleChange}
+                  value={state.pickupLocation}
                   placeholder="Местоположение за взимане"
                   required
                 />
@@ -97,8 +96,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="deliveryLocation"
-                  onChange={(ev) => setDeliveryLocation(ev.target.value)}
-                  value={deliveryLocation}
+                  onChange={handleChange}
+                  value={state.deliveryLocation}
                   placeholder="Местоположение за доставяне"
                   required
                 />
@@ -107,8 +106,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="pickupDate"
-                  onChange={(ev) => setPickupDate(ev.target.value)}
-                  value={pickupDate}
+                  onChange={handleChange}
+                  value={state.pickupDate}
                   placeholder="Дата за взимане"
                 />
               </label>
@@ -116,8 +115,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="deliveryDate"
-                  onChange={(ev) => setDeliveryDate(ev.target.value)}
-                  value={deliveryDate}
+                  onChange={handleChange}
+                  value={state.deliveryDate}
                   placeholder="Дата за доставяне"
                 />
               </label>
@@ -125,8 +124,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="condition"
-                  onChange={(ev) => setCondition(ev.target.value)}
-                  value={condition}
+                  onChange={handleChange}
+                  value={state.condition}
                   placeholder="Състояние на МПС"
                   required
                 />
@@ -135,8 +134,8 @@ const EditRequestModal = ({ requestId, isShow }) => {
                 <input
                   type="text"
                   name="status"
-                  onChange={(ev) => setStatus(ev.target.value)}
-                  value={status}
+                  onChange={handleChange}
+                  value={state.status}
                   placeholder="Статус"
                   required
                 />
@@ -148,7 +147,7 @@ const EditRequestModal = ({ requestId, isShow }) => {
           <Button variant="secondary" onClick={handleClose}>
             Затвори
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleSave}>
             Запази
           </Button>
         </Modal.Footer>
