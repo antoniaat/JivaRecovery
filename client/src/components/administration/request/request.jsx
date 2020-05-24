@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./request.scss";
 
 import React from "react";
-import EditRequestModal from "../../modals/edit-request";
+import EditRequestModal from "../../modals/edit-request-modal";
 
 const Request = ({
   _id,
