@@ -10,10 +10,12 @@
         text-align: center;
     }
 
-    textarea {
-        @include for-desktop-up {
-            width: 93%;
-        }
+    input {
+        width: 100%;
+    }
+
+    .textarea-label {
+        width: 85%;
     }
 
     .name-label, .phone-label {

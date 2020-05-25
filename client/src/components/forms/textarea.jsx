@@ -5,7 +5,7 @@ const Textarea = ({ name, placeholder }) => {
   const [value, setValue] = useState('');
 
   return (
-    <label htmlFor>
+    <label htmlFor className='textarea-label'>
       <textarea
         name={name}
         value={value}
