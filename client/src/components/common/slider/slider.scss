@@ -47,13 +47,14 @@
     top: 131px;
     left: 3px;
     border-radius: 3px;
+    word-wrap: no-wrap;
 
     @include for-tablet-portrait-up {
       width: 70%;
     }
 
     @include for-desktop-up {
-      width: 40%;
+      width: 43%;
     }
 
     p {
