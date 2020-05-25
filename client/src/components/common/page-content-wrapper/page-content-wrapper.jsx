@@ -1,3 +1,5 @@
+import '../page-content-wrapper/page-content-wrapper.scss';
+
 import React from "react";
 import { string, element, oneOfType, arrayOf } from "prop-types";
 
