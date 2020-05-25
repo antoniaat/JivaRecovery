@@ -1,13 +1,16 @@
-import './contact-box.scss';
+import "./contact-box.scss";
 
-import React from 'react';
-import { string } from 'prop-types';
+import React from "react";
+import Slide from "react-reveal/Slide";
+import { string } from "prop-types";
 
 const ContactBox = ({ icon, text }) => (
-  <p className="contact-box">
-    <span>{icon}</span>
-    {text}
-  </p>
+  <Slide top>
+    <p className="contact-box">
+      <span>{icon}</span>
+      {text}
+    </p>
+  </Slide>
 );
 
 ContactBox.propTypes = {
