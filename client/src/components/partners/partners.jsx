@@ -1,8 +1,9 @@
-import brands from 'assets/images/brands.png';
+import brands from "assets/images/brands.png";
 
-import './partners.scss';
+import "./partners.scss";
 
-import React from 'react';
+import React from "react";
+import Flip from "react-reveal/Flip";
 
 const Partners = () => (
   <div className="partners">
@@ -10,7 +11,9 @@ const Partners = () => (
     <span className="partners-line">-</span>
     <p className="partners-subtitle">КОМПАНИИТЕ, КОИТО НИ СЕ ДОВЕРИХА</p>
     <span className="partners-line">-</span>
-    <img src={brands} alt="brand-img" />
+    <Flip top>
+      <img src={brands} alt="brand-img" />
+    </Flip>
   </div>
 );
 
