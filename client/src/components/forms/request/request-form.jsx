@@ -1,3 +1,5 @@
+import './request-form.scss';
+
 import React, { useState } from "react";
 import requestService from "../../../services/request-service";
 import FormHeader from "../form-header/form-header";
@@ -34,8 +36,8 @@ const RequestForm = () => {
   return (
     <div className="request-form">
       <FormHeader
-        title="Заявка"
-        subtitle="Изпратете заявка за превоз на вашето превозно средство"
+        title="Нова заявка"
+        subtitle="Изпратете заявка за превоз на Вашето превозно средство"
       />
 
       <form onSubmit={handleFormSubmit}>

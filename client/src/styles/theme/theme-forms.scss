@@ -15,10 +15,11 @@ textarea {
 
 textarea:focus,
 input:focus {
-    border: 0.1em solid $red-color;
+    border: 0.1em solid $main-color;
 }
 
 input[type='submit'] {
-    background: $red-color;
+    background: $main-color;
+    font-weight: 900;
     color: #eee;
 }
