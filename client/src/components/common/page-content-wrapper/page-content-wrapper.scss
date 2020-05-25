@@ -1,0 +1,20 @@
+@import 'styles/styles.scss';
+
+$page-content-wrapper-width: 1290px;
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+.page-content-wrapper {
+    max-width: $page-content-wrapper-width;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+
+    @include for-desktop-up {
+        padding: 0 30px;
+    }
+}
