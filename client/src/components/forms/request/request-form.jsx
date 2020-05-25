@@ -1,6 +1,11 @@
-import './request-form.scss';
+import "react-notifications/lib/notifications.css";
+import "./request-form.scss";
 
 import React, { useState } from "react";
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
 import requestService from "../../../services/request-service";
 import FormHeader from "../form-header/form-header";
 
@@ -28,18 +33,22 @@ const RequestForm = () => {
       condition,
     };
 
-    requestService.add(request).then((res) => {
-    // history.push("/home");
+    requestService.add(request).then(() => {
+      return NotificationManager.success(
+        "Заявката Ви беше успешно изпратена и ще бъде разгледана от администратор!",
+        "Поздравления!",
+        9000
+      );
     });
   }
 
   return (
     <div className="request-form">
+      <NotificationContainer />
       <FormHeader
         title="Нова заявка"
         subtitle="Изпратете заявка за превоз на Вашето превозно средство"
       />
-
       <form onSubmit={handleFormSubmit}>
         <label>
           <input
