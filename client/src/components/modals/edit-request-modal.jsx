@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./edit-request-modal.scss";
 
 import React, { useState, useEffect } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import requestService from "../../services/request-service";
 
 const EditRequestModal = ({ requestId }) => {
@@ -19,6 +19,10 @@ const EditRequestModal = ({ requestId }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+  const handleDelete =  () => {
+    setShow(false);
+    requestService.delete(requestId);
+  }
   const handleSave = () => {
     setShow(false);
     const updatedRequest = {
@@ -169,12 +173,15 @@ const EditRequestModal = ({ requestId }) => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <button className="button button-danger" onClick={handleDelete}>
+            Изтриване
+          </button>
+          <button className="button button-primary" onClick={handleClose}>
             Затвори
-          </Button>
-          <Button variant="primary" onClick={handleSave}>
+          </button>
+          <button className="button button-success" onClick={handleSave}>
             Запази
-          </Button>
+          </button>
         </Modal.Footer>
       </Modal>
     </>
