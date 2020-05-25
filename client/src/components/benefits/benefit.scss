@@ -1,17 +1,15 @@
 @import 'styles/styles.scss';
+@import './theme-benefit.scss';
 
 .benefit {
+    display: flex;
     margin: 1rem 0;
 
     .benefit-icon-wrapper {
-        padding-right: 1em;
-
-        @include for-desktop-up {
-            float: left;
-        }
+        padding-right: 1.5em;
+        width: 80px;
 
         span {
-            color: $red-color;
             font-size: 2.5em;
         }
     }
@@ -20,7 +18,7 @@
         .benefit-content-box-title {
             font-weight: bold;
             margin: 0;
-            padding: 0;
+            padding: 10px 0 0 0;
         }
 
         .benefit-content-box-subtitle {

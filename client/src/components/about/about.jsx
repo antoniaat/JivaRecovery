@@ -1,6 +1,5 @@
 import './about.scss';
 
-import tlogo from 'assets/images/tlogo.png';
 import aboutBgImage from 'assets/images/about-bg.jpg';
 
 import React from 'react';
@@ -28,7 +27,6 @@ const benefits = [
 
 const About = ({ mainTitle, mainSubtitle, description }) => (
   <div className="about">
-    <img src={tlogo} alt="logo" />
     <h2>{mainTitle}</h2>
     <div className="about-wrapper">
       <section className="about-content-wrapper">

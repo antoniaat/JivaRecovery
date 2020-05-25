@@ -27,7 +27,8 @@
     }
 
     .about-image {
-        width: 100%;
+        width: 50%;
+        object-fit: contain;
         max-width: 100%;
         border-radius: 12px;
     }
