@@ -9,10 +9,6 @@ import { AuthContext } from "../../../ContextWrapper";
 
 const additionalLinks = [
   {
-    link: "/home",
-    text: "ЗАБРАВЕНА ПАРОЛА?",
-  },
-  {
     link: "/register",
     text: "НОВИ СТЕ ТУК?",
   },
