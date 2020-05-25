@@ -35,7 +35,7 @@ const Footer = () => (
       <article>
         <h6>КЪДЕ ДА НИ НАМЕРИТЕ</h6>
         <p>
-          UK, Auto, King St. 665087 Телефон.: +7 234 949-58-83 E-mail.:
+          UK, Auto, King St. 665087 Телефон.: +7957 511350 E-mail:
           info@vehrecoverys.com
         </p>
       </article>
