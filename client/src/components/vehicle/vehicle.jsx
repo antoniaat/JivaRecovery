@@ -6,10 +6,10 @@ import { calendar, road, transmission } from '../icons/font-awesome-icons';
 import VehicleSpecification from './specification/vehicle-specification';
 
 const Vehicle = ({
-  name, price, year, mileage, vehicleTransmission, rental, img,
+  name, price, year, mileage, vehicleTransmission, isNew, img,
 }) => (
   <div className="vehicle">
-    <div className={rental ? 'vehicle-rental' : 'hidden'}>RENTAL</div>
+    <div className={isNew ? 'vehicle-rental' : 'hidden'}>НОВО</div>
     <img src={img} alt="vehicle-img" />
     <p className="vehicle-price">{price}</p>
     <h5 className="vehicle-name">{name}</h5>

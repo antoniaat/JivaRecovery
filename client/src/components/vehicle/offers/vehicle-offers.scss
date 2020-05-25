@@ -1,11 +1,10 @@
 @import 'styles/styles.scss';
 
 .vehicle-offers {
-    width: 85%;
-    margin: 0 auto;
+    margin: 4em auto;
     text-align: center;
 
-    section:nth-child(1) {
+    .vehicle-offers-header {
         text-align: center;
         margin: 2em auto;
     }
