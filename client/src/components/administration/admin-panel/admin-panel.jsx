@@ -36,6 +36,7 @@ const AdminPanel = () => {
       name: "Статус",
       selector: "status",
       sortable: true,
+      className: "status",
     },
   ];
 
@@ -55,7 +56,20 @@ const AdminPanel = () => {
       selector: "phone",
       sortable: true,
     },
-  ]
+  ];
+
+  const conditionalRowStyles = [
+    {
+      when: row => row.status < 'Изчакване',
+      style: {
+        backgroundColor: 'green',
+        color: 'white',
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+    },
+  ];
 
   const ExpanableRow = ({ data }) => {
     return <Request {...data} />;
@@ -92,13 +106,14 @@ const AdminPanel = () => {
               expandableRows
               expandableRowDisabled={(row) => row.disabled}
               expandableRowsComponent={<ExpanableRow />}
-            />
+              conditionalRowStyles={conditionalRowStyles}
+              />
           ) : (
             "Няма текущи заявки"
           )}
         </TabPanel>
         <TabPanel>
-        {users.length > 0 ? (
+          {users.length > 0 ? (
             <DataTable
               columns={userColumns}
               data={users}
