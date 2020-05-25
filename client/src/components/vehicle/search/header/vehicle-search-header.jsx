@@ -14,7 +14,7 @@ const VehicleSearchHeader = ({ header, deliversCount }) => (
         ОТ
         {' '}
         {deliversCount}
-        + ДОСТАВЧИКА
+        + УСПЕШНО ИЗВЪРШЕНИ УСЛУГИ
       </p>
       <span className="vehicle-search-header-line">-</span>
     </article>
@@ -22,7 +22,7 @@ const VehicleSearchHeader = ({ header, deliversCount }) => (
 );
 
 VehicleSearchHeader.defaultProps = {
-  header: 'Търсене на транспортни услуги',
+  header: 'Търсене на услуги',
   deliversCount: 0,
 };
 
