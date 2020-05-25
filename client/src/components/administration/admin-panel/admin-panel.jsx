@@ -62,8 +62,34 @@ const AdminPanel = () => {
     {
       when: row => row.status === 'Изчакване',
       style: {
-        backgroundColor: 'green',
-        color: 'white',
+        backgroundColor: 'rgba(240,219,8,0.2)',
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+    },
+    {
+      when: row => row.status === 'Одобрена',
+      style: {
+        backgroundColor: 'rgba(8, 240, 53, 0.2)',
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+    },
+    {
+      when: row => row.status === 'Отхвърлена',
+      style: {
+        backgroundColor: 'rgba(240, 8, 45, 0.2)',
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+    },
+    {
+      when: row => row.status === 'Завършена',
+      style: {
+        backgroundColor: 'rgba(8, 159, 240, 0.2)',
         '&:hover': {
           cursor: 'pointer',
         },
@@ -107,6 +133,7 @@ const AdminPanel = () => {
               expandableRowDisabled={(row) => row.disabled}
               expandableRowsComponent={<ExpanableRow />}
               conditionalRowStyles={conditionalRowStyles}
+              
               />
           ) : (
             "Няма текущи заявки"
