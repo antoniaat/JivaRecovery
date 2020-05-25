@@ -1,0 +1,12 @@
+@import 'styles/styles.scss';
+
+.form-header {
+    .form-header-image-wrapper {
+        max-width: 120px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+}
