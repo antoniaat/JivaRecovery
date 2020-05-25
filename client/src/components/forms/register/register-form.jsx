@@ -23,55 +23,63 @@ const RegisterForm = ({ history }) => {
   }
 
   return (
-    <div className="register-form">
+    <div className="register-form-wrapper">
       <FormHeader
         title="Регистрация"
-        subtitle="Добавете Вашите транспортни услуги в платформата"
+        subtitle="Изпратете заявка за пътна помощ"
       />
 
-      <form onSubmit={handleFormSubmit}>
-        <label>
-          <input
-            type="text"
-            name="name"
-            onChange={(ev) => setName(ev.target.value)}
-            value={name}
-            placeholder="Име"
-          />
-        </label>
-        <label>
-          <input
-            onChange={(ev) => setEmail(ev.target.value)}
-            value={email}
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Имейл"
-          />
-        </label>
-
-        <label>
-          <input
-            type="text"
-            name="phone"
-            onChange={(ev) => setPhone(ev.target.value)}
-            value={phone}
-            placeholder="Телефон"
-          />
-        </label>
-
-        <label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(ev) => setPassword(ev.target.value)}
-            placeholder="Парола"
-          />
-        </label>
+      <form onSubmit={handleFormSubmit} className="register-form">
+        <div className="register-form-content">
+          <div className="register-form-labels-wrapper">
+            <label>
+              <input
+                type="text"
+                name="name"
+                onChange={(ev) => setName(ev.target.value)}
+                value={name}
+                placeholder="Име"
+              />
+            </label>
+            <label className="register-form-labels-wrapper">
+              <input
+                onChange={(ev) => setEmail(ev.target.value)}
+                value={email}
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Имейл"
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="text"
+                name="phone"
+                onChange={(ev) => setPhone(ev.target.value)}
+                value={phone}
+                placeholder="Телефон"
+              />
+            </label>
+            <label>
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={(ev) => setPassword(ev.target.value)}
+                placeholder="Парола"
+              />
+            </label>
+          </div>
+        </div>
 
         <TermsAndConditions />
-        <input type="submit" value="РЕГИСТРАЦИЯ" />
+        <input
+          type="submit"
+          value="РЕГИСТРАЦИЯ"
+          className="register-form-submit-btn"
+        />
         <label className="additional-links">
           <span>
             <Link to="/login">ВЕЧЕ ИМАТЕ ПРОФИЛ?</Link>

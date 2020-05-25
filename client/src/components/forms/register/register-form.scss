@@ -1,36 +1,31 @@
 @import 'styles/styles.scss';
 
-.register-form {
+.register-form-wrapper {
     width: 35%;
     margin: 3rem auto;
     text-align: center;
+
+    .register-form-content {
+        label,
+        input {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+
+    .register-form-submit-btn {
+        display: block;
+        margin: 10px auto;
+    }
 
     h1,
     p {
         text-align: center;
     }
 
-    input {
-        width: 100%;
-        margin: 1%;
-    }
-
-    input[name='firstName'],
-    input[name='lastName'] {
-        width: 46.5%;
-    }
-
-    input[name='lastName'] {
-        margin-right: 0;
-    }
-
     span {
         color: $red-color;
         font-weight: bold;
-    }
-
-    input[type='submit'] {
-        margin: 6% auto;
     }
 
     .terms-and-conditions span,
