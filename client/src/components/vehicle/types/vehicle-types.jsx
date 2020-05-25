@@ -7,11 +7,11 @@ import cars from './vehicle-types-data';
 
 const VehicleTypes = () => (
   <div className="vehicle-types">
-    <h1 className="vehicle-types-title">Types of Vehicles</h1>
+    <h1 className="vehicle-types-title">Видове превозни средства</h1>
     <p>
       <span className="vehicle-types-line">-</span>
       {' '}
-      THE AUTOS WE DEALS IN
+      10+ различни вида
       {' '}
       <span className="vehicle-types-line">-</span>
     </p>
