@@ -60,7 +60,7 @@ const AdminPanel = () => {
 
   const conditionalRowStyles = [
     {
-      when: row => row.status < 'Изчакване',
+      when: row => row.status === 'Изчакване',
       style: {
         backgroundColor: 'green',
         color: 'white',
