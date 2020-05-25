@@ -43,6 +43,10 @@ const requestSchema = new Schema({
   isDeleted: {
     type: Boolean,
   },
+  userId: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = new Model("Request", requestSchema);

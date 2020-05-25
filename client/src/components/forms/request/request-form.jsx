@@ -1,12 +1,13 @@
 import "react-notifications/lib/notifications.css";
 import "./request-form.scss";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   NotificationContainer,
   NotificationManager,
 } from "react-notifications";
 import requestService from "../../../services/request-service";
+import { AuthContext } from "../../../ContextWrapper";
 import FormHeader from "../form-header/form-header";
 
 const RequestForm = () => {
@@ -18,6 +19,7 @@ const RequestForm = () => {
   const [pickupDate, setPickupDate] = useState("");
   const [deliveryDate, setDeliveryDate] = useState("");
   const [condition, setCondition] = useState("");
+  const { auth } = useContext(AuthContext);
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -31,6 +33,7 @@ const RequestForm = () => {
       pickupDate,
       deliveryDate,
       condition,
+      userId: auth,
     };
 
     requestService.add(request).then(() => {

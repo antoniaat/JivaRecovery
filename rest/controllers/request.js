@@ -32,6 +32,7 @@ module.exports = {
         deliveryDate,
         condition,
         status,
+        userId,
       } = req.body;
       models.Request.create({
         brand,
@@ -43,6 +44,7 @@ module.exports = {
         deliveryDate,
         condition,
         status,
+        userId,
       })
         .then((createdRequest) => {
           res.send(createdRequest);
@@ -64,6 +66,7 @@ module.exports = {
       condition,
       status,
       isDeleted,
+      userId,
     } = req.body;
 
     models.Request.update(
@@ -79,6 +82,7 @@ module.exports = {
         condition,
         status,
         isDeleted,
+        userId,
       }
     )
       .then((updatedRequest) => res.send(updatedRequest))
