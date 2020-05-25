@@ -2,10 +2,10 @@ import "./login-form.scss";
 
 import React, { useContext } from "react";
 import { withRouter } from "react-router-dom";
-import userService from "../../../services/user-service";
-import { AuthContext } from "../../../ContextWrapper";
 import FormHeader from "../form-header/form-header";
 import AdditionalLinks from "../additional-links";
+import userService from "../../../services/user-service";
+import { AuthContext } from "../../../ContextWrapper";
 
 const additionalLinks = [
   {
@@ -33,9 +33,7 @@ const LoginForm = ({ history }) => {
     const user = { email, password };
 
     userService.login(user).then((res) => {
-      // console.log(res._id);
       setAuth(res._id);
-      // console.log(auth);
       history.push("/home");
     });
   }
@@ -53,7 +51,7 @@ const LoginForm = ({ history }) => {
     <div className="login-form">
       <FormHeader
         title="Вход"
-        subtitle="Добавете вашите транспортни услуги в платформата"
+        subtitle="Изпратете заявка за пътна помощ"
       />
 
       <form onSubmit={handleFormSubmit}>
@@ -75,9 +73,6 @@ const LoginForm = ({ history }) => {
             placeholder="ПАРОЛА"
           />
         </label>
-        {/* <Label type="email" name="email" placeholder="ИМЕЙЛ" /> */}
-        {/* <Label type="password" name="password" placeholder="ПАРОЛА" /> */}
-        {/* <Submit value="ВХОД" /> */}
         <input type="submit" value="ВХОД" />
         <AdditionalLinks links={additionalLinks} />
       </form>
