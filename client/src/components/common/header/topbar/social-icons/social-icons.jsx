@@ -1,10 +1,12 @@
-import './social-icons.scss';
+import "./social-icons.scss";
 
-import React from 'react';
+import React from "react";
 import {
-  // eslint-disable-next-line import/named
-  fbIcon, twitterIcon, instagramIcon, youtubeIcon,
-} from '../../../../icons/font-awesome-icons';
+  fbIcon,
+  twitterIcon,
+  instagramIcon,
+  youtubeIcon,
+} from "../../../../icons/font-awesome-icons";
 
 const SocialIcons = () => (
   <section className="social-icons">
