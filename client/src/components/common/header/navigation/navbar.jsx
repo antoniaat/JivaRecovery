@@ -6,15 +6,18 @@ import { AuthContext } from "../../../../ContextWrapper";
 import NavHeader from "./nav-header/nav-header";
 import AuthorizedNav from "./authorized/authorized-nav";
 import UnauthorizedNav from "./unauthorized/unauthorized-nav";
+import PageContentWrapper from "components/common/page-content-wrapper/page-content-wrapper";
 
 const Navbar = () => {
   const { auth } = useContext(AuthContext);
   return (
     <nav className="navbar">
-      <div className="navbar-wrapper">
-        <NavHeader />
-        {auth ? <AuthorizedNav /> : <UnauthorizedNav />}
-      </div>
+      <PageContentWrapper>
+        <div className="navbar-wrapper">
+          <NavHeader />
+          {auth ? <AuthorizedNav /> : <UnauthorizedNav />}
+        </div>
+      </PageContentWrapper>
     </nav>
   );
 };

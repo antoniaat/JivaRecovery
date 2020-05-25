@@ -2,8 +2,8 @@
 @import "./theme-navbar.scss";
 
 .navbar-wrapper {
-    padding-bottom: 2em;
-
+    margin: -10px 0;
+    
     @include for-tablet-portrait-up {
         display: block;
     }
@@ -12,9 +12,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
     }
 
     .logo-container {
@@ -38,7 +35,7 @@
 
         li {
             text-align: center;
-            padding: 0.3em;
+            padding: 0 0.3em;
 
             @include for-desktop-up {
                 display: inline-block;
