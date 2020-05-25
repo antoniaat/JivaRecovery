@@ -87,7 +87,6 @@ module.exports = {
 
   delete: (req, res, next) => {
     const id = req.params.id;
-    console.log("JAJHAHAHAHA DELEEETE", id);
     models.Request.deleteOne({ _id: id })
       .then((removedRequest) => res.send(removedRequest))
       .catch(next);

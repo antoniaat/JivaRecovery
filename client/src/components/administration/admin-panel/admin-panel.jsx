@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import DataTable from "react-data-table-component";
 import Request from "../request/request";
+import EditUserModal from '../../modals/edit-user-modal';
 import requestService from "../../../services/request-service";
 import userService from "../../../services/user-service";
 
@@ -56,48 +57,54 @@ const AdminPanel = () => {
       selector: "phone",
       sortable: true,
     },
+    {
+      name: "",
+      cell: ({ data }) => (
+        <EditUserModal {...data}/>
+      ),
+    },
   ];
 
   const conditionalRowStyles = [
     {
-      when: row => row.status === 'Изчакване',
+      when: (row) => row.status === "Изчакване",
       style: {
-        backgroundColor: 'rgba(240,219,8,0.2)',
-        '&:hover': {
-          cursor: 'pointer',
+        backgroundColor: "rgba(240,219,8,0.2)",
+        "&:hover": {
+          cursor: "pointer",
         },
       },
     },
     {
-      when: row => row.status === 'Одобрена',
+      when: (row) => row.status === "Одобрена",
       style: {
-        backgroundColor: 'rgba(8, 240, 53, 0.2)',
-        '&:hover': {
-          cursor: 'pointer',
+        backgroundColor: "rgba(8, 240, 53, 0.2)",
+        "&:hover": {
+          cursor: "pointer",
         },
       },
     },
     {
-      when: row => row.status === 'Отхвърлена',
+      when: (row) => row.status === "Отхвърлена",
       style: {
-        backgroundColor: 'rgba(240, 8, 45, 0.2)',
-        '&:hover': {
-          cursor: 'pointer',
+        backgroundColor: "rgba(240, 8, 45, 0.2)",
+        "&:hover": {
+          cursor: "pointer",
         },
       },
     },
     {
-      when: row => row.status === 'Завършена',
+      when: (row) => row.status === "Завършена",
       style: {
-        backgroundColor: 'rgba(8, 159, 240, 0.2)',
-        '&:hover': {
-          cursor: 'pointer',
+        backgroundColor: "rgba(8, 159, 240, 0.2)",
+        "&:hover": {
+          cursor: "pointer",
         },
       },
     },
   ];
 
-  const ExpanableRow = ({ data }) => {
+  const ExpanableRequestRow = ({ data }) => {
     return <Request {...data} />;
   };
 
@@ -131,10 +138,9 @@ const AdminPanel = () => {
               pointerOnHover
               expandableRows
               expandableRowDisabled={(row) => row.disabled}
-              expandableRowsComponent={<ExpanableRow />}
+              expandableRowsComponent={<ExpanableRequestRow />}
               conditionalRowStyles={conditionalRowStyles}
-              
-              />
+            />
           ) : (
             "Няма текущи заявки"
           )}
