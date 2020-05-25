@@ -1,14 +1,17 @@
-import './advantage.scss';
+import "./advantage.scss";
 
-import React from 'react';
-import { string } from 'prop-types';
-import { arrowUp } from '../../icons/font-awesome-icons';
+import React from "react";
+import Slide from "react-reveal/Slide";
+import { string } from "prop-types";
+import { arrowUp } from "../../icons/font-awesome-icons";
 
 const Advantage = ({ img, title, text }) => (
   <article className="advantage">
     <img src={img} alt={`${img}-img`} />
     <h5>{title}</h5>
-    <p>{text}</p>
+    <Slide top cascade>
+      <p>{text}</p>
+    </Slide>
     <button type="button">{arrowUp}</button>
   </article>
 );
