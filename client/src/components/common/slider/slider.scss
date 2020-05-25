@@ -32,18 +32,20 @@
     height: 100vh;
 
     h1 {
-      position: absolute;
-      top: 73px;
-      padding: 0;
       margin: 1.7em;
+      padding: 5px;
+      position: absolute;
+      top: 60px;
+      left: -1px;
     }
   }
 
   .header-slider-text {
-    position: absolute;
-    top: 130px;
     padding: 1em;
-    margin: 3em;
+    margin: 4em;
+    position: absolute;
+    top: 131px;
+    left: 3px;
     border-radius: 3px;
 
     @include for-tablet-portrait-up {
