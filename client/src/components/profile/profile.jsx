@@ -1,4 +1,7 @@
+import "./profile.scss";
+
 import React, { useContext, useEffect } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import userService from "../../services/user-service";
 import { AuthContext } from "../../ContextWrapper";
@@ -12,6 +15,7 @@ const Profile = () => {
     requests: [],
     feedback: [],
   });
+  const { name, email, phone, requests, feedback } = state;
 
   useEffect(() => {
     userService.getUser(auth).then((res) => {
@@ -28,14 +32,22 @@ const Profile = () => {
   }, []);
 
   return (
-    <>
-      <div>Profile</div>
-      <div>{state.name}</div>
-      <div>{state.email}</div>
-      <div>{state.phone}</div>
-      <div>{state.requests}</div>
-      <div>{state.feedback}</div>
-    </>
+    <section className="profile">
+      <Tabs>
+        <TabList>
+          <Tab>Информация</Tab>
+          <Tab>Заявки</Tab>
+        </TabList>
+        <TabPanel>
+          <div>{name}</div>
+          <div>{email}</div>
+          <div>{phone}</div>
+          <div>{requests}</div>
+          <div>{feedback}</div>
+        </TabPanel>
+        <TabPanel>haha</TabPanel>
+      </Tabs>
+    </section>
   );
 };
 
