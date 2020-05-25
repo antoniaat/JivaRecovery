@@ -37,15 +37,29 @@ const Profile = () => {
         <TabList>
           <Tab>Информация</Tab>
           <Tab>Заявки</Tab>
+          <Tab>Обратна връзка</Tab>
         </TabList>
         <TabPanel>
-          <div>{name}</div>
-          <div>{email}</div>
-          <div>{phone}</div>
+          <div className="profile-info-wrapper">
+            <strong>Име:</strong>
+            <span>{name}</span>
+          </div>
+          <div className="profile-info-wrapper">
+            <strong>Имейл:</strong>
+            <span>{email}</span>
+          </div>
+          <div className="profile-info-wrapper">
+            <strong>Телефон:</strong>
+            <span>{phone}</span>
+          </div>
+          <button className='button button-primary'>РЕДАКТИРАЙ</button>
+        </TabPanel>
+        <TabPanel>
           <div>{requests}</div>
+        </TabPanel>
+        <TabPanel>
           <div>{feedback}</div>
         </TabPanel>
-        <TabPanel>haha</TabPanel>
       </Tabs>
     </section>
   );
