@@ -7,6 +7,7 @@
     font-weight: lighter;
     cursor: pointer;
     outline: none;
+    border: none;
 
     &-primary {
         font-size: 16px;
@@ -15,6 +16,26 @@
 
         &:hover {
             background: $main-color;
+            color: #FFF;
+        }
+    }
+
+    &-danger {
+        background: $red-color;
+        color: #FFF;
+
+        &:hover {
+            background: $red-color;
+            color: #FFF;
+        }
+    }
+
+    &-success {
+        background: $green-500;
+        color: #FFF;
+
+        &:hover {
+            background: $green-500;
             color: #FFF;
         }
     }

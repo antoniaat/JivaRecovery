@@ -27,6 +27,15 @@ const requestService = {
       },
     }).then(handleResponse);
   },
+
+  delete: function (id) {
+    return fetch(`http://localhost:9999/api/request/delete/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }).then(handleResponse);
+  },
 };
 
 export default requestService;
