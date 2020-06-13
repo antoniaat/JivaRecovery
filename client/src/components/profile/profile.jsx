@@ -2,7 +2,6 @@ import "./profile.scss";
 
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
 import ProfileInfo from "./profile-info";
 import RequestPanel from "./request-panel";
 

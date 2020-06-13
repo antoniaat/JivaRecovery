@@ -7,6 +7,10 @@
         padding: 1% 6%;
         text-align: center;
 
+        @include for-desktop-up {
+            display: flex;
+        }
+
         article {
             margin: 1em;
             text-align: left;
@@ -14,12 +18,11 @@
             font-size: 0.9em;
 
             @include for-desktop-up {
-                display: inline-block;
-                width: 22%;
+                margin: 1em 6em;
             }
 
             .footer-logo {
-                padding-bottom: 8%;
+                max-width: 160px;
             }
 
             li {

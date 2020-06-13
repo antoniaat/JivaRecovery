@@ -11,7 +11,7 @@ const Copyright = () => (
     <strong>
       <a href="http://antoniaat.com">antoniaat</a>
     </strong>
-    . Проекта е разработен с учебни цели.
+    . All rights reserved.
   </p>
 );
 
