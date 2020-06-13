@@ -3,6 +3,7 @@ import "./profile.scss";
 import React, { useContext, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
+import EditUserModal from "components/modals/edit-user-modal";
 import userService from "../../services/user-service";
 import { AuthContext } from "../../ContextWrapper";
 
@@ -52,7 +53,7 @@ const Profile = () => {
             <strong>Телефон:</strong>
             <span>{phone}</span>
           </div>
-          <button className='button button-primary'>РЕДАКТИРАЙ</button>
+          <EditUserModal />
         </TabPanel>
         <TabPanel>
           <div>{requests}</div>

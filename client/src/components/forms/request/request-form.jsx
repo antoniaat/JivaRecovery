@@ -42,7 +42,6 @@ const RequestForm = () => {
       userService.getUser(auth).then((userData) => {
         const userWithRequest = userData;
         userWithRequest.requests.push(request);
-        // console.log('reqqqqqq id',request._id)
         userService.edit(auth, userWithRequest);
       });
 
