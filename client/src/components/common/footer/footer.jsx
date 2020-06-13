@@ -27,14 +27,9 @@ const Footer = () => (
       </article>
       <article>
         <h6>КЪДЕ ДА НИ НАМЕРИТЕ</h6>
-        <p>
-          UK, Auto, King St. 612087 
-        </p>
+        <p>UK, Auto, King St. 612087</p>
         <p>Телефон.: +7957 511350</p>
-        <p>
-        E-mail:
-          info@jivarecovery.com
-        </p>
+        <p>E-mail: info@jivarecovery.com</p>
       </article>
       <article>
         <img className="footer-logo" src={tlogo} alt="logo" />
