@@ -123,7 +123,6 @@ const AdminPanel = () => {
         <TabList>
           <Tab>Заявки</Tab>
           <Tab>Потребители</Tab>
-          <Tab>Обратна връзка</Tab>
         </TabList>
 
         <TabPanel>
@@ -159,9 +158,6 @@ const AdminPanel = () => {
           ) : (
             "Няма регистрирани потребители"
           )}
-        </TabPanel>
-        <TabPanel>
-          <p>Feedbacks</p>
         </TabPanel>
       </Tabs>
     </div>

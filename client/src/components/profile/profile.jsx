@@ -13,16 +13,12 @@ const Profile = () => {
         <TabList>
           <Tab>Информация</Tab>
           <Tab>Заявки</Tab>
-          <Tab>Обратна връзка</Tab>
         </TabList>
         <TabPanel>
           <ProfileInfo />
         </TabPanel>
         <TabPanel>
           <RequestPanel />
-        </TabPanel>
-        <TabPanel>
-          <div>feedback</div>
         </TabPanel>
       </Tabs>
     </section>
