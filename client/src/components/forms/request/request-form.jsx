@@ -9,6 +9,7 @@ import {
 import requestService from "../../../services/request-service";
 import { AuthContext } from "../../../ContextWrapper";
 import FormHeader from "../form-header/form-header";
+import userService from "services/user-service";
 
 const RequestForm = () => {
   const [brand, setBrand] = useState("");
@@ -36,12 +37,22 @@ const RequestForm = () => {
       userId: auth,
     };
 
-    requestService.add(request).then(() => {
-      return NotificationManager.success(
-        "Заявката Ви беше успешно изпратена и ще бъде разгледана от администратор!",
-        "Поздравления!",
-        9000
-      );
+    requestService.add(request).then((data) => {
+      const requestId = data._id;
+      userService.getUser(auth).then((userData) => {
+        const userWithRequest = userData;
+        userWithRequest.requests.push(request);
+        // console.log('reqqqqqq id',request._id)
+        userService.edit(auth, userWithRequest);
+      });
+
+      return (
+        NotificationManager.success(
+          "Заявката Ви беше успешно изпратена и ще бъде разгледана от администратор!",
+          "Поздравления!",
+          9000
+        )
+      )
     });
   }
 

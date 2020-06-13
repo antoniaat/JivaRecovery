@@ -35,6 +35,16 @@ const userService = {
       credentials: "include",
     }).then(handleResponse);
   },
+
+  edit: function (id, data) {
+    return fetch(`http://localhost:9999/api/user/edit/${id}`, {
+      body: JSON.stringify(data),
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }).then(handleResponse);
+  },
 };
 
 export default userService;
