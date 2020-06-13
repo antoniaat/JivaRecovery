@@ -1,9 +1,8 @@
+import "./vehicle-model.scss";
+
 import React from "react";
 import Fade from "react-reveal/Fade";
-
 import { string, number } from "prop-types";
-
-import "./vehicle-model.scss";
 
 const VehicleModel = ({ img, name, offersCount, lowestPriceOffer }) => (
   <Fade left>
