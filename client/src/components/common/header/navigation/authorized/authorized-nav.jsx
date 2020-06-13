@@ -24,7 +24,6 @@ const AuthorizedNav = ({ history }) => {
       <ListItem link="/home" text="Начало" />
       <ListItem link="/about" text="Информация" />
       <ListItem link="/services" text="Услуги" />
-      <ListItem link="/news" text="Новини" />
       <ListItem link="/profile" text="Профил" />
       {isAdmin 
         ? <ListItem link="/administration" text="Администрация" />
