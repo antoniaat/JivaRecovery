@@ -6,6 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import EditUserModal from "components/modals/edit-user-modal";
 import userService from "../../services/user-service";
 import { AuthContext } from "../../ContextWrapper";
+import ProfileInfo from "./profile-info";
 
 const Profile = () => {
   const { auth } = useContext(AuthContext);
@@ -41,19 +42,7 @@ const Profile = () => {
           <Tab>Обратна връзка</Tab>
         </TabList>
         <TabPanel>
-          <div className="profile-info-wrapper">
-            <strong>Име:</strong>
-            <span>{name}</span>
-          </div>
-          <div className="profile-info-wrapper">
-            <strong>Имейл:</strong>
-            <span>{email}</span>
-          </div>
-          <div className="profile-info-wrapper">
-            <strong>Телефон:</strong>
-            <span>{phone}</span>
-          </div>
-          <EditUserModal />
+          <ProfileInfo name={name} email={email} phone={phone} />
         </TabPanel>
         <TabPanel>
           <div>{requests}</div>
