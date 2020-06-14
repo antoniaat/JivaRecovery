@@ -1,7 +1,11 @@
 @import 'styles/styles.scss';
 
+.request-form-wrapper {
+    width: 40%;
+}
+
 .request-form {
-    width: 42%;
+    width: 100%;
     margin: 20px auto;
     text-align: center;
 
