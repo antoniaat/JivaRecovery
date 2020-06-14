@@ -18,7 +18,7 @@ const Footer = () => (
             <a href="/about">За нас</a>
           </li>
           <li>
-            <a href="/home">Услуги</a>
+            <a href="/home">Видове транспорт</a>
           </li>
           <li>
             <a href="/about">Информация</a>
