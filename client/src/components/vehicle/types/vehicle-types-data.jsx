@@ -17,13 +17,13 @@ const cars = [
     name: 'Van',
     offersCount: 4,
     lowestPriceOffer: 32000,
-    img: 'https://localbreakdownrecovery.co.uk/wp-content/uploads/2020/03/transparent-trucks-recovery-2a.png',
+    img: 'https://purepng.com/public/uploads/large/purepng.com-vantruckvehicletransportwhitevanbuscargodeliveryautocommercialcourier-98152506780070rcn.png',
   },
   {
     name: 'Pickups',
     offersCount: 5,
     lowestPriceOffer: 12234,
-    img: 'https://lh3.googleusercontent.com/proxy/QpZ-7e0rQu4-C6-tw9HcDRDY06WlV5U8X1z2G1jheGwME4AlEuRM45gKc7T9TX-C0wat74QvGcFA_pcsvgg7OSf-BonkPOAO_qnnxSUSISUcEh6_MM06WtXQ61hSUqCVYbcFAV77Kg',
+    img: 'https://www.pngarts.com/files/3/Chevy-Pickup-Truck-Transparent-Background-PNG.png',
   },
   {
     name: 'SUV',
@@ -35,7 +35,7 @@ const cars = [
     name: 'Trucks',
     offersCount: 12,
     lowestPriceOffer: 11000,
-    img: 'https://localbreakdownrecovery.co.uk/wp-content/uploads/2020/03/transparent-trucks-recovery-2a.png',
+    img: 'https://lh3.googleusercontent.com/proxy/moMXL334krRe3ledfW41sfAi5XrTi3xd3h1Tlwsso3uoPbxUx5fIVzipahaXE48YyWmTnJz6m41HGqG5ryLT4aQGFB6CkLfNnofjHe94uCQCIYs1TG9nDDblNY9czdHZsM1wbWybc378KzyJi3jbjunbabIjddgphO_8',
   },
   {
     name: 'Van',
@@ -47,7 +47,7 @@ const cars = [
     name: 'Trucks',
     offersCount: 7,
     lowestPriceOffer: 42000,
-    img: 'https://lh3.googleusercontent.com/proxy/QpZ-7e0rQu4-C6-tw9HcDRDY06WlV5U8X1z2G1jheGwME4AlEuRM45gKc7T9TX-C0wat74QvGcFA_pcsvgg7OSf-BonkPOAO_qnnxSUSISUcEh6_MM06WtXQ61hSUqCVYbcFAV77Kg',
+    img: 'https://www.freeiconspng.com/uploads/vehicle-png-25.png',
   },
 ];
 
