@@ -1,9 +1,10 @@
 import "./vehicle-offers.scss";
 
 import React from "react";
-import vehicles from "./vehicle-offers-data";
+import { Link } from "react-router-dom";
 
 import PageContentWrapper from "components/common/page-content-wrapper/page-content-wrapper";
+import vehicles from "./vehicle-offers-data";
 import Vehicle from "../vehicle";
 
 const VehicleOffers = () => (
@@ -28,7 +29,7 @@ const VehicleOffers = () => (
         )}
       </section>
       <button type="button" className="light-button">
-        РАЗГЛЕДАЙ ВСИЧКИ
+        <Link to="/services">РАЗГЛЕДАЙ ВСИЧКИ</Link>
       </button>
     </div>
   </PageContentWrapper>
