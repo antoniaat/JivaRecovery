@@ -2,7 +2,7 @@
 @import "./theme-social-icons.scss";
 
 .social-icons {
-    padding: 1em 0;
+    padding: .5em 0;
 
     @include for-desktop-up {
         text-align: right;
