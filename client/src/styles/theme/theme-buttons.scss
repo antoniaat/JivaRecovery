@@ -17,6 +17,14 @@
         &:hover {
             background-color: $main-color;
             border-color: $main-color;
+
+            a {
+                color: #000;
+            }
+        }
+
+        a {
+            color: #fff;
         }
     }
 }
