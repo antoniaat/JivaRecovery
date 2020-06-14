@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Request from 'components/administration/request/request';
+import FullRequest from "components/profile/full-request";
 import { AuthContext } from "../../ContextWrapper";
 import requestService from "../../services/request-service";
 
 const RequestPanel = () => {
   const { auth } = useContext(AuthContext);
   let [requests, setRequests] = useState([]);
-  const userRequests = requests.filter(req => req.userId === auth);
+  const userRequests = requests.filter((req) => req.userId === auth);
 
   useEffect(() => {
     requestService.getRequest("all").then((res) => {
@@ -17,9 +17,9 @@ const RequestPanel = () => {
 
   return (
     <article className="profile-request-panel">
-      {userRequests.map((data) => (
-        <Request {...data}/>
-      ))}
+      {userRequests.map((data) => {
+        return <FullRequest {...data} />;
+      })}
     </article>
   );
 };

@@ -1,0 +1,18 @@
+@import 'styles/styles.scss';
+
+.full-request {
+    text-align: right;
+
+    .request-main {
+        margin-bottom: 20px;
+
+        article {
+            text-align: left;
+            border: 1px solid rgb(209, 204, 204);
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin: 0 10px 0 0;
+            min-width: 185px;
+        }
+    }
+}
