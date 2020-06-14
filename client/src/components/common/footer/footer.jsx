@@ -1,6 +1,6 @@
-import "./footer.scss";
+import tlogo from "assets/images/dark-logo.jpg";
 
-import tlogo from "assets/images/logo.jpg";
+import "./footer.scss";
 
 import React from "react";
 import Copyright from "./copyright/copyright";
@@ -8,6 +8,9 @@ import Copyright from "./copyright/copyright";
 const Footer = () => (
   <footer className="footer">
     <section className="main-footer-wrapper">
+    <article>
+        <img className="footer-logo" src={tlogo} alt="logo" />
+      </article>
       <article>
         <h6>ПОЛЕЗНИ ЛИНКОВЕ</h6>
         <ul>
@@ -31,9 +34,7 @@ const Footer = () => (
         <p>Телефон.: +7957 511350</p>
         <p>E-mail: info@jivarecovery.com</p>
       </article>
-      <article>
-        <img className="footer-logo" src={tlogo} alt="logo" />
-      </article>
+    
     </section>
     <section className="bottom-footer-wrapper">
       <Copyright />
