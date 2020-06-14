@@ -1,3 +1,5 @@
+import '../button-list-item/button-list-item.scss';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { string } from 'prop-types';
