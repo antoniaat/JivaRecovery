@@ -11,11 +11,18 @@
         margin: 2em auto;
 
         .services-page-vehicles {
-            padding-right: 2em;
+            text-align: center;
         }
 
         // Override vehicle styles for displaying 3 vehicles on row
         .vehicle {
             width: 30%;
+            border-radius: 4px;
+            border: 1px solid rgb(235, 229, 229);
+
+            > img {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
         }
     }
