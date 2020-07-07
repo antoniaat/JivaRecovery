@@ -30,6 +30,7 @@ const LoginForm = ({ history }) => {
 
     userService.login(user).then((res) => {
       setAuth(res._id);
+      localStorage.setItem("auth", res._id);
       history.push("/home");
     });
   }
@@ -45,10 +46,7 @@ const LoginForm = ({ history }) => {
 
   return (
     <div className="login-form">
-      <FormHeader
-        title="Вход"
-        subtitle="Изпратете заявка за пътна помощ"
-      />
+      <FormHeader title="Вход" subtitle="Изпратете заявка за пътна помощ" />
 
       <form onSubmit={handleFormSubmit}>
         <label>

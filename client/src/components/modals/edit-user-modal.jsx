@@ -1,26 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./edit-user-modal.scss";
 
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import userService from "services/user-service";
+import userService from "../../services/user-service";
+import { AuthContext } from "../../ContextWrapper";
 
 const EditUserModal = () => {
+  const { auth } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
 
   const [show, setShow] = useState(false);
-  const handleShow = (data) => {
-    setShow(true)
+  const handleShow = () => {
+    setShow(true);
   };
   const handleClose = () => setShow(false);
   const handleDelete = () => {
     setShow(false);
-    // userService.delete(requestId);
+    userService.delete(auth);
   };
-  const handleSave = () => {
+  const handleSave = async () => {
     setShow(false);
     const updatedUser = {
       name,
@@ -28,21 +30,22 @@ const EditUserModal = () => {
       password,
       phone,
     };
-
-    // userService.edit(requestId, updatedUser);
+    const user = await userService.edit(auth, updatedUser);
+    setName(user.name);
+    setEmail(user.email);
+    setPhone(user.phone);
   };
 
   useEffect(() => {
-    // userService.getUser(userId).then((data) => {
-    //   const { name, email, password, phone } = data;
-
-    //   setName(name);
-    //   setEmail(email);
-    //   setPassword(password);
-    //   setPhone(phone);
-    // });
+    userService.getUser(auth).then((data) => {
+      setName(data.name);
+      setEmail(data.email);
+      setPassword(data.password);
+      setPhone(data.phone);
+    });
   }, []);
 
+ 
   return (
     <>
       <button

@@ -6,8 +6,14 @@ import requestService from "../../services/request-service";
 
 const RequestPanel = () => {
   const { auth } = useContext(AuthContext);
-  let [requests, setRequests] = useState([]);
+  const [requests, setRequests] = useState([]);
   const userRequests = requests.filter((req) => req.userId === auth);
+
+  const noUserRequestsPanel = (
+    <div>
+      <h6>Нямате изпратени заявки.</h6>
+    </div>
+  );
 
   useEffect(() => {
     requestService.getRequest("all").then((res) => {
@@ -17,9 +23,9 @@ const RequestPanel = () => {
 
   return (
     <article className="profile-request-panel">
-      {userRequests.map((data) => {
-        return <FullRequest {...data} />;
-      })}
+      {userRequests.length > 0
+        ? userRequests.map((data) => <FullRequest {...data} />)
+        : noUserRequestsPanel}
     </article>
   );
 };
