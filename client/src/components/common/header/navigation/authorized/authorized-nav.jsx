@@ -3,7 +3,7 @@ import ListItem from "../list-item/list-item";
 import userService from "../../../../../services/user-service";
 import { AuthContext } from "../../../../../ContextWrapper";
 
-const AuthorizedNav = () => {
+const AuthorizedNav = ({ history }) => {
   const { auth, setAuth } = useContext(AuthContext);
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -19,16 +19,21 @@ const AuthorizedNav = () => {
     }, []);
   });
 
+  const adminItems = <ListItem link="/administration" text="Администрация" />;
+
+  {
+    /* <ListItem link="/profile" text="Профил" /> */
+  }
+
+  const userItems = <ListItem link="/request" text="Нова заявка" />;
+
   return (
     <ul>
       <ListItem link="/home" text="Начало" />
       <ListItem link="/about" text="Информация" />
       <ListItem link="/services" text="Видове транспорт" />
-      <ListItem link="/profile" text="Профил" />
-      {isAdmin 
-        ? <ListItem link="/administration" text="Администрация" />
-        : <ListItem link="/request" text="Нова заявка" />
-      }
+
+      {isAdmin ? { adminItems } : { userItems }}
       <li className="list-item">
         <a href="#" onClick={logout}>
           ИЗХОД
