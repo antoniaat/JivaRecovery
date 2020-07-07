@@ -36,7 +36,7 @@
 
         li {
             text-align: center;
-            padding: 0 0.3em;
+            padding: 0 0.2em;
 
             @include for-desktop-up {
                 display: inline-block;
@@ -47,7 +47,7 @@
             }
 
             a {
-                font-size: 0.8em;
+                font-size: 0.76em;
             }
         }
     }
