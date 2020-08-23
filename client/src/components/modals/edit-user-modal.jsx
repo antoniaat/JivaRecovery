@@ -6,12 +6,12 @@ import { Modal } from "react-bootstrap";
 import userService from "../../services/user-service";
 import { AuthContext } from "../../ContextWrapper";
 
-const EditUserModal = () => {
+const EditUserModal = ({ updateProfile, user, updateUser }) => {
   const { auth } = useContext(AuthContext);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
+  const [name, setName] = useState(user?.name || "");
+  const [email, setEmail] = useState(user?.email || "");
+  const [password, setPassword] = useState(user?.password || "");
+  const [phone, setPhone] = useState(user?.phone || "");
 
   const [show, setShow] = useState(false);
   const handleShow = () => {
@@ -23,6 +23,7 @@ const EditUserModal = () => {
     userService.delete(auth);
   };
   const handleSave = async () => {
+
     setShow(false);
     const updatedUser = {
       name,
@@ -30,22 +31,34 @@ const EditUserModal = () => {
       password,
       phone,
     };
-    const user = await userService.edit(auth, updatedUser);
-    setName(user.name);
-    setEmail(user.email);
-    setPhone(user.phone);
+
+    if (!user) {
+      const userProfile = await userService.edit(auth, updatedUser);
+
+      updateProfile({
+        name: userProfile.name,
+        email: userProfile.email,
+        phone: userProfile.phone,
+      });
+    } else {
+      const userProfile = await userService.edit(user["_id"], updatedUser);
+
+      updateUser(user["_id"], userProfile);
+    }
   };
 
   useEffect(() => {
-    userService.getUser(auth).then((data) => {
-      setName(data.name);
-      setEmail(data.email);
-      setPassword(data.password);
-      setPhone(data.phone);
-    });
+    console.log(user,"HAHAAH")
+    if (!user) {
+      userService.getUser(auth).then((data) => {
+        setName(data.name);
+        setEmail(data.email);
+        setPassword(data.password);
+        setPhone(data.phone);
+      });
+    }
   }, []);
 
- 
   return (
     <>
       <button

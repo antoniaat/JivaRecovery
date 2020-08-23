@@ -4,7 +4,7 @@ import EditUserModal from "components/modals/edit-user-modal";
 import { AuthContext } from "../../ContextWrapper";
 import userService from "../../services/user-service";
 
-const ProfileInfo = () => {
+const ProfileInfo = ({updateProfile}) => {
   const { auth } = useContext(AuthContext);
   const [state, setState] = React.useState({
     name: "",
@@ -39,7 +39,7 @@ const ProfileInfo = () => {
         <strong>Телефон:</strong>
         <span>{phone}</span>
       </div>
-      <EditUserModal />
+      <EditUserModal updateProfile={setState}  />
     </>
   );
 };

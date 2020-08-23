@@ -66,7 +66,6 @@ module.exports = {
       condition,
       status,
       isDeleted,
-      userId,
     } = req.body;
 
     models.Request.update(
@@ -82,7 +81,6 @@ module.exports = {
         condition,
         status,
         isDeleted,
-        userId,
       }
     )
       .then((updatedRequest) => res.send(updatedRequest))

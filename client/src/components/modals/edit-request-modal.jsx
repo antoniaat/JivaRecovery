@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import requestService from "../../services/request-service";
 
-const EditRequestModal = ({ requestId }) => {
+const EditRequestModal = ({ requestId,updateData }) => {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
@@ -38,6 +38,17 @@ const EditRequestModal = ({ requestId }) => {
     };
 
     requestService.edit(requestId, updatedRequest);
+    updateData({
+      brand,
+      model,
+      year,
+      pickupLocation,
+      deliveryLocation,
+      pickupDate,
+      deliveryDate,
+      condition,
+      status,
+    })
   };
 
   useEffect(() => {

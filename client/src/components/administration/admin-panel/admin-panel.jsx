@@ -5,13 +5,25 @@ import React, { useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import DataTable from "react-data-table-component";
 import Request from "../request/request";
-import EditUserModal from '../../modals/edit-user-modal';
+import EditUserModal from "../../modals/edit-user-modal";
 import requestService from "../../../services/request-service";
 import userService from "../../../services/user-service";
 
 const AdminPanel = () => {
   let [requests, setRequests] = useState([]);
   let [users, setUsers] = useState([]);
+
+  const updateUser = (id, newUser) => {
+    setUsers((users) => {
+      return users.map((user) => {
+        if (user._id === id) {
+          return newUser;
+        } else {
+          return user;
+        }
+      });
+    });
+  };
   const requestColumns = [
     {
       name: "Марка",
@@ -59,9 +71,7 @@ const AdminPanel = () => {
     },
     {
       name: "",
-      cell: ({ data }) => (
-        <EditUserModal {...data}/>
-      ),
+      cell: (data) => <EditUserModal user={data} updateUser={updateUser} />,
     },
   ];
 

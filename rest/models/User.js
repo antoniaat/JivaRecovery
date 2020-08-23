@@ -23,16 +23,8 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  requests: {
-    type: Array,
-  },
-  feedback: {
-    type: Array,
-  },
+
   isAdmin: {
-    type: Boolean,
-  },
-  isDeleted: {
     type: Boolean,
   },
 });

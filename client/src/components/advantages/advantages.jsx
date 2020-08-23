@@ -24,14 +24,18 @@ const advantages = [
 ];
 
 const Advantages = () => (
-  <div className="advantages">
+  <section className="advantages">
     <AdvantagesHeader />
     <article className="advantages-wrapper">
       {advantages.map(({ title, text, img }) => (
-        <Advantage title={title} text={text} img={img} />
+        <Advantage
+          title={title}
+          text={text}
+          img={img}
+        />
       ))}
     </article>
-  </div>
+  </section>
 );
 
 export default Advantages;

@@ -65,21 +65,20 @@ module.exports = {
 
   put: (req, res, next) => {
     const id = req.params.id;
-    const {
-      name,
-      email,
-      password,
-      phone,
-      requests,
-      feedback,
-      isDeleted,
-    } = req.body;
+    const { name, email, password, phone } = req.body;
 
-    models.User.update(
-      { _id: id },
-      { name, email, password, phone, requests, feedback, isDeleted }
+    models.User.findByIdAndUpdate(
+      id,
+      { name, email, password, phone },
+      { new: true }
     )
-      .then((updatedUser) => res.send(updatedUser))
+      .then((updatedUser) => {
+        res.send({
+          name: updatedUser.name,
+          email: updatedUser.email,
+          phone: updatedUser.phone,
+        });
+      })
       .catch(next);
   },
 

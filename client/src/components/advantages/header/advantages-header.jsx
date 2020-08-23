@@ -4,9 +4,9 @@ import React from 'react';
 import { string } from 'prop-types';
 
 const AdvantagesHeader = ({ title }) => (
-  <article className="advantages-header">
+  <header className="advantages-header">
     <h1>{title}</h1>
-  </article>
+  </header>
 );
 
 AdvantagesHeader.defaultProps = {
